@@ -7,8 +7,8 @@ public class platform : MonoBehaviour
     Vector3 current_position;
     Vector3 stopped_position;
     float direction = 1.0f;
-    float speed = 4f;
-    float heightlimit = 1f;
+    float speed = 1f;
+    float heightlimit = 4f;
     float timecount = 0.0f;
     float timelimit = 0.0f;
 
@@ -16,18 +16,20 @@ public class platform : MonoBehaviour
 
 
     public float radius = 10.0f;
-
+    Animator anim;
     void Start()
     {
         current_position = this.transform.position;
+        anim = this.GetComponent<Animator>();
+        anim.speed = 3;
     }
 
     void Update()
     {
 
-        transform.Translate(0, direction * speed * Time.deltaTime * 1, 0);
+        //transform.Translate(0, direction * speed * Time.deltaTime * 1, 0);
 
-
+        /*
         if (transform.position.y > current_position.y + heightlimit)
         {
             direction = -1;
@@ -42,7 +44,7 @@ public class platform : MonoBehaviour
                 direction = 1;
                 timecount = 0;
             }
-        }
+        }*/
     }
 
     void OnTriggerEnter(Collider other)
@@ -55,14 +57,17 @@ public class platform : MonoBehaviour
             {
                 if (col.tag == "Object")
                 {
-                    if (Input.GetKeyDown(KeyCode.K))
+
+                    if (OVRInput.GetDown(OVRInput.Button.One))//Input.GetKeyDown(KeyCode.K)
                     {
-                        speed = 0.0f;
+                        anim.enabled = false;
+                        //speed = 0.0f;
                     }
 
-                    if (Input.GetKeyUp(KeyCode.K))
+                    if (OVRInput.GetUp(OVRInput.Button.One))//Input.GetKeyUp(KeyCode.K)
                     {
-                        speed = 9f;
+                        //speed = 1f;
+                        anim.enabled = true;
                     }
                 }
             }
@@ -73,20 +78,24 @@ public class platform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            print("collided");
+            //print("collided");
             Collider[] colliders = Physics.OverlapSphere(current_position, radius);
             foreach (Collider col in colliders)
             {
                 if (col.tag == "Object")
                 {
-                    if (Input.GetKeyDown(KeyCode.K))
+                    //Debug.Log();
+                    
+                    if (OVRInput.GetDown(OVRInput.Button.One))//Input.GetKeyDown(KeyCode.K)
                     {
-                        speed = 0.0f;
+                        //speed = 0.0f;
+                        anim.enabled = false;
                     }
 
-                    if (Input.GetKeyUp(KeyCode.K))
+                    if (OVRInput.GetUp(OVRInput.Button.One))//Input.GetKeyUp(KeyCode.K)
                     {
-                        speed = 9f;
+                        //speed = 1f;
+                        anim.enabled = true;
                     }
                 }
             }
@@ -95,7 +104,6 @@ public class platform : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        speed = 9f;
-        heightlimit = 10f;
+        //speed = 1f;
     }
 }

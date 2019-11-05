@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OVR;
 
 public class ToggleThermal : MonoBehaviour
 {
@@ -31,7 +32,8 @@ public class ToggleThermal : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        
+        if (OVRInput.GetDown(OVRInput.Button.Two)) // Input.GetKeyDown("space")
         {
             for(int i = 0; i < thermalShaderObjects.Count; i++)
             {

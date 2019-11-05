@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OVR;
 
 public class cubeMove : MonoBehaviour
 {
@@ -55,12 +56,12 @@ public class cubeMove : MonoBehaviour
             {
                 if (col.tag == "Object")
                 {
-                    if (Input.GetKeyDown(KeyCode.K))
+                    if (OVRInput.GetDown(OVRInput.Button.One))//Input.GetKeyDown(KeyCode.K)
                     {
                         speed = 0.0f;
                     }
 
-                    if (Input.GetKeyUp(KeyCode.K))
+                    if (OVRInput.GetUp(OVRInput.Button.One))//Input.GetKeyUp(KeyCode.K)
                     {
                         speed = 9f;
                     }
@@ -79,12 +80,12 @@ public class cubeMove : MonoBehaviour
             {
                 if (col.tag == "Object")
                 {
-                    if (Input.GetKeyDown(KeyCode.K))
+                    if (OVRInput.GetDown(OVRInput.Button.One))//Input.GetKeyDown(KeyCode.K)
                     {
                         speed = 0.0f;
                     }
 
-                    if (Input.GetKeyUp(KeyCode.K))
+                    if (OVRInput.GetUp(OVRInput.Button.One))//Input.GetKeyUp(KeyCode.K)
                     {
                         speed = 9f;
                     }
@@ -96,6 +97,5 @@ public class cubeMove : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         speed = 9f;
-        heightlimit = 10f;
     }
 }
