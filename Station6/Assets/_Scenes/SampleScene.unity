@@ -120,6 +120,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70902128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: dff7e144eed49464d9e396ee86103b70,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956920219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &70902131
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70902128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &332132191
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,11 +435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4458547538326316, guid: 844d2c1034d70ac41b56c47f92c538c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.4745092
+      value: 6.96
       objectReference: {fileID: 0}
     - target: {fileID: 4458547538326316, guid: 844d2c1034d70ac41b56c47f92c538c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3357282
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4458547538326316, guid: 844d2c1034d70ac41b56c47f92c538c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -465,6 +485,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1190603775}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1236151328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8052994932809076077, guid: dff7e144eed49464d9e396ee86103b70,
+    type: 3}
+  m_PrefabInstance: {fileID: 1956920219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1236151332
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236151328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4068373912626513877, guid: dff7e144eed49464d9e396ee86103b70, type: 3}
 --- !u!143 &1462099282 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 143006964398545588, guid: 844d2c1034d70ac41b56c47f92c538c6,
