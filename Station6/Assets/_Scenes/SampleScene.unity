@@ -1403,6 +1403,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: dff7e144eed49464d9e396ee86103b70,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c87c82fe58c18f64c92597cb19eb2e18, type: 2}
+    - target: {fileID: -6057140222963153312, guid: dff7e144eed49464d9e396ee86103b70,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dff7e144eed49464d9e396ee86103b70, type: 3}
 --- !u!1 &1992511137 stripped
