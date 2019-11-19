@@ -397,9 +397,9 @@ public class VRMovementOculus : MonoBehaviour
             case OVRInput.Button.PrimaryHandTrigger:
                 holder = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, theController);
                 break;
-            case OVRInput.Button.PrimaryIndexTrigger:
-                holder = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, theController);
-                break;
+           // case OVRInput.Button.PrimaryIndexTrigger:
+                //holder = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, theController);
+                //break;
             case OVRInput.Button.SecondaryThumbstickUp:
                 holder = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, theController).x;
                 break;

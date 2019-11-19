@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using OVR;
 
 public class ToggleArmMenu : MonoBehaviour
@@ -88,6 +89,11 @@ public class ToggleArmMenu : MonoBehaviour
         minerva.transform.parent = null;
         rig.transform.position = AntPos;
         ant.transform.parent = rig.transform;
+    }
+
+    public void ChangeToHacking()
+    {
+        SceneManager.LoadScene("HackingScene");
     }
 
     void Fade()

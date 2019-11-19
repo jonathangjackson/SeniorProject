@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dff7e144eed49464d9e396ee86103b70
+guid: 5d223c14745d2e04bbfaf4e4b406b481
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -61,7 +61,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
