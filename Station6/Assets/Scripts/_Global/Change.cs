@@ -29,7 +29,7 @@ public class Change : MonoBehaviour
             {
                 minervaActive = true;
                 antActive = false;
-                rig.GetComponent<CharacterController>().height = 4.4f;
+                rig.GetComponent<CharacterController>().height = 3.25f;
                 ant.transform.parent = null;
                 rig.transform.position = MinervaPos;
                 minerva.transform.parent = rig.transform;
@@ -38,7 +38,7 @@ public class Change : MonoBehaviour
             {
                 minervaActive = false;
                 antActive = true;
-                rig.GetComponent<CharacterController>().height = 0.6f;
+                rig.GetComponent<CharacterController>().height = 0.9f;
                 minerva.transform.parent = null;
                 rig.transform.position = AntPos;
                 ant.transform.parent = rig.transform;
