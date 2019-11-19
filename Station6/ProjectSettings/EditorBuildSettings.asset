@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Scenes/TutorialLevel.unity
+    guid: d7548f45ab812414486537745c84a3e9
+  - enabled: 1
+    path: Assets/HackingWorld/Scenes/HackingScene.unity
+    guid: e3d468b7f8571a04ca6cb149f6f8afdb
+  - enabled: 1
+    path: Assets/_Scenes/TutorialLevelPostHack.unity
+    guid: a29ee34acdcc9944f9ce3534c98b9d64
   m_configObjects: {}
