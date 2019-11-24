@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using OVR;
+using UnityEngine.UI;
 
 public class ToggleArmMenu : MonoBehaviour
 {
 
     public GameObject armMenu;
     bool menuOn;
+
+    public GameObject objectives;
+    bool objectivesOn;
+
+    public GameObject bodyNameText;
 
     public GameObject minerva;
     public GameObject ant;
@@ -26,10 +32,13 @@ public class ToggleArmMenu : MonoBehaviour
     void Start()
     {
         menuOn = false;
+        objectivesOn = false;
 
         blk = new Texture2D(1, 1);
         blk.SetPixel(0, 0, new Color(0, 0, 0, 0));
         blk.Apply();
+
+        bodyNameText.GetComponent<Text>().text = "Minerva";
     }
 
     void OnGUI()
@@ -42,9 +51,19 @@ public class ToggleArmMenu : MonoBehaviour
     {
 
         if (OVRInput.GetDown(OVRInput.Button.Three)){
+            Debug.Log("Menu button pressed.");
             menuOn = !menuOn;
 
             armMenu.SetActive(menuOn);
+        }
+
+        if (OVRInput.GetDown(OVRInput.Button.Four))
+        {
+            Debug.Log("Objectives button pressed.");
+
+            objectivesOn = !objectivesOn;
+
+            objectives.SetActive(objectivesOn);
         }
 
         Fade();
@@ -65,8 +84,12 @@ public class ToggleArmMenu : MonoBehaviour
 
         fade = !fade;
 
-        Vector3 MinervaPos = GameObject.Find("Minerva").transform.position;
+        menuOn = false;
+        armMenu.SetActive(menuOn);
 
+        bodyNameText.GetComponent<Text>().text = "Minerva";
+
+        Vector3 MinervaPos = GameObject.Find("Minerva").transform.position;
 
         minervaActive = true;
         antActive = false;
@@ -80,6 +103,11 @@ public class ToggleArmMenu : MonoBehaviour
     {
 
         fade = !fade;
+
+        menuOn = false;
+        armMenu.SetActive(menuOn);
+
+        bodyNameText.GetComponent<Text>().text = "S5-ANT";
 
         Vector3 AntPos = GameObject.Find("Ant").transform.position;
 

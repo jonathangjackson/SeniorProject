@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Hot
   - Cold
+  - Door
+  - Airlock
+  - StorageRoom
+  - Generator
   layers:
   - Default
   - TransparentFX
