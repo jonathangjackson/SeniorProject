@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/TutorialLevel.unity
     guid: d7548f45ab812414486537745c84a3e9
   - enabled: 1
-    path: Assets/HackingWorld/Scenes/HackingScene.unity
+    path: Assets/_Scenes/HackingScene.unity
     guid: e3d468b7f8571a04ca6cb149f6f8afdb
   - enabled: 1
     path: Assets/_Scenes/TutorialLevelPostHack.unity

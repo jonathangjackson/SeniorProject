@@ -24,6 +24,7 @@ public class FireColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown("d"))
         {
             this.transform.position = new Vector3(this.GetComponent<Transform>().position.x + 100 * Time.deltaTime, this.GetComponent<Transform>().position.y, this.GetComponent<Transform>().position.z);
@@ -39,7 +40,7 @@ public class FireColor : MonoBehaviour
         if (Input.GetKeyDown("s"))
         {
             this.transform.position = new Vector3(this.GetComponent<Transform>().position.x, this.GetComponent<Transform>().position.y, this.GetComponent<Transform>().position.z - 100 * Time.deltaTime);
-        }
+        }*/
         Fire.startColor = new Color((colorF * BaseFireColor.r) + ((1.0f - hot) * Red.r) + ((1.0f - cold) * Blue.r), (colorF * BaseFireColor.g) + ((1.0f - hot) * Red.g) + ((1.0f - cold) * Blue.g), (colorF * BaseFireColor.b) + ((1.0f - hot) * Red.b) + ((1.0f - cold) * Blue.b));
     }
 
@@ -56,12 +57,10 @@ public class FireColor : MonoBehaviour
         float hyp = Mathf.Sqrt(Mathf.Pow(distance.x, 2.0f) + Mathf.Pow(distance.z, 2.0f));
         if(other.gameObject.tag.CompareTo("Hot") == 0)
         {
-            Debug.Log("HOT");
             hot = hyp / enterDistance;
         }
         if(other.gameObject.tag.CompareTo("Cold") == 0)
         {
-            Debug.Log("COLD");
             cold = hyp / enterDistance;
         }
         colorF = hyp / enterDistance;
