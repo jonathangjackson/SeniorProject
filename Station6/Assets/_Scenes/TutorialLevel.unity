@@ -711,6 +711,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945887672848756753, guid: b3359e3620f5c9145907341c2a342908,
+        type: 3}
+      propertyPath: ExternalForcesModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4945887672848756752, guid: b3359e3620f5c9145907341c2a342908,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -780,11 +785,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.049723856
-      objectReference: {fileID: 0}
-    - target: {fileID: 4945887672848756753, guid: b3359e3620f5c9145907341c2a342908,
-        type: 3}
-      propertyPath: ExternalForcesModule.enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4945887672848756754, guid: b3359e3620f5c9145907341c2a342908,
         type: 3}
@@ -979,10 +979,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190603776}
     m_Modifications:
-    - target: {fileID: 6801707267703111024, guid: 72a258e28e18d3a479b10edc15bd6870,
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
         type: 3}
-      propertyPath: m_Name
-      value: ArmMenuCanvas
+      propertyPath: minerva
+      value: 
+      objectReference: {fileID: 294665289}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: ant
+      value: 
+      objectReference: {fileID: 2014679189}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: rig
+      value: 
+      objectReference: {fileID: 682748735}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: fade
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: Fire
+      value: 
+      objectReference: {fileID: 1992511137}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: objectives
+      value: 
+      objectReference: {fileID: 1537378762}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: bodyNameText
+      value: 
+      objectReference: {fileID: 1588534756}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: objectiveText
+      value: 
+      objectReference: {fileID: 1096656456}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: roomNameText
+      value: 
+      objectReference: {fileID: 1314635809}
+    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: click
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6801707267703111036, guid: 72a258e28e18d3a479b10edc15bd6870,
         type: 3}
@@ -1089,6 +1134,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6801707267703111024, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: m_Name
+      value: ArmMenuCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6801707267869805948, guid: 72a258e28e18d3a479b10edc15bd6870,
         type: 3}
       propertyPath: m_IsActive
@@ -1099,56 +1149,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 389989385}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: minerva
-      value: 
-      objectReference: {fileID: 294665289}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: ant
-      value: 
-      objectReference: {fileID: 2014679189}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: rig
-      value: 
-      objectReference: {fileID: 682748735}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: fade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: Fire
-      value: 
-      objectReference: {fileID: 1992511137}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: objectives
-      value: 
-      objectReference: {fileID: 1537378762}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: bodyNameText
-      value: 
-      objectReference: {fileID: 1588534756}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: objectiveText
-      value: 
-      objectReference: {fileID: 1096656456}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: roomNameText
-      value: 
-      objectReference: {fileID: 1314635809}
-    - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: click
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6801707268801054230, guid: 72a258e28e18d3a479b10edc15bd6870,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1429,6 +1429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6767880913500881670, guid: 85e528687ba392f489898df0330eac56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8116202249333863363, guid: 85e528687ba392f489898df0330eac56,
         type: 3}
@@ -2200,6 +2205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6767880913500881670, guid: 85e528687ba392f489898df0330eac56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8116202249333863363, guid: 85e528687ba392f489898df0330eac56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2811,11 +2821,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190603776}
     m_Modifications:
-    - target: {fileID: 384561034240450491, guid: ebb2c889364afff488bec9bfa523c971,
-        type: 3}
-      propertyPath: m_Name
-      value: ObjectivesCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 384561034240450490, guid: ebb2c889364afff488bec9bfa523c971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2920,6 +2925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561034240450491, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Name
+      value: ObjectivesCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 384561034240450495, guid: ebb2c889364afff488bec9bfa523c971,
         type: 3}
