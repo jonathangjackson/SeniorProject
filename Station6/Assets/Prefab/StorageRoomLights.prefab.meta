@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Station6/Assets/Prefab/StorageRoomLights.prefab.meta
 guid: b7b99972b8dc6c54791874b2629460b2
 PrefabImporter:
+=======
+guid: 1a4aca721e7b15146afc633d1ed4a9dc
+DefaultImporter:
+>>>>>>> c708ede5a03a389947773350926d680d928736ea:Station6/Assets/_Scenes/crate.unitypackage.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

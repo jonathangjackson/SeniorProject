@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Station6/Assets/Material/LightMaterial.mat.meta
 guid: 179f92a6baed0ef4d86d6dc2b6884dcd
 NativeFormatImporter:
+=======
+guid: 30c8896c40eaf9841bf66bffccdce2b8
+DefaultImporter:
+>>>>>>> c708ede5a03a389947773350926d680d928736ea:Station6/Assets/_Scenes/hackPackage.unitypackage.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
