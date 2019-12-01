@@ -2516,6 +2516,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190603776}
     m_Modifications:
+    - target: {fileID: 384561034189978051, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 384561034240450490, guid: ebb2c889364afff488bec9bfa523c971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2631,6 +2636,96 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 389989385}
+    - target: {fileID: 384561033811645926, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033811645926, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033811645926, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033825916483, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033825916483, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033825916483, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033842323498, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033842323498, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561033842323498, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561034105728495, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561034105728495, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561034105728495, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561035372623372, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561035372623372, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561035372623372, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561035663584853, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561035663584853, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561035663584853, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 384561034240450493, guid: ebb2c889364afff488bec9bfa523c971, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebb2c889364afff488bec9bfa523c971, type: 3}
