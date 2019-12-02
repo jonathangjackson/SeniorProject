@@ -567,6 +567,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomNameText: {fileID: 1314635809}
   objectiveText: {fileID: 1096656456}
+  objectives:
+  - {fileID: 8313012100116471096}
+  - {fileID: 27954874756054684}
+  - {fileID: 1494911076}
+  - {fileID: 1494911076}
 --- !u!20 &389989385 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20994742000812204, guid: 844d2c1034d70ac41b56c47f92c538c6,
@@ -953,6 +958,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190603776}
     m_Modifications:
+    - target: {fileID: 6801707267703111024, guid: 72a258e28e18d3a479b10edc15bd6870,
+        type: 3}
+      propertyPath: m_Name
+      value: ArmMenuCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 6801707267703111037, guid: 72a258e28e18d3a479b10edc15bd6870,
         type: 3}
       propertyPath: minerva
@@ -1107,11 +1117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6801707267703111024, guid: 72a258e28e18d3a479b10edc15bd6870,
-        type: 3}
-      propertyPath: m_Name
-      value: ArmMenuCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 6801707267869805948, guid: 72a258e28e18d3a479b10edc15bd6870,
         type: 3}
@@ -1968,6 +1973,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60a0c42425238c43b70063750049e3c, type: 3}
+--- !u!1 &1494911075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 27954872698231115, guid: d60a0c42425238c43b70063750049e3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1494911074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1494911076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494911075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20b58c07caa9648a343cc404f97767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveName: GeneratorRoomDoor
+  objectiveText: Deploy the S5-ANT and find a way into the Generator Room
 --- !u!1 &1537378762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 384561034189978051, guid: ebb2c889364afff488bec9bfa523c971,
@@ -2509,6 +2534,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60a0c42425238c43b70063750049e3c, type: 3}
+--- !u!1 &27954874756054683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 27954872698231115, guid: d60a0c42425238c43b70063750049e3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 27954874756054682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &27954874756054684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27954874756054683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20b58c07caa9648a343cc404f97767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveName: StorageRoomTrigger
+  objectiveText: Locate the Generator Room
 --- !u!1001 &384561034888425481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2516,10 +2561,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190603776}
     m_Modifications:
-    - target: {fileID: 384561034189978051, guid: ebb2c889364afff488bec9bfa523c971,
+    - target: {fileID: 384561034240450491, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_Name
+      value: ObjectivesCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561034240450491, guid: ebb2c889364afff488bec9bfa523c971,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 384561034189978051, guid: ebb2c889364afff488bec9bfa523c971,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 384561034240450490, guid: ebb2c889364afff488bec9bfa523c971,
         type: 3}
@@ -2625,11 +2680,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 384561034240450491, guid: ebb2c889364afff488bec9bfa523c971,
-        type: 3}
-      propertyPath: m_Name
-      value: ObjectivesCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 384561034240450495, guid: ebb2c889364afff488bec9bfa523c971,
         type: 3}
@@ -2764,7 +2814,7 @@ PrefabInstance:
     - target: {fileID: 2591877809697137849, guid: 6045f30893a213f4491939b7b4e9cd58,
         type: 3}
       propertyPath: m_Name
-      value: GeneratorRoom
+      value: GeneratorRoomTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 2591877809697137849, guid: 6045f30893a213f4491939b7b4e9cd58,
         type: 3}
@@ -2828,6 +2878,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6045f30893a213f4491939b7b4e9cd58, type: 3}
+--- !u!1 &2591877810145087613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2591877809697137849, guid: 6045f30893a213f4491939b7b4e9cd58,
+    type: 3}
+  m_PrefabInstance: {fileID: 2591877810145087612}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2591877810145087614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591877810145087613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20b58c07caa9648a343cc404f97767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveName: GeneratorRoomTrigger
+  objectiveText: Find a way to open the door for Minerva
 --- !u!1001 &4882150957035061100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2985,3 +3055,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a448307047db3a4690510c8de468d1e, type: 3}
+--- !u!1 &8313012100116471095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8313012098663055758, guid: 4a448307047db3a4690510c8de468d1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8313012100116471094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8313012100116471096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8313012100116471095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb20b58c07caa9648a343cc404f97767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveName: AirLockTrigger
+  objectiveText: Locate the Storage room.

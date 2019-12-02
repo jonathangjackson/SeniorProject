@@ -9,11 +9,12 @@ public class playerTrigger : MonoBehaviour
     public GameObject objectiveText;
     string roomName;
     string objective;
+    public List<ObjectiveManager> objectives ;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //ObjectiveManager objective = new ObjectiveManager();
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class playerTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         RoomTrigger(collision);
+
         objectiveTrigger(collision);
         if(collision.gameObject.tag == "Door")
         {
@@ -72,8 +74,16 @@ public class playerTrigger : MonoBehaviour
 
     private void objectiveTrigger(Collider collision)
     {
-        //
-        if (collision.gameObject.tag == "Airlock")
+
+        if(collision.name == objectives[0].objectiveName)
+        {
+            objective = objectives[0].objectiveText;
+            objectiveText.GetComponent<Text>().text = objective;
+            objectives.RemoveAt(0);
+
+        }
+
+        /*if (collision.gameObject.tag == "Airlock")
         {
             Debug.Log("Airlock Trigger");
             objective = "Head to the Storage Room";
@@ -94,9 +104,8 @@ public class playerTrigger : MonoBehaviour
         {
 
             objective = "Use the S5-ANT to gain access to the Generator Room.";
-        }
+        }*/
 
-        objectiveText.GetComponent<Text>().text = objective;
 
     }
 }

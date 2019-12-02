@@ -62,6 +62,8 @@ public class ToggleArmMenu : MonoBehaviour
             Debug.Log("Objectives button pressed.");
 
             objectivesOn = !objectivesOn;
+            Debug.Log(objectivesOn);
+
 
             objectives.SetActive(objectivesOn);
         }

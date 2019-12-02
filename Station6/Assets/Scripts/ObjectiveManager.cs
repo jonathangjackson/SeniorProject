@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public string objectiveName;
+    public string objectiveText;
+
+    /*public string ObjectiveName
     {
-        
+        get
+        {
+            return objectiveName;
+        }
+
+        set
+        {
+            ObjectiveName = value;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public string ObjectiveText
     {
-        
-    }
+        get
+        {
+            return objectiveText;
+        }
+
+        set
+        {
+            objectiveText = value;
+        }
+    }*/
+
 }
