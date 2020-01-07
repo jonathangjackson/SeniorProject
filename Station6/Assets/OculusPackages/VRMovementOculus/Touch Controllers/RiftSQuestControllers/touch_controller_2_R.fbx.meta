@@ -1,50 +1,9 @@
 fileFormatVersion: 2
-guid: a9deb29a21ce29d45901b36bcc0fec61
+guid: 35db878a200064540aa84fd048a3b019
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: a_button
-    100002: b_button
-    100004: oculus_button
-    100006: right_grip
-    100008: right_joystick
-    100010: right_trigger
-    100012: //RootNode
-    400000: a_button
-    400002: b_button
-    400004: oculus_button
-    400006: right_grip
-    400008: right_joystick
-    400010: right_trigger
-    400012: //RootNode
-    2100000: phong3
-    2300000: a_button
-    2300002: b_button
-    2300004: oculus_button
-    2300006: right_grip
-    2300008: right_joystick
-    2300010: right_trigger
-    2300012: //RootNode
-    3300000: a_button
-    3300002: b_button
-    3300004: oculus_button
-    3300006: right_grip
-    3300008: right_joystick
-    3300010: right_trigger
-    3300012: //RootNode
-    4300000: touch_controller_2_R
-    4300002: right_trigger
-    4300004: right_grip
-    4300006: oculus_button
-    4300008: right_joystick
-    4300010: b_button
-    4300012: a_button
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: phong3
-    second: {fileID: 2100000, guid: 288068731493d9f40bc86061da765578, type: 2}
+  serializedVersion: 26
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -72,13 +31,14 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -86,18 +46,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -106,10 +67,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -119,6 +81,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
