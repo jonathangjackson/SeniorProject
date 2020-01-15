@@ -9,10 +9,12 @@ public class ToggleArmMenu : MonoBehaviour
 {
 
     public GameObject armMenu;
+    public GameObject menuButtons;
+    public GameObject toolsButton;
     bool menuOn;
 
-    public GameObject objectives;
-    bool objectivesOn;
+    //public GameObject objectives;
+    //bool objectivesOn;
 
     public GameObject bodyNameText;
 
@@ -32,7 +34,7 @@ public class ToggleArmMenu : MonoBehaviour
     void Start()
     {
         menuOn = false;
-        objectivesOn = false;
+        //objectivesOn = false;
 
         blk = new Texture2D(1, 1);
         blk.SetPixel(0, 0, new Color(0, 0, 0, 0));
@@ -57,16 +59,16 @@ public class ToggleArmMenu : MonoBehaviour
             armMenu.SetActive(menuOn);
         }
 
-        if (OVRInput.GetDown(OVRInput.Button.Four))
+        /*if (OVRInput.GetDown(OVRInput.Button.Four))
         {
             Debug.Log("Objectives button pressed.");
 
-            objectivesOn = !objectivesOn;
-            Debug.Log(objectivesOn);
+            //objectivesOn = !objectivesOn;
+            //Debug.Log(objectivesOn);
 
 
             objectives.SetActive(objectivesOn);
-        }
+        }*/
 
         Fade();
 
@@ -119,6 +121,18 @@ public class ToggleArmMenu : MonoBehaviour
         minerva.transform.parent = null;
         rig.transform.position = AntPos;
         ant.transform.parent = rig.transform;
+    }
+
+    public void ChangeToTools()
+    {
+        menuButtons.SetActive(false);
+        toolsButton.SetActive(true);
+    }
+
+    public void BackToMenu()
+    {
+        toolsButton.SetActive(false);
+        menuButtons.SetActive(true);
     }
 
     public void ChangeToHacking()
