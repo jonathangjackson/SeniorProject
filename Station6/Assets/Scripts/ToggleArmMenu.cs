@@ -57,6 +57,12 @@ public class ToggleArmMenu : MonoBehaviour
             menuOn = !menuOn;
 
             armMenu.SetActive(menuOn);
+
+            if (!menuOn)
+            {
+                menuButtons.SetActive(true);
+                toolsButton.SetActive(false);
+            }
         }
 
         /*if (OVRInput.GetDown(OVRInput.Button.Four))

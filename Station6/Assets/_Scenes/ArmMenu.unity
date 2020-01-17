@@ -195,7 +195,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: -1
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -968,7 +968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &826196350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1682,7 +1682,7 @@ PrefabInstance:
     - target: {fileID: 2624974716721873305, guid: 0e35479c358961b4c8939039eb24be45,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2624974716721873309, guid: 0e35479c358961b4c8939039eb24be45,
         type: 3}
@@ -1857,6 +1857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956077819550670319, guid: 8d8dc75dcf9bc9c4687698c3e2ae47d0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956077819550670319, guid: 8d8dc75dcf9bc9c4687698c3e2ae47d0,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8dc75dcf9bc9c4687698c3e2ae47d0, type: 3}
