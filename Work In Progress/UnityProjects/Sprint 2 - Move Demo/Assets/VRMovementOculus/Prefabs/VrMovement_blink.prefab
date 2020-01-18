@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1892036106467620}
+  m_IsPrefabParent: 1
+--- !u!1 &1892036106467620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4679136232924392}
+  - component: {fileID: 114791032791295600}
+  - component: {fileID: 114745105001990490}
+  - component: {fileID: 114656427589078288}
+  m_Layer: 0
+  m_Name: VrMovement_blink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4679136232924392
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892036106467620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114656427589078288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892036106467620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9de102d8a4118d418700cc46a9f6773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkButton: 1
+  canBlink: 1
+  fadeBlink: 0
+  BlinkMode: 1
+  blinkDistance: 10
+  blinkMoveTime: 0.5
+  blinkPoint: {fileID: 0}
+--- !u!114 &114745105001990490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892036106467620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401ac3434cc95c34491ddb4ddf2c445f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRotate: 1
+  RotateOnHand: 0
+  copyHandFromMain: 1
+  invertHand: 0
+  RotationMode: 1
+  RotateButton: 0
+  fadeRotate: 1
+  rotateDegrees: 45
+  rotateTime: 0
+  slowRotateSpeed: 0.7
+  doubleTapTime: 0.3
+--- !u!114 &114791032791295600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892036106467620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235dc9a61faab8a4e895444fc12c6907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oculusType: 0
+  defaultLeft: 1
+  defaultRight: 2
+  ControlsOn: 2
+  ForwardButton: 16384
+  BackwardButton: 0
+  canMove: 0
+  MovementMode: 3
+  gravityInDebug: 0
+  headIsForward: 0
+  moveSpeed: 4
+  PlayerGravity: 300
+  basicAcceleration: 10
+  fadeTime: 0.3
+  yourRig: {fileID: 0}
+  AutoAssignTheRest: 1
+  headRig: {fileID: 0}
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
+  myFade: {fileID: 0}
+  mainMovementOverRide: 0
