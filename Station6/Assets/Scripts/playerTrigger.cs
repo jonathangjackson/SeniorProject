@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class playerTrigger : MonoBehaviour
 {
     public GameObject roomNameText;
-    public GameObject objectiveText;
+    public GameObject mainObjective;
+    public GameObject curObjective;
+    public GameObject subObjective;
+    ObjectiveManager currentObjective;
     string roomName;
-    string objective;
-    public List<ObjectiveManager> objectives ;
+    string subObjectives;
+    //public List<ObjectiveManager> objectives ;
 
     // Start is called before the first frame update
     void Start()
@@ -75,11 +78,24 @@ public class playerTrigger : MonoBehaviour
     private void objectiveTrigger(Collider collision)
     {
 
-        if(collision.name == objectives[0].objectiveName)
+        if(collision.tag == "Objective")
         {
-            objective = objectives[0].objectiveText;
-            objectiveText.GetComponent<Text>().text = objective;
-            objectives.RemoveAt(0);
+
+            currentObjective = collision.gameObject.GetComponent<ObjectiveManager>();
+            curObjective.GetComponent<Text>().text = currentObjective.objectiveText;
+
+            int lengthSubObjectives = currentObjective.subObjectives.Count;
+
+            for (int i = 0; i < lengthSubObjectives; i++)
+            {
+
+                subObjectives = subObjectives + currentObjective.subObjectives[i].objectiveText + '\n';
+                currentObjective.subObjectives[i].isObjectiveActive = !currentObjective.subObjectives[i].isObjectiveActive;
+                currentObjective.subObjectives[i].gameObject.SetActive(currentObjective.subObjectives[i].isObjectiveActive);
+            }
+            //objective = objectives[0].objectiveText;
+            //objectiveText.GetComponent<Text>().text = objective;
+            //objectives.RemoveAt(0);
 
         }
 
