@@ -1,28 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class hackingButton : MonoBehaviour
+public class killPowerCell : MonoBehaviour
 {
+    public bool hackingSuccess;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        hackingSuccess = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "PreparedOVRCameraRig" || other.name == "HackingButton")
+        if (other.name == "PowerSlot")
         {
-            Debug.Log("entered");
-            SceneManager.LoadScene("HackingScene");
+            Destroy(gameObject);
+            hackingSuccess = true;
         }
     }
 }
