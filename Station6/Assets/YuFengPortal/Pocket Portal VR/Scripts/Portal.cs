@@ -208,7 +208,7 @@ public class Portal : MonoBehaviour
 			camSkybox.material = ToDimension ().customSkybox;
 		}
 
-		meshRenderer.material.SetFloat ("_RecursiveRender", (gameObject.layer != Camera.current.gameObject.layer) ? 1 : 0);
+		//meshRenderer.material.SetFloat ("_RecursiveRender", (gameObject.layer != Camera.current.gameObject.layer) ? 1 : 0);
 		RenderPortal (Camera.current);
 	}
 

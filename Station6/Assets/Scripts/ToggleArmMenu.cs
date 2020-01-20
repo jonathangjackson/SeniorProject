@@ -21,6 +21,10 @@ public class ToggleArmMenu : MonoBehaviour
     public GameObject rig;
     public GameObject Fire;
 
+    private Vector3 oldMinervaPos;
+    private Quaternion oldMinervaRot;
+    private Vector3 oldBotPos;
+
     Texture2D blk;
     public bool fade;
     public float alph;
@@ -37,7 +41,7 @@ public class ToggleArmMenu : MonoBehaviour
         blk = new Texture2D(1, 1);
         blk.SetPixel(0, 0, new Color(0, 0, 0, 0));
         blk.Apply();
-
+        oldBotPos = GameObject.Find("Ant").transform.position;
         bodyNameText.GetComponent<Text>().text = "Minerva";
     }
 
@@ -78,6 +82,18 @@ public class ToggleArmMenu : MonoBehaviour
                 Fire.SetActive(false);
         }
 
+        if (Input.GetKeyDown("1"))
+        {
+            oldMinervaRot = this.transform.rotation;
+            oldMinervaPos = this.transform.position;
+            ChangeToBot();
+        }
+
+        if (Input.GetKeyDown("2"))
+        {
+            oldBotPos = this.transform.position;
+            ChangeToMinerva();
+        }
 
     }
 
@@ -91,13 +107,14 @@ public class ToggleArmMenu : MonoBehaviour
 
         bodyNameText.GetComponent<Text>().text = "Minerva";
 
-        Vector3 MinervaPos = GameObject.Find("Minerva").transform.position;
+        Vector3 MinervaPos = oldMinervaPos;
 
         minervaActive = true;
         antActive = false;
-        rig.GetComponent<CharacterController>().height = 4.4f;
+        rig.GetComponent<CharacterController>().height = 1.76f;
         ant.transform.parent = null;
         rig.transform.position = MinervaPos;
+        rig.transform.rotation = oldMinervaRot;
         minerva.transform.parent = rig.transform;
     }
 
@@ -111,11 +128,11 @@ public class ToggleArmMenu : MonoBehaviour
 
         bodyNameText.GetComponent<Text>().text = "S5-ANT";
 
-        Vector3 AntPos = GameObject.Find("Ant").transform.position;
+        Vector3 AntPos = oldBotPos;
 
         minervaActive = false;
         antActive = true;
-        rig.GetComponent<CharacterController>().height = 0.4f;
+        rig.GetComponent<CharacterController>().height = 0.04f;
         minerva.transform.parent = null;
         rig.transform.position = AntPos;
         ant.transform.parent = rig.transform;
