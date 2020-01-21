@@ -97,7 +97,7 @@ public class ToggleArmMenu : MonoBehaviour
         menuOn = false;
         armMenu.SetActive(menuOn);
 
-        bodyNameText.GetComponent<Text>().text = "Minerva";
+        //bodyNameText.GetComponent<Text>().text = "Minerva";
 
         Vector3 MinervaPos = GameObject.Find("Minerva").transform.position;
 
@@ -117,7 +117,7 @@ public class ToggleArmMenu : MonoBehaviour
         menuOn = false;
         armMenu.SetActive(menuOn);
 
-        bodyNameText.GetComponent<Text>().text = "S5-ANT";
+        //bodyNameText.GetComponent<Text>().text = "S5-ANT";
 
         Vector3 AntPos = GameObject.Find("Ant").transform.position;
 

@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class playerTrigger : MonoBehaviour
 {
-    public GameObject roomNameText;
+    //public GameObject roomNameText;
     public GameObject mainObjective;
     public GameObject curObjective;
     public GameObject subObjective;
-    ObjectiveManager currentObjective;
+    
     string roomName;
+    string objective;
     string subObjectives;
     //public List<ObjectiveManager> objectives ;
 
@@ -18,6 +19,7 @@ public class playerTrigger : MonoBehaviour
     void Start()
     {
         //ObjectiveManager objective = new ObjectiveManager();
+        mainObjective.GetComponent<Text>().text = "Find out what happened to the station.";
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class playerTrigger : MonoBehaviour
 
         }
 
-        roomNameText.GetComponent<Text>().text = roomName;
+        //roomNameText.GetComponent<Text>().text = roomName;
 
     }
 
@@ -80,16 +82,18 @@ public class playerTrigger : MonoBehaviour
 
         if(collision.tag == "Objective")
         {
-
+            ObjectiveManager currentObjective;
             currentObjective = collision.gameObject.GetComponent<ObjectiveManager>();
-            curObjective.GetComponent<Text>().text = currentObjective.objectiveText;
+            currentObjective.isObjectiveActive = !currentObjective.isObjectiveActive;
+            currentObjective.gameObject.SetActive(currentObjective.isObjectiveActive);
+            objective = currentObjective.objectiveText;
 
             int lengthSubObjectives = currentObjective.subObjectives.Count;
 
             for (int i = 0; i < lengthSubObjectives; i++)
             {
 
-                subObjectives = subObjectives + currentObjective.subObjectives[i].objectiveText + '\n';
+                //subObjectives = subObjectives + currentObjective.subObjectives[i].objectiveText + '\n';
                 currentObjective.subObjectives[i].isObjectiveActive = !currentObjective.subObjectives[i].isObjectiveActive;
                 currentObjective.subObjectives[i].gameObject.SetActive(currentObjective.subObjectives[i].isObjectiveActive);
             }
@@ -97,7 +101,33 @@ public class playerTrigger : MonoBehaviour
             //objectiveText.GetComponent<Text>().text = objective;
             //objectives.RemoveAt(0);
 
+            curObjective.GetComponent<Text>().text = currentObjective.objectiveText + '\n' + "      " + subObjectives;
+
         }
+
+        if (collision.tag == "SubObjective")
+        {
+            ObjectiveManager currentObjective;
+            currentObjective = collision.gameObject.GetComponent<ObjectiveManager>();
+            currentObjective.isObjectiveActive = !currentObjective.isObjectiveActive;
+            currentObjective.gameObject.SetActive(currentObjective.isObjectiveActive);
+            subObjectives = "- " + currentObjective.objectiveText;
+
+            int lengthSubObjectives = currentObjective.subObjectives.Count;
+
+            for (int i = 0; i < lengthSubObjectives; i++)
+            {
+
+                //subObjectives = subObjectives + currentObjective.subObjectives[i].objectiveText + '\n';
+                currentObjective.subObjectives[i].isObjectiveActive = !currentObjective.subObjectives[i].isObjectiveActive;
+                currentObjective.subObjectives[i].gameObject.SetActive(currentObjective.subObjectives[i].isObjectiveActive);
+            }
+
+            curObjective.GetComponent<Text>().text = objective + '\n' + "      " + subObjectives;
+
+        }
+
+
 
         /*if (collision.gameObject.tag == "Airlock")
         {

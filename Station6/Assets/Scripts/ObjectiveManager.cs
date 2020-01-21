@@ -9,6 +9,7 @@ public class ObjectiveManager : MonoBehaviour
     public string objectiveText;
     public List<ObjectiveManager> subObjectives;
     public bool isObjectiveActive;
+    public bool isObjectiveComplete;
 
     /*public string ObjectiveName
     {
