@@ -5,11 +5,18 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour
 {
 
+    public enum ObjectiveType
+    {
+        MainObjective, SubObjective, ConditionalObjective
+    }
+
     public string objectiveName;
     public string objectiveText;
-    public List<ObjectiveManager> subObjectives;
+    public List<ObjectiveManager> nextObjectives;
     public bool isObjectiveActive;
     public bool isObjectiveComplete;
+    public ObjectiveType objectiveType;
+   
 
     /*public string ObjectiveName
     {

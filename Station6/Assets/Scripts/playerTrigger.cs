@@ -88,14 +88,14 @@ public class playerTrigger : MonoBehaviour
             currentObjective.gameObject.SetActive(currentObjective.isObjectiveActive);
             objective = currentObjective.objectiveText;
 
-            int lengthSubObjectives = currentObjective.subObjectives.Count;
+            int lengthSubObjectives = currentObjective.nextObjectives.Count;
 
             for (int i = 0; i < lengthSubObjectives; i++)
             {
 
                 //subObjectives = subObjectives + currentObjective.subObjectives[i].objectiveText + '\n';
-                currentObjective.subObjectives[i].isObjectiveActive = !currentObjective.subObjectives[i].isObjectiveActive;
-                currentObjective.subObjectives[i].gameObject.SetActive(currentObjective.subObjectives[i].isObjectiveActive);
+                currentObjective.nextObjectives[i].isObjectiveActive = !currentObjective.nextObjectives[i].isObjectiveActive;
+                currentObjective.nextObjectives[i].gameObject.SetActive(currentObjective.nextObjectives[i].isObjectiveActive);
             }
             //objective = objectives[0].objectiveText;
             //objectiveText.GetComponent<Text>().text = objective;
@@ -113,14 +113,14 @@ public class playerTrigger : MonoBehaviour
             currentObjective.gameObject.SetActive(currentObjective.isObjectiveActive);
             subObjectives = "- " + currentObjective.objectiveText;
 
-            int lengthSubObjectives = currentObjective.subObjectives.Count;
+            int lengthSubObjectives = currentObjective.nextObjectives.Count;
 
             for (int i = 0; i < lengthSubObjectives; i++)
             {
 
                 //subObjectives = subObjectives + currentObjective.subObjectives[i].objectiveText + '\n';
-                currentObjective.subObjectives[i].isObjectiveActive = !currentObjective.subObjectives[i].isObjectiveActive;
-                currentObjective.subObjectives[i].gameObject.SetActive(currentObjective.subObjectives[i].isObjectiveActive);
+                currentObjective.nextObjectives[i].isObjectiveActive = !currentObjective.nextObjectives[i].isObjectiveActive;
+                currentObjective.nextObjectives[i].gameObject.SetActive(currentObjective.nextObjectives[i].isObjectiveActive);
             }
 
             curObjective.GetComponent<Text>().text = objective + '\n' + "      " + subObjectives;

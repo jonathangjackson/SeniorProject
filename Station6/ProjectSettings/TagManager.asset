@@ -12,6 +12,7 @@ TagManager:
   - Generator
   - Objective
   - SubObjective
+  - Interactable
   layers:
   - Default
   - TransparentFX
