@@ -5,7 +5,11 @@ using UnityEngine;
 public class Raycasting : MonoBehaviour
 {
     // Update is called once per frame
+    public Shader interactableShader;
+    Shader defaultShader;
     Material objectMaterial;
+    Material defaultObjMat;
+    GameObject selectedObject;
     void Update()
     {
         RaycastFromOculus();
@@ -33,10 +37,24 @@ public class Raycasting : MonoBehaviour
 
             if (hitObject.tag == "Interactable")
             {
-                objectMaterial = hitObject.GetComponent<MeshRenderer>().material;
+                defaultObjMat = hitObject.GetComponent<MeshRenderer>().material;
+                selectedObject = hitObject;
+                objectMaterial = defaultObjMat;
+                objectMaterial.shader = interactableShader;
                 Debug.Log("Object " + hitObjectName + " was hit.");
 
             }
+            else
+            {
+
+                
+            }
+
+        }
+        else
+        {
+            //selectedObject.GetComponent<MeshRenderer>().material = 
+            selectedObject.GetComponent<MeshRenderer>().material = defaultObjMat;
 
         }
 
