@@ -396,8 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521de5029ebc19f4c99e37e027863d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableShader: {fileID: -6465566751694194690, guid: 7a43900080c4192429143b7822fcae8a,
-    type: 3}
+  highlightMat: {fileID: 2100000, guid: 7e689880e9d1d7a429e66731657a7e7b, type: 2}
 --- !u!1 &1554837346
 GameObject:
   m_ObjectHideFlags: 0

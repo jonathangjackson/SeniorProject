@@ -5,10 +5,11 @@ using UnityEngine;
 public class Raycasting : MonoBehaviour
 {
     // Update is called once per frame
-    public Shader interactableShader;
-    Shader defaultShader;
+    //public Shader interactableShader;
+    //Shader defaultShader;
     Material objectMaterial;
-    Material defaultObjMat;
+    public Material highlightMat;
+    //Material defaultObjMat;
     GameObject selectedObject;
     void Update()
     {
@@ -37,11 +38,25 @@ public class Raycasting : MonoBehaviour
 
             if (hitObject.tag == "Interactable")
             {
-                defaultObjMat = hitObject.GetComponent<MeshRenderer>().material;
-                selectedObject = hitObject;
-                objectMaterial = defaultObjMat;
-                objectMaterial.shader = interactableShader;
-                Debug.Log("Object " + hitObjectName + " was hit.");
+                if(hitObject != selectedObject)
+                {
+                    //Material highlight = new Material(hitObject.GetComponent<Renderer>().material);
+                    //highlight.SetColor("_EmissionColor", Color.yellow);
+                    //hitObject.GetComponent<Renderer>().material = highlight;
+                    //Renderer objectRenderer = hitObject.GetComponent<Renderer>();
+                    //objectRenderer.material.SetColor("_EmissionColor", Color.yellow);
+                    objectMaterial = hitObject.GetComponent<Renderer>().material;
+                    hitObject.GetComponent<Renderer>().material = highlightMat;
+                    
+                    //Debug.Log("Object " + hitObjectName + " was hit.");
+                    selectedObject = hitObject;
+                    Debug.Log("Object " + selectedObject.name + " was hit.");
+
+                }
+
+                //defaultObjMat = hitObject.GetComponent<MeshRenderer>().material;
+                //objectMaterial = defaultObjMat;
+                //objectMaterial.shader = interactableShader;
 
             }
             else
@@ -53,8 +68,16 @@ public class Raycasting : MonoBehaviour
         }
         else
         {
+            if(selectedObject != null)
+            {
+                Debug.Log("No Object being hit");
+                selectedObject.GetComponent<Renderer>().material = objectMaterial;
+                selectedObject = null;
+
+
+            }
             //selectedObject.GetComponent<MeshRenderer>().material = 
-            selectedObject.GetComponent<MeshRenderer>().material = defaultObjMat;
+            //selectedObject.GetComponent<MeshRenderer>().material = defaultObjMat;
 
         }
 
