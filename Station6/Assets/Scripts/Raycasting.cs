@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Raycasting : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Raycasting : MonoBehaviour
     public Material highlightMat;
     //Material defaultObjMat;
     GameObject selectedObject;
+    public GameObject toolTip;
+    public GameObject toolTipText;
+    public Camera centerCam;
+    //ToolTip toolTipText;
     void Update()
     {
         RaycastFromOculus();
@@ -40,31 +45,31 @@ public class Raycasting : MonoBehaviour
             {
                 if(hitObject != selectedObject)
                 {
-                    //Material highlight = new Material(hitObject.GetComponent<Renderer>().material);
-                    //highlight.SetColor("_EmissionColor", Color.yellow);
-                    //hitObject.GetComponent<Renderer>().material = highlight;
-                    //Renderer objectRenderer = hitObject.GetComponent<Renderer>();
-                    //objectRenderer.material.SetColor("_EmissionColor", Color.yellow);
                     objectMaterial = hitObject.GetComponent<Renderer>().material;
                     hitObject.GetComponent<Renderer>().material = highlightMat;
-                    
-                    //Debug.Log("Object " + hitObjectName + " was hit.");
+
                     selectedObject = hitObject;
                     Debug.Log("Object " + selectedObject.name + " was hit.");
 
                 }
-
-                //defaultObjMat = hitObject.GetComponent<MeshRenderer>().material;
-                //objectMaterial = defaultObjMat;
-                //objectMaterial.shader = interactableShader;
-
             }
-            else
+
+            if (hitObject.tag == "ToolTip")
             {
+                if (hitObject != selectedObject)
+                {
+                    objectMaterial = hitObject.GetComponent<Renderer>().material;
+                    hitObject.GetComponent<Renderer>().material = highlightMat;
+                    toolTip.SetActive(true);
+                    toolTip.transform.position = hitObject.transform.position;
 
-                
+                    selectedObject = hitObject;
+                    Debug.Log("Object " + selectedObject.name + " was hit.");
+                }
+
+                toolTip.transform.LookAt(toolTip.transform.position + centerCam.transform.rotation * Vector3.back);
+                toolTipText.GetComponent<Text>().text = hitObject.GetComponent<ToolTip>().toolTipText;
             }
-
         }
         else
         {
@@ -73,12 +78,9 @@ public class Raycasting : MonoBehaviour
                 Debug.Log("No Object being hit");
                 selectedObject.GetComponent<Renderer>().material = objectMaterial;
                 selectedObject = null;
-
+                toolTip.SetActive(false);
 
             }
-            //selectedObject.GetComponent<MeshRenderer>().material = 
-            //selectedObject.GetComponent<MeshRenderer>().material = defaultObjMat;
-
         }
 
         Debug.DrawLine(oculusPos, rayEndPos);

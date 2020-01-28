@@ -13,6 +13,7 @@ TagManager:
   - Objective
   - SubObjective
   - Interactable
+  - ToolTip
   layers:
   - Default
   - TransparentFX
