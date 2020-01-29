@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.041894473, g: 0.039328597, b: 0.04439249, a: 1}
+  m_IndirectSpecularColor: {r: 0.041885167, g: 0.039319653, b: 0.044377856, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -281,7 +281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897035646}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.12507528, y: -3.328, z: -13.268}
+  m_LocalPosition: {x: -0.12507528, y: -3.593, z: -12.959}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1810345609
 Light:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
       propertyPath: m_Name
-      value: FA38_Airborne
+      value: Cockpit_01
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
@@ -646,12 +646,12 @@ PrefabInstance:
     - target: {fileID: 4249233297961924212, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3499543415332853355, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
@@ -661,7 +661,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.89
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 1d5b0becb795956469b877b5e0aa1f3c,
         type: 3}
@@ -737,6 +737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 862616971961133229, guid: 62eabd823e03d1b4099fa0fe918aaa90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 862616971961133225, guid: 62eabd823e03d1b4099fa0fe918aaa90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -750,7 +755,7 @@ PrefabInstance:
     - target: {fileID: 862616971961133225, guid: 62eabd823e03d1b4099fa0fe918aaa90,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.994
+      value: -11.639
       objectReference: {fileID: 0}
     - target: {fileID: 862616971961133225, guid: 62eabd823e03d1b4099fa0fe918aaa90,
         type: 3}
@@ -795,12 +800,12 @@ PrefabInstance:
     - target: {fileID: 862616971961133225, guid: 62eabd823e03d1b4099fa0fe918aaa90,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.104
+      value: -0.147
       objectReference: {fileID: 0}
     - target: {fileID: 862616971961133225, guid: 62eabd823e03d1b4099fa0fe918aaa90,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.96
+      value: -2.991
       objectReference: {fileID: 0}
     - target: {fileID: 862616971961133225, guid: 62eabd823e03d1b4099fa0fe918aaa90,
         type: 3}
