@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1969773244839692619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964352847720448317}
+  - component: {fileID: 1929168457365348627}
+  - component: {fileID: 1930903483755653679}
+  m_Layer: 0
+  m_Name: VrMovement_BasicGrounded
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964352847720448317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969773244839692619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.41, z: 0}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1929168457365348627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969773244839692619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235dc9a61faab8a4e895444fc12c6907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oculusType: 0
+  defaultLeft: 1
+  defaultRight: 2
+  ControlsOn: 2
+  ForwardButton: 32768
+  BackwardButton: 0
+  canMove: 1
+  MovementMode: 6
+  gravityInDebug: 1
+  headIsForward: 1
+  moveSpeed: 0.88
+  PlayerGravity: 100
+  basicAcceleration: 10
+  fadeTime: 0.3
+  yourRig: {fileID: 0}
+  AutoAssignTheRest: 1
+  headRig: {fileID: 0}
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
+  myFade: {fileID: 0}
+  mainMovementOverRide: 0
+--- !u!114 &1930903483755653679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969773244839692619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401ac3434cc95c34491ddb4ddf2c445f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRotate: 1
+  RotateOnHand: 0
+  copyHandFromMain: 1
+  invertHand: 0
+  RotationMode: 1
+  RotateButton: 0
+  fadeRotate: 1
+  rotateDegrees: 25
+  rotateTime: 0
+  slowRotateSpeed: 0.7
+  doubleTapTime: 0.3
