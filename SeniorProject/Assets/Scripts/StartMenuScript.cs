@@ -7,7 +7,7 @@ public class StartMenuScript : MonoBehaviour
 {
     public void PlayButtonHit()
     {
-        SceneManager.LoadScene("TutorialLevel");
+        SceneManager.LoadScene("StartAnimation");
     }
 
     public void QuitButtonHit()
