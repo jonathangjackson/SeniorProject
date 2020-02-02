@@ -315,7 +315,7 @@ public class OvrAvatarSkinnedMeshPBSV2RenderComponent : OvrAvatarRenderComponent
                     ExpressiveParameters.lipSmoothness);
             }
 
-            avatarMaterialManager.ValidateTextures(materialStates);
+            avatarMaterialManager.ValidateTextures();
         }   
     }
 

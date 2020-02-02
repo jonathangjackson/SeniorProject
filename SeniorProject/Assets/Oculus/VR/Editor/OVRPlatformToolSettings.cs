@@ -35,6 +35,21 @@ namespace Assets.Oculus.VR.Editor
 			}
 		}
 
+		public static string AppToken
+		{
+			get
+			{
+				return Instance.targetPlatform < OVRPlatformTool.TargetPlatform.None ? Instance.appTokens[(int)Instance.targetPlatform] : "";
+			}
+			set
+			{
+				if (Instance.targetPlatform < OVRPlatformTool.TargetPlatform.None)
+				{
+					Instance.appTokens[(int)Instance.targetPlatform] = value;
+				}
+			}
+		}
+
 		public static string ReleaseNote
 		{
 			get
@@ -199,6 +214,9 @@ namespace Assets.Oculus.VR.Editor
 
 		[SerializeField]
 		private string[] appIDs = new string[(int)OVRPlatformTool.TargetPlatform.None];
+
+		[SerializeField]
+		private string[] appTokens = new string[(int)OVRPlatformTool.TargetPlatform.None];
 
 		[SerializeField]
 		private string[] releaseNotes = new string[(int)OVRPlatformTool.TargetPlatform.None];

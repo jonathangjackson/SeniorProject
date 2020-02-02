@@ -198,7 +198,7 @@ partial class OculusBuildApp : EditorWindow
 		buildFailed = true;
 	}
 
-	[MenuItem("Oculus/OVR Build/OVR Build APK And Run %k", false, 20)]
+	[MenuItem("Oculus/OVR Build And Run", false, 10)]
 	static void StartBuildAndRun()
 	{
 		EditorWindow.GetWindow(typeof(OculusBuildApp));
@@ -248,7 +248,7 @@ partial class OculusBuildApp : EditorWindow
 			gradlePath = OVRConfig.Instance.GetGradlePath();
 			jdkPath = OVRConfig.Instance.GetJDKPath();
 			androidSdkPath = OVRConfig.Instance.GetAndroidSDKPath();
-			applicationIdentifier = PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android);
+			applicationIdentifier = PlayerSettings.applicationIdentifier;
 			productName = Application.productName;
 			dataPath = Application.dataPath;
 

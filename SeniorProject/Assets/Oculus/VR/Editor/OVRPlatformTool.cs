@@ -33,7 +33,6 @@ namespace Assets.Oculus.VR.Editor
 		private static bool activeProcess = false;
 		private static bool ranSelfUpdate = false;
 		private static int retryCount = 0;
-		private static string appToken;
 
 		private const float buttonPadding = 5.0f;
 
@@ -130,7 +129,7 @@ namespace Assets.Oculus.VR.Editor
 				// App Token
 				GUIContent AppTokenLabel = new GUIContent("Oculus App Token [?]: ",
 					"You can get your app token from your app's Oculus API Dashboard.");
-				appToken = MakePasswordBox(AppTokenLabel, appToken);
+				OVRPlatformToolSettings.AppToken = MakePasswordBox(AppTokenLabel, OVRPlatformToolSettings.AppToken);
 
 				// Release Channel
 				GUIContent ReleaseChannelLabel = new GUIContent("Release Channel [?]: ",
@@ -663,8 +662,8 @@ namespace Assets.Oculus.VR.Editor
 			command += " --app-id \"" + OVRPlatformToolSettings.AppID + "\"";
 
 			// Add App Token
-			ValidateTextField(GenericFieldValidator, appToken, "App Token", ref success);
-			command += " --app-secret \"" + appToken + "\"";
+			ValidateTextField(GenericFieldValidator, OVRPlatformToolSettings.AppToken, "App Token", ref success);
+			command += " --app-secret \"" + OVRPlatformToolSettings.AppToken + "\"";
 
 			// Add Platform specific fields
 			if (targetPlatform == TargetPlatform.Rift)
@@ -1043,8 +1042,7 @@ namespace Assets.Oculus.VR.Editor
 
 		private static IEnumerator ProvisionPlatformUtil(string dataPath)
 		{
-			UnityEngine.Debug.Log("Started Provisioning Oculus Platform Util");
-#if UNITY_2018_3_OR_NEWER
+#if UNITY_2019_1_OR_NEWER
 			var webRequest = new UnityWebRequest(urlPlatformUtil, UnityWebRequest.kHttpVerbGET);
 			string path = dataPath;
 			webRequest.downloadHandler = new DownloadHandlerFile(path);
@@ -1067,6 +1065,7 @@ namespace Assets.Oculus.VR.Editor
 #else
 			using (WWW www = new WWW(urlPlatformUtil))
 			{
+				UnityEngine.Debug.Log("Started Provisioning Oculus Platform Util");
 				float timer = 0;
 				float timeOut = 60;
 				yield return www;

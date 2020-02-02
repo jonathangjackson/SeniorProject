@@ -708,9 +708,9 @@ public struct ovrAvatarGazeTarget
 
 struct ovrAvatarGazeTarget_Offsets
 {
-    public static Int32 id = 0;
-    public static Int32 worldPosition = Marshal.SizeOf(typeof(UInt32));
-    public static Int32 type = worldPosition + Marshal.SizeOf(typeof(Vector3));
+    public static Int32 id = Marshal.OffsetOf(typeof(ovrAvatarGazeTarget), "id").ToInt32();
+    public static long worldPosition = Marshal.OffsetOf(typeof(ovrAvatarGazeTarget), "worldPosition").ToInt64();
+    public static long type = Marshal.OffsetOf(typeof(ovrAvatarGazeTarget), "type").ToInt32();
 };
 
 public struct ovrAvatarGazeTargets
@@ -723,9 +723,7 @@ public struct ovrAvatarGazeTargets
 struct ovrAvatarGazeTargets_Offsets
 {
     public static Int32 targetCount = Marshal.OffsetOf(typeof(ovrAvatarGazeTargets), "targetCount").ToInt32();
-    // Bug with Marshal.OffsetOf is returning an incorrect offset, causing an off by 1 float issue in the targets
-    //public static long targets = Marshal.OffsetOf(typeof(ovrAvatarGazeTargets), "targets").ToInt64();
-    public static long targets = Marshal.SizeOf(typeof(UInt32));
+    public static long targets = Marshal.OffsetOf(typeof(ovrAvatarGazeTargets), "targets").ToInt64();
 };
 
 // This needs to be the csharp equivalent of ovrAvatarLightType in OVR_AvatarInternal.h

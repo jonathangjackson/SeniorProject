@@ -282,25 +282,7 @@ public class OvrAvatarMaterialManager : MonoBehaviour
         return ovrAvatarBodyPartType.Count;
     }
 
-    UInt64 GetTextureIDForType(ovrAvatarPBSMaterialState materialState, TextureType type)
-    {
-        if (type == TextureType.DiffuseTextures)
-        {
-            return materialState.albedoTextureID;
-        }
-        else if (type == TextureType.NormalMaps)
-        {
-            return materialState.normalTextureID;
-        }
-        else if (type == TextureType.RoughnessMaps)
-        {
-            return materialState.metallicnessTextureID;
-        }
-
-        return 0;
-    }
-
-    public void ValidateTextures(ovrAvatarPBSMaterialState[] materialStates)
+    public void ValidateTextures()
     {
         var props = LocalAvatarConfig.ComponentMaterialProperties;
 
@@ -337,13 +319,9 @@ public class OvrAvatarMaterialManager : MonoBehaviour
                         + ((TextureType)textureIndex).ToString()
                         + " "
                         + props[propIndex - 1].Textures[textureIndex].height
-                        + " (ID: "
-                        + GetTextureIDForType(materialStates[propIndex - 1], (TextureType)textureIndex)
-                        + ") vs "
+                        + " vs "
                         + props[propIndex].Textures[textureIndex].height
-                        + " (ID: "
-                        + GetTextureIDForType(materialStates[propIndex], (TextureType)textureIndex)
-                        + ") Ensure you are using ASTC texture compression on Android or turn off CombineMeshes");
+                        + " Ensure you are using ASTC texture compression on Android or turn off CombineMeshes");
                 }
 
                 if (props[propIndex - 1].Textures[textureIndex].format
@@ -353,15 +331,7 @@ public class OvrAvatarMaterialManager : MonoBehaviour
                         props[propIndex].TypeIndex.ToString()
                         + " Mismatching Formats: "
                         + ((TextureType)textureIndex).ToString()
-                        + " "
-                        + props[propIndex - 1].Textures[textureIndex].format
-                        + " (ID: "
-                        + GetTextureIDForType(materialStates[propIndex - 1], (TextureType)textureIndex)
-                        + ") vs "
-                        + props[propIndex].Textures[textureIndex].format
-                        + " (ID: "
-                        + GetTextureIDForType(materialStates[propIndex], (TextureType)textureIndex)
-                        + ") Ensure you are using ASTC texture compression on Android or turn off CombineMeshes");
+                        + " Ensure you are using ASTC texture compression on Android or turn off CombineMeshes");
                 }
             }
         }
