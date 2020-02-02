@@ -67,12 +67,15 @@
 
 						}
 
-						float depth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, input.uv);
+						float depth =  SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, input.uv);
 						float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
 						float grey = ((color.x + color.y + color.z) / 3.0f);
 
+						//depth = Linear01Depth(depth);
+
 						if (depth >= _ProjectionParams.z)
 							return color;
+
 						if (_WaveActive == 1.0) {
 
 							float waveFront = step(depth, _WaveDistance);

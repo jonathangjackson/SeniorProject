@@ -17,7 +17,7 @@ public class SonarWave : MonoBehaviour
     // Update is called once per fra.me
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Three)) 
+        if (OVRInput.GetDown(OVRInput.Button.Four)) 
         {
             if (!on)
             {

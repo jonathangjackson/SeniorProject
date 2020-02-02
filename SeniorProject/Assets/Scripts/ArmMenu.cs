@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
+using UnityEngine.UI;
 using OVR;
 
 public class ArmMenu : MonoBehaviour
@@ -9,6 +11,13 @@ public class ArmMenu : MonoBehaviour
     public GameObject minerva;
     public GameObject ant;
     public GameObject rig;
+    public GameObject leftIK;
+    public GameObject rightIK;
+    public GameObject parentObj;
+    public GameObject rightElbowObj;
+    private Vector3 originalPos;
+    private Vector3 originalRot;
+
 
     //Input for Ant Placement
     public GameObject antHologram;
@@ -23,7 +32,8 @@ public class ArmMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        originalPos = this.GetComponent<RectTransform>().localPosition;
+        originalRot = this.GetComponent<RectTransform>().localEulerAngles;
     }
 
     // Update is called once per frame
@@ -44,7 +54,7 @@ public class ArmMenu : MonoBehaviour
             {
                 placeBot();
                 antLineRender.enabled = false;
-                antHologram.SetActive(false);
+                //antHologram.SetActive(false);
                 placeAnt = false;
             }
             //and On Button Press  place Ant
@@ -67,15 +77,23 @@ public class ArmMenu : MonoBehaviour
     {
         Vector3 AntPos = antHologram.transform.position;
 
-        rig.GetComponent<CharacterController>().height = 0.4f;
-        /*
-        minervaActive = false;
-        antActive = true;
+        leftIK.GetComponent<InverseKinematics>().enabled = false;
+        rightIK.GetComponent<InverseKinematics>().enabled = false;
+        minerva.GetComponent<PositionConstraint>().enabled = false;
         minerva.transform.parent = null;
-        rig.transform.position = AntPos;
-        ant.transform.parent = rig.transform;*/
-    }
 
+        rig.GetComponent<CharacterController>().height = 0.4f;
+        rig.transform.position = AntPos;
+
+        ant.GetComponent<LookAtConstraint>().enabled = false;
+        ant.transform.parent = parentObj.transform;
+        ant.transform.localPosition = new Vector3(0, 0, 0);
+        this.transform.parent = ant.transform;
+        //this.transform.position = new Vector3(17, 12.3f, -80.9f);
+        this.GetComponent<RectTransform>().localPosition = new Vector3(17, 12.3f, -80.9f);
+
+        this.GetComponent<RectTransform>().localEulerAngles = new Vector3(0, -180, 0);
+    }
     private void activateBotPlacement()
     {
 
@@ -103,14 +121,33 @@ public class ArmMenu : MonoBehaviour
         else
         {
             antLineRender.enabled = false;
-            antHologram.SetActive(false);
+            //antHologram.SetActive(false);
         }
     }
 
 
     public void swapToMinerva()
     {
-        Debug.Log("Swap Minerva");
+        Vector3 MinervaPos = minerva.transform.position;
+
+        ant.transform.parent = null;
+
+        rig.GetComponent<CharacterController>().height = 0.9f;
+        rig.transform.position = MinervaPos;
+
+        ant.GetComponent<LookAtConstraint>().enabled = true;
+        minerva.transform.parent = parentObj.transform;
+        minerva.transform.localEulerAngles = new Vector3(0, 0, 0);
+        //ant.transform.position = new Vector3(0, 0, 0);
+
+
+        leftIK.GetComponent<InverseKinematics>().enabled = true;
+        rightIK.GetComponent<InverseKinematics>().enabled = true;
+        minerva.GetComponent<PositionConstraint>().enabled = true;
+
+        this.transform.parent = rightElbowObj.transform;
+        this.GetComponent<RectTransform>().localPosition = originalPos;
+        this.GetComponent<RectTransform>().localEulerAngles = originalRot;
     }
 
     public void openTools()
