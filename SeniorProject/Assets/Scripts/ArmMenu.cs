@@ -41,6 +41,7 @@ public class ArmMenu : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.Button.Three))
         {
+
             menuOn = !menuOn;
             transform.GetChild(0).gameObject.SetActive(menuOn);
         }
@@ -75,6 +76,7 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
+
         Vector3 AntPos = antHologram.transform.position;
 
         leftIK.GetComponent<InverseKinematics>().enabled = false;
@@ -82,8 +84,12 @@ public class ArmMenu : MonoBehaviour
         minerva.GetComponent<PositionConstraint>().enabled = false;
         minerva.transform.parent = null;
 
-        rig.GetComponent<CharacterController>().height = 0.4f;
-        rig.transform.position = AntPos;
+        rig.GetComponent<CharacterController>().height = 0.1f;
+        Debug.Log(rig.transform.position);
+        //rig.transform.localPosition = (new Vector3(0, 0, 0));//
+        transform.Translate(Time.deltaTime, 0, 0, Camera.main.transform);
+        // rig.transform.position = (new Vector3(0, 0, 0));//
+        Debug.Log(rig.transform.position);
 
         ant.GetComponent<LookAtConstraint>().enabled = false;
         ant.transform.parent = parentObj.transform;
