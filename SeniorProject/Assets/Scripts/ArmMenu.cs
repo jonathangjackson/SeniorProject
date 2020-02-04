@@ -81,6 +81,8 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
+
+        placeAnt = true;
         //Turn on touch controllers
         leftController.SetActive(true);
         rightController.SetActive(true);
@@ -103,10 +105,10 @@ public class ArmMenu : MonoBehaviour
         ant.transform.localPosition = new Vector3(0, 0, 0);
         this.transform.parent = ant.transform;
         //this.transform.position = new Vector3(17, 12.3f, -80.9f);
-        this.GetComponent<RectTransform>().localPosition = new Vector3(17, 12.3f, -80.9f);
+        this.GetComponent<RectTransform>().localPosition = new Vector3(17, 12.3f, -100.9f);
 
         this.GetComponent<RectTransform>().localEulerAngles = new Vector3(0, -180, 0);
-        coroutine = WaitAndPrint(2.0f);
+        coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
     }
     private IEnumerator WaitAndPrint(float waitTime)
@@ -177,6 +179,9 @@ public class ArmMenu : MonoBehaviour
         this.transform.parent = rightElbowObj.transform;
         this.GetComponent<RectTransform>().localPosition = originalPos;
         this.GetComponent<RectTransform>().localEulerAngles = originalRot;
+
+        coroutine = WaitAndPrint(0.1f);
+        StartCoroutine(coroutine);
     }
 
     public void openTools()
