@@ -19,6 +19,8 @@ using DG.Tweening;
 
 public class VRMovementOculus : MonoBehaviour
 {
+    public bool minerSwitchOn = false;
+
 
     public enum eControllerType { Left,Right,Both };
 
@@ -153,7 +155,7 @@ public class VRMovementOculus : MonoBehaviour
             if(MovementMode == eMovementMode.Flight || MovementMode == eMovementMode.Grounded)
             {
                 MoveInputSystem();
-                if(MovementMode == eMovementMode.Grounded)
+                if(MovementMode == eMovementMode.Grounded && !minerSwitchOn)
                 {
                     ApplyGravity();
                 }

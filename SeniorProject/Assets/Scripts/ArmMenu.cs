@@ -7,7 +7,9 @@ using OVR;
 
 public class ArmMenu : MonoBehaviour
 {
+    private IEnumerator coroutine;
     //Positions
+    public GameObject VRMovement;
     public GameObject minerva;
     public GameObject ant;
     public GameObject rig;
@@ -74,10 +76,12 @@ public class ArmMenu : MonoBehaviour
 
     }
 
+
     private void placeBot()
     {
 
         Vector3 AntPos = antHologram.transform.position;
+        AntPos = new Vector3(AntPos.x, AntPos.y + 1.0f, AntPos.z);
 
         leftIK.GetComponent<InverseKinematics>().enabled = false;
         rightIK.GetComponent<InverseKinematics>().enabled = false;
@@ -85,11 +89,9 @@ public class ArmMenu : MonoBehaviour
         minerva.transform.parent = null;
 
         rig.GetComponent<CharacterController>().height = 0.1f;
-        Debug.Log(rig.transform.position);
-        //rig.transform.localPosition = (new Vector3(0, 0, 0));//
-        transform.Translate(Time.deltaTime, 0, 0, Camera.main.transform);
-        // rig.transform.position = (new Vector3(0, 0, 0));//
-        Debug.Log(rig.transform.position);
+        VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
+        rig.transform.position = AntPos;//
+        
 
         ant.GetComponent<LookAtConstraint>().enabled = false;
         ant.transform.parent = parentObj.transform;
@@ -99,7 +101,16 @@ public class ArmMenu : MonoBehaviour
         this.GetComponent<RectTransform>().localPosition = new Vector3(17, 12.3f, -80.9f);
 
         this.GetComponent<RectTransform>().localEulerAngles = new Vector3(0, -180, 0);
+        coroutine = WaitAndPrint(2.0f);
+        StartCoroutine(coroutine);
     }
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
+
+    }
+
     private void activateBotPlacement()
     {
 
@@ -139,7 +150,10 @@ public class ArmMenu : MonoBehaviour
         ant.transform.parent = null;
 
         rig.GetComponent<CharacterController>().height = 0.9f;
+
+        VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = MinervaPos;
+        //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
 
         ant.GetComponent<LookAtConstraint>().enabled = true;
         minerva.transform.parent = parentObj.transform;
