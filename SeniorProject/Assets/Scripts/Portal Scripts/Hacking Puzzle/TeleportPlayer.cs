@@ -17,7 +17,7 @@ public class TeleportPlayer : MonoBehaviour
             VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
             thePlayer.transform.position = teleportTarget.transform.position;
             Debug.Log("test");
-            coroutine = WaitAndPrint(2.0f);
+            coroutine = WaitAndPrint(1.0f);
             StartCoroutine(coroutine);
         }
     }

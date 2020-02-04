@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class PuzzleState : MonoBehaviour
 {
-    public GameObject greenLight, redLight, blueLight;
+    public GameObject greenLight, redLight, blueLight, congratsLight;
+
+    public float time;
+
+    private IEnumerator coroutine;
+    public Transform teleportTarget;
+    public GameObject thePlayer;
+    public GameObject VRMovement;
+
+    public GameObject hackingButton, doorLeft, doorRight, doorLeft2, doorRight2;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +26,33 @@ public class PuzzleState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (greenLight.activeInHierarchy == true && redLight.activeInHierarchy == true && blueLight.activeInHierarchy == true)
+        {
+            //congratsLight.SetActive(true);
+            hackingButton.SetActive(false);
+            doorLeft.SetActive(false);
+            doorRight.SetActive(false);
+            doorLeft2.SetActive(false);
+            doorRight2.SetActive(false);
+            //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;                
+            coroutine = WaitAndPrint(2.0f);
+            StartCoroutine(coroutine);
+            time -= Time.deltaTime;
+            if (time < 0)
+            {
+                greenLight.SetActive(false);
+                redLight.SetActive(false);
+                blueLight.SetActive(false);
+            }
+            
+        }        
+    }
+
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
+        thePlayer.transform.position = teleportTarget.transform.position;
+
     }
 }

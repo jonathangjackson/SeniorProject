@@ -27,6 +27,8 @@ public class ArmMenu : MonoBehaviour
     public GameObject indexPos;
     public GameObject rightAnchor;
 
+    public GameObject leftController, rightController;
+
     private bool menuOn = false;
     private bool placeAnt = false;
 
@@ -79,6 +81,9 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
+        //Turn on touch controllers
+        leftController.SetActive(true);
+        rightController.SetActive(true);
 
         Vector3 AntPos = antHologram.transform.position;
         AntPos = new Vector3(AntPos.x, AntPos.y + 1.0f, AntPos.z);
@@ -145,6 +150,10 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
+
+        leftController.SetActive(false);
+        rightController.SetActive(false);
+
         Vector3 MinervaPos = minerva.transform.position;
 
         ant.transform.parent = null;
