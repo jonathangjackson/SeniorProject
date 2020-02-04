@@ -10,6 +10,7 @@ TagManager:
   - Airlock
   - StorageRoom
   - Generator
+  - HackingButton
   layers:
   - Default
   - TransparentFX
