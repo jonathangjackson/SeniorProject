@@ -24,8 +24,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _WaveActive: 0
-    - _WaveDistance: 0.3
+    - _WaveActive: 1
+    - _WaveDistance: 0.1570704
     - _WaveTrail: 0.02
     m_Colors:
     - _WaveColor: {r: 0, g: 0.867609, b: 1, a: 100}

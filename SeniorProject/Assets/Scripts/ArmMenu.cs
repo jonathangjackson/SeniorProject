@@ -81,7 +81,7 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
-
+        parentObj.GetComponent<Camera>().nearClipPlane = 1.0f;
         placeAnt = true;
         //Turn on touch controllers
         leftController.SetActive(true);
@@ -152,6 +152,7 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
+        parentObj.GetComponent<Camera>().nearClipPlane = 0.01f;
 
         leftController.SetActive(false);
         rightController.SetActive(false);
