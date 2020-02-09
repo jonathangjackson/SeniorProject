@@ -15,8 +15,9 @@ public class ArmMenu : MonoBehaviour
     public GameObject rig;
     public GameObject leftIK;
     public GameObject rightIK;
-    public GameObject parentObj;
+    public GameObject centerEyeCamera;
     public GameObject rightElbowObj;
+    public GameObject trackingSpace;
     private Vector3 originalPos;
     private Vector3 originalRot;
 
@@ -59,7 +60,7 @@ public class ArmMenu : MonoBehaviour
             {
                 placeBot();
                 antLineRender.enabled = false;
-                //antHologram.SetActive(false);
+                //antHologram.SetActive(false); 
                 placeAnt = false;
             }
             //and On Button Press  place Ant
@@ -81,7 +82,7 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
-        parentObj.GetComponent<Camera>().nearClipPlane = 1.0f;
+        //centerEyeCamera.GetComponent<Camera>().nearClipPlane = 1.0f;
         placeAnt = true;
         //Turn on touch controllers
         leftController.SetActive(true);
@@ -101,13 +102,17 @@ public class ArmMenu : MonoBehaviour
         
 
         ant.GetComponent<LookAtConstraint>().enabled = false;
-        ant.transform.parent = parentObj.transform;
-        ant.transform.localPosition = new Vector3(0, 0, 0);
+        //ant.transform.parent = centerEyeCamera.transform;
+        ant.GetComponent<PositionConstraint>().constraintActive = true;
+        ant.transform.position = new Vector3(ant.transform.position.x, ant.transform.position.y, ant.transform.position.z);
+        ant.transform.localEulerAngles = new Vector3(0, 90, 0);
         this.transform.parent = ant.transform;
         //this.transform.position = new Vector3(17, 12.3f, -80.9f);
         this.GetComponent<RectTransform>().localPosition = new Vector3(17, 12.3f, -100.9f);
 
         this.GetComponent<RectTransform>().localEulerAngles = new Vector3(0, -180, 0);
+
+        trackingSpace.transform.localPosition = new Vector3(0, -0.719f, 0);
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
     }
@@ -152,7 +157,7 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
-        parentObj.GetComponent<Camera>().nearClipPlane = 0.01f;
+        centerEyeCamera.GetComponent<Camera>().nearClipPlane = 0.01f;
 
         leftController.SetActive(false);
         rightController.SetActive(false);
@@ -161,14 +166,14 @@ public class ArmMenu : MonoBehaviour
 
         ant.transform.parent = null;
 
-        rig.GetComponent<CharacterController>().height = 0.9f;
+        rig.GetComponent<CharacterController>().height = 1.9f;
 
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = MinervaPos;
         //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
 
         ant.GetComponent<LookAtConstraint>().enabled = true;
-        minerva.transform.parent = parentObj.transform;
+        minerva.transform.parent = rig.transform;
         minerva.transform.localEulerAngles = new Vector3(0, 0, 0);
         //ant.transform.position = new Vector3(0, 0, 0);
 
@@ -180,6 +185,7 @@ public class ArmMenu : MonoBehaviour
         this.transform.parent = rightElbowObj.transform;
         this.GetComponent<RectTransform>().localPosition = originalPos;
         this.GetComponent<RectTransform>().localEulerAngles = originalRot;
+        trackingSpace.transform.localPosition = new Vector3(0, 0, 0);
 
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);

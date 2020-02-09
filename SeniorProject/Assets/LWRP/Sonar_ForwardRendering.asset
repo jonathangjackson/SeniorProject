@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: Sonar
   m_EditorClassIdentifier: 
   settings:
-    Event: 300
+    Event: 600
     blitMaterial: {fileID: 2100000, guid: 26178ccd6a117ef488deb06e54f82618, type: 2}
     blitMaterialPassIndex: 0
     destination: 0

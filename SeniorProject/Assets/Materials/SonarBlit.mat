@@ -19,13 +19,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _DepthTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _WaveActive: 1
-    - _WaveDistance: 0.1570704
-    - _WaveTrail: 0.02
+    - _WaveActive: 0
+    - _WaveAlpha: 1
+    - _WaveDistance: 0
+    - _WaveTrail: 1.1
     m_Colors:
-    - _WaveColor: {r: 0, g: 0.867609, b: 1, a: 100}
+    - _WaveColor: {r: 0, g: 0.8666668, b: 1, a: 1}

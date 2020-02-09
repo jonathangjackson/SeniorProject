@@ -1,99 +1,104 @@
 ﻿Shader "Unlit/Sonar"
 {
-	Properties
-	{
-		_MainTex("Texture", 2D) = "white" {}
+    Properties
+    {
+        _MainTex ("Texture", 2D) = "white" {}
+		
+        [Header(Wave)]
 		_WaveActive("Activate Wave", Float) = 0.0
-		_WaveDistance("Wave Distance", Float) = 1.0
-		_WaveTrail("Wave Trail", Float) = 1.0
-		_WaveColor("Wave Color", Color) = (0.0, 0.0, 0.0, 100.0)
-	}
-		SubShader
-		{
-			Tags { "RenderType" = "Opaque" }
-			LOD 200
-
-			Pass
-			{
-				HLSLPROGRAM
-					#include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/SurfaceInput.hlsl"
-					#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
-
-					TEXTURE2D(_CameraDepthTexture);
-					SAMPLER(sampler_CameraDepthTexture);
-
-					TEXTURE2D(_MainTex);
-					SAMPLER(sampler_MainTex);
-
-					float _WaveDistance;
-					float _WaveTrail;
-					float4 _WaveColor;
-					float _WaveActive;
-
-
-					struct Attributes
-					{
-						float4 positionOS       : POSITION;
-						float2 uv               : TEXCOORD0;
-					};
-
-					struct Varyings
-					{
-						float2 uv        : TEXCOORD0;
-						float4 vertex : SV_POSITION;
-						UNITY_VERTEX_OUTPUT_STEREO
-					};
-
-					Varyings vert(Attributes input)
-					{
-						Varyings output = (Varyings)0;
-						UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
-
-						VertexPositionInputs vertexInput = GetVertexPositionInputs(input.positionOS.xyz);
-						output.vertex = vertexInput.positionCS;
-						output.uv = input.uv;
-						return output;
-					}
-
-					half4 frag(Varyings input) : SV_Target
-					{
-						//UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
-						float4 scaleOffset = unity_StereoScaleOffset[unity_StereoEyeIndex];
-
-						if (scaleOffset.x > 0) {
-
-							input.uv.x /= 2;
-							input.uv.x += scaleOffset.z;
-
-						}
-
-						float depth =  SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, input.uv);
-						float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, input.uv);
-						float grey = ((color.x + color.y + color.z) / 3.0f);
-
-						//depth = Linear01Depth(depth);
-
-						if (depth >= _ProjectionParams.z)
-							return color;
-
-						if (_WaveActive == 1.0) {
-
-							float waveFront = step(depth, _WaveDistance);
-
-							float waveTrail = smoothstep(_WaveDistance - _WaveTrail, _WaveDistance, depth);
-							float wave = waveFront * waveTrail;
-							color = (grey, grey, grey, color.z);
-
-							float4 outCOl = lerp(color, _WaveColor, wave);
-							return outCOl;//col * s
-						}
-						else
-							return color;
-					}
-
-					#pragma vertex vert
-					#pragma fragment frag
-				ENDHLSL
-			}
+		_WaveAlpha("Wave Alpha", Float) = 0.0
+        _WaveDistance ("Distance from player", float) = 10
+        _WaveTrail ("Length of the trail", Range(0,5)) = 1
+        _WaveColor ("Color", Color) = (1,0,0,1)
+    }
+    SubShader
+    {
+        Tags { 
+			"Queue" = "Transparent"
+			"RenderType" = "Opaque" 
 		}
+		
+		ZTest Always
+		Blend One One
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // make fog work
+            #pragma multi_compile_fog
+
+            #include "UnityCG.cginc"
+			 
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float4 vertex : SV_POSITION;
+            };
+
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+			
+            sampler2D _CameraDepthTexture;
+			float _WaveActive;
+			float _WaveDistance;
+            float _WaveTrail;
+            float _WaveAlpha;
+            float4 _WaveColor;
+
+            v2f vert (appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+				
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+
+                UNITY_TRANSFER_FOG(o,o.vertex);
+				o.uv = UnityStereoTransformScreenSpaceTex(v.uv);
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+				fixed4 source = tex2D(_MainTex, i.uv);
+				fixed4 col = source;
+
+				if(_WaveActive == 1.0f){
+					float depthVal = tex2D(_CameraDepthTexture, i.uv).r;
+					//linear depth between camera and far clipping plane
+					depthVal = Linear01Depth(depthVal);
+					//depth as distance from camera in units 
+					depthVal = depthVal * _ProjectionParams.z;
+
+					//get source color
+					//skip wave and return source color if we're at the skybox
+					if(depthVal >= _ProjectionParams.z)
+						return source;
+
+					//calculate wave
+					//_WaveColor = (_WaveColor.x, _WaveColor.y, _WaveColor.z, _WaveColor.w * _WaveAlpha); 
+					float waveFront = step(depthVal, _WaveDistance);
+					float waveTrail = smoothstep(_WaveDistance - _WaveTrail, _WaveDistance, depthVal);
+					float wave = waveFront * waveTrail;
+
+					//mix wave into source color
+					col = lerp(source, _WaveColor, wave);
+				}
+                return _WaveColor;
+            }
+            ENDCG
+        }
+    }
+	
+
+
 }
