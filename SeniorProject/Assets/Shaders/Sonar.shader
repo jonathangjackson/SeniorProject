@@ -3,7 +3,7 @@
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-		
+
         [Header(Wave)]
 		_WaveActive("Activate Wave", Float) = 0.0
 		_WaveAlpha("Wave Alpha", Float) = 0.0
@@ -14,12 +14,12 @@
     SubShader
     {
         Tags { 
-			"Queue" = "Transparent"
+			//"Queue" = "Transparent"
 			"RenderType" = "Opaque" 
 		}
 		
 		ZTest Always
-		Blend One One
+		//Blend One One
 
         Pass
         {
@@ -78,7 +78,6 @@
 					depthVal = Linear01Depth(depthVal);
 					//depth as distance from camera in units 
 					depthVal = depthVal * _ProjectionParams.z;
-
 					//get source color
 					//skip wave and return source color if we're at the skybox
 					if(depthVal >= _ProjectionParams.z)
@@ -92,8 +91,9 @@
 
 					//mix wave into source color
 					col = lerp(source, _WaveColor, wave);
+					return col;
 				}
-                return _WaveColor;
+                return col;
             }
             ENDCG
         }
