@@ -13,7 +13,8 @@ public class PuzzleState : MonoBehaviour
     public GameObject thePlayer;
     public GameObject VRMovement;
 
-    public GameObject hackingButton, doorLeft, doorRight, doorLeft2, doorRight2;
+    public GameObject hackingButton, doorLeft, doorRight, doorLeft2, doorRight2, fadeObject2, PostProcessingVolume, checkMark01, checkMark02;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class PuzzleState : MonoBehaviour
             doorRight.SetActive(false);
             doorLeft2.SetActive(false);
             doorRight2.SetActive(false);
+            checkMark01.SetActive(true);
+            checkMark02.SetActive(true);
             //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;                
             coroutine = WaitAndPrint(2.0f);
             StartCoroutine(coroutine);
@@ -43,6 +46,7 @@ public class PuzzleState : MonoBehaviour
                 greenLight.SetActive(false);
                 redLight.SetActive(false);
                 blueLight.SetActive(false);
+                PostProcessingVolume.SetActive(true);
             }
             
         }        
@@ -53,6 +57,8 @@ public class PuzzleState : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
         thePlayer.transform.position = teleportTarget.transform.position;
+        fadeObject2.SetActive(true);
+
 
     }
 }

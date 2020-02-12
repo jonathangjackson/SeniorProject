@@ -44,6 +44,8 @@ public class OVRScreenFade : MonoBehaviour
 
     public float currentAlpha { get; private set; }
 
+    public GameObject fadeObject;
+
 	void Awake()
 	{
 		// create the fade material
@@ -128,7 +130,17 @@ public class OVRScreenFade : MonoBehaviour
         }
     }
 
-	void OnEnable()
+    private void Update()
+    {
+        if (fadeObject.activeInHierarchy == true)
+        {
+            StartCoroutine(Fade(1, 0));
+        }
+        fadeObject.SetActive(false);
+        
+    }
+
+    void OnEnable()
 	{
 		if (!fadeOnStart)
 		{
@@ -201,4 +213,9 @@ public class OVRScreenFade : MonoBehaviour
 			fadeRenderer.enabled = isFading;
         }
     }
+}
+
+public class TeleportPlayer
+{
+    internal bool fadeToHack;
 }

@@ -8,6 +8,8 @@ public class TeleportPlayer : MonoBehaviour
     public Transform teleportTarget;
     public GameObject thePlayer;
     public GameObject VRMovement;
+    public GameObject fadeObject1;
+    public GameObject PostProcessingVolume;
 
     void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,8 @@ public class TeleportPlayer : MonoBehaviour
             Debug.Log("test");
             coroutine = WaitAndPrint(1.0f);
             StartCoroutine(coroutine);
+            fadeObject1.SetActive(true);
+            PostProcessingVolume.SetActive(false);
         }
     }
 
