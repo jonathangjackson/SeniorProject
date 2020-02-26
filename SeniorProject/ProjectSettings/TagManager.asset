@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ToolTip
   - HackingButton
+  - AR
   layers:
   - Default
   - TransparentFX

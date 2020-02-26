@@ -36,6 +36,9 @@ public class SonarWave : MonoBehaviour
                 sonarMat.SetFloat("_WaveActive", 1.0f);
                 arPlaneTrigger.transform.eulerAngles = new Vector3(-90, this.transform.eulerAngles.y - 90.0f, 90);
                 arPlaneTrigger.transform.position = this.transform.position;
+                //arPlaneTrigger.transform.localPosition = new Vector3(arPlaneTrigger.transform.localPosition.x, arPlaneTrigger.transform.localPosition.y + 2.0f, arPlaneTrigger.transform.localPosition.z);
+                arPlaneTrigger.GetComponent<BoxCollider>().transform.localPosition = arPlaneTrigger.transform.localPosition;
+                arPlaneTrigger.GetComponent<BoxCollider>().transform.localEulerAngles = arPlaneTrigger.transform.localEulerAngles;
                 //volume.weight = 1.0f;
             }
             else
@@ -69,6 +72,9 @@ public class SonarWave : MonoBehaviour
         else
         {
             arPlaneTrigger.transform.position = this.transform.position;
+            //arPlaneTrigger.transform.localPosition = new Vector3(arPlaneTrigger.transform.localPosition.x, arPlaneTrigger.transform.localPosition.y + 2.0f, arPlaneTrigger.transform.localPosition.z);
+            arPlaneTrigger.GetComponent<BoxCollider>().transform.localPosition = arPlaneTrigger.transform.localPosition;
+            arPlaneTrigger.GetComponent<BoxCollider>().transform.localEulerAngles = arPlaneTrigger.transform.localEulerAngles;
             sonarMat.SetFloat("_WaveDistance", 0.0f);
             //sonarMat.SetFloat("_WaveAlpha", 1.0f);
         }
