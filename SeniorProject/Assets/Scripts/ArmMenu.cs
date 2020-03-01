@@ -18,8 +18,14 @@ public class ArmMenu : MonoBehaviour
     public GameObject centerEyeCamera;
     public GameObject rightElbowObj;
     public GameObject trackingSpace;
+    public GameObject gun;
+    public Material hologramMat;
     private Vector3 originalPos;
     private Vector3 originalRot;
+    private bool grabGun = false;
+    private bool grabbedGun = false;
+    Renderer rend;
+    Material currentMat;
 
 
     //Input for Ant Placement
@@ -37,6 +43,9 @@ public class ArmMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        rend = gun.GetComponent<Renderer>();
+        currentMat = rend.material;
         originalPos = this.GetComponent<RectTransform>().localPosition;
         originalRot = this.GetComponent<RectTransform>().localEulerAngles;
     }
@@ -64,6 +73,20 @@ public class ArmMenu : MonoBehaviour
                 placeAnt = false;
             }
             //and On Button Press  place Ant
+        }
+
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) >= 0.9f && grabGun)
+        {
+            grabbedGun = true;
+            grabGun = false;
+            rend.material = currentMat;
+            gun.transform.GetChild(0).GetComponent<Pulse>().isActive = true;
+        }
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) < 0.9f && grabbedGun)
+        {
+            grabbedGun = false;
+            gun.transform.GetChild(0).GetComponent<Pulse>().isActive = false;
+            gun.gameObject.SetActive(false);
         }
 
     }
@@ -99,7 +122,7 @@ public class ArmMenu : MonoBehaviour
         rig.GetComponent<CharacterController>().height = 0.1f;
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = AntPos;//
-        
+
 
         ant.GetComponent<LookAtConstraint>().enabled = false;
         //ant.transform.parent = centerEyeCamera.transform;
@@ -193,7 +216,9 @@ public class ArmMenu : MonoBehaviour
 
     public void openTools()
     {
-        Debug.Log("Open Tools");
+        gun.gameObject.SetActive(true);
+        rend.material = hologramMat;
+        grabGun = true;
     }
 
     public void closeTools()
