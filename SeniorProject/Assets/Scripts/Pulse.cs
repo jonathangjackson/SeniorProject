@@ -16,12 +16,13 @@ public class Pulse : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.Two) && isActive)
         {
+            this.transform.parent.GetComponent<Animator>().SetBool("Play", true);
             fire.Play();
             GameObject pulseClone = Instantiate(pulseObj, this.transform.position, this.transform.localRotation);//Quaternion.Euler(this.transform.localEulerAngles.x, this.transform.localEulerAngles.x + 90, this.transform.localEulerAngles.z)
             pulseClone.transform.parent = gameObject.transform;
             pulseClone.transform.localEulerAngles = rotate;
             pulseClone.transform.parent = null;
-            coroutine = StopParticle(1.0f);
+            coroutine = StopParticle(0.5f);
             StartCoroutine(coroutine);
             //pulseClone.GetComponent<ConstantForce>().force = new Vector3(speed, 0, 0);
             Destroy(pulseClone, destroyTime);
@@ -31,6 +32,7 @@ public class Pulse : MonoBehaviour
     private IEnumerator StopParticle(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        this.transform.parent.GetComponent<Animator>().SetBool("Play", false);
         fire.Stop();
     }
 }
