@@ -5,7 +5,7 @@ using UnityEngine;
 public class ARStayActive : MonoBehaviour
 {
     private IEnumerator coroutine;
-    private bool playerTrigger = false;
+    public bool playerTrigger = false;
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "AR" && !playerTrigger)
@@ -14,7 +14,7 @@ public class ARStayActive : MonoBehaviour
             coroutine = SetActiveStatus(1.0f, false);
             StartCoroutine(coroutine);
         }
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             playerTrigger = true;
             this.transform.GetChild(0).gameObject.SetActive(true);
@@ -34,8 +34,8 @@ public class ARStayActive : MonoBehaviour
     private IEnumerator SetActiveStatus(float waitTime, bool active)
     {
         yield return new WaitForSeconds(waitTime);
-        if(!playerTrigger)
+        if (!playerTrigger)
             this.transform.GetChild(0).gameObject.SetActive(active);
-        
+
     }
 }

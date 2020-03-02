@@ -21,6 +21,10 @@ public class rotateIcon : MonoBehaviour
 
     public Text meters;
 
+    public ARStayActive arStay;
+
+    private bool iscalled;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +39,26 @@ public class rotateIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (arStay.playerTrigger)
+        {
+            print("Collision, can spin icon");
+            animator.SetTrigger("Spin");
+            animator.ResetTrigger("Reverse");
+        }
 
+        else
+        {
+            print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
+
+            animator.ResetTrigger("Spin");
+
+            animator.SetTrigger("Reverse");
+        }
     }
 
     void swapIcon()
     {
-       print("Change Icons");
+        print("Change Icons");
 
         icon.enabled = false;
         meters.enabled = false;
@@ -67,19 +85,7 @@ public class rotateIcon : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == "MainCamera")
-        {
-            print("Collision, can spin icon");
-            animator.SetTrigger("Spin");
-            animator.ResetTrigger("Reverse");
-
-        }
-        else
-        {
-            print("No collision, cant spin icon");
-        }
-
-}
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -88,10 +94,6 @@ public class rotateIcon : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        print(gameObject.name + " and trigger object " + other.name + " are no longer colliding");
 
-        animator.ResetTrigger("Spin");
-
-        animator.SetTrigger("Reverse");
     }
 }
