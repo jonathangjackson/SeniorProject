@@ -40,6 +40,8 @@ public class ArmMenu : MonoBehaviour
     private bool placeAnt = false;
 
     private float rayLength = 2.0f;
+
+    public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,10 +55,21 @@ public class ArmMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Three))
-        {
+        //if (OVRInput.GetDown(OVRInput.Button.Three))
+        //{
 
-            menuOn = !menuOn;
+          //  menuOn = !menuOn;
+         //   transform.GetChild(0).gameObject.SetActive(menuOn);
+        //}
+
+        if (slider.value == 1)
+        {
+            menuOn = true;
+            transform.GetChild(0).gameObject.SetActive(menuOn);
+        }
+        if(slider.value == 0)
+        {
+            menuOn = false;
             transform.GetChild(0).gameObject.SetActive(menuOn);
         }
 
