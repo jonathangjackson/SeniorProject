@@ -8,6 +8,7 @@ TagManager:
   - HackingButton
   - AR
   - hit
+  - tutorial
   layers:
   - Default
   - TransparentFX
