@@ -8,6 +8,7 @@ public class SonarWave : MonoBehaviour
     public Material sonarMat;
     public Shader xRayShader;
     public GameObject arPlaneTrigger;
+    public GameObject ArmMenu;
 
     //public PostProcessVolume volume;
     private bool on = false;
@@ -27,7 +28,7 @@ public class SonarWave : MonoBehaviour
     // Update is called once per fra.me
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Four)) 
+        if (OVRInput.GetDown(OVRInput.Button.Four) && ArmMenu.GetComponent<ArmMenu>().SonarWaveOn) 
         {
             if (!on)
             {
@@ -41,17 +42,8 @@ public class SonarWave : MonoBehaviour
                 arPlaneTrigger.GetComponent<BoxCollider>().transform.localEulerAngles = arPlaneTrigger.transform.localEulerAngles;
                 //volume.weight = 1.0f;
             }
-            else
-            {
-                arPlaneTrigger.GetComponent<BoxCollider>().enabled = false;
-                on = false;
-                sonarMat.SetFloat("_WaveActive", 0.0f);
-                //volume.weight = 0.0f;
-                sonarMat.SetFloat("_WaveDistance", 0.0f);
-                sonarMat.SetFloat("_WaveAlpha", 1.0f);
-            }
         }
-        if (on)
+        if (on && ArmMenu.GetComponent<ArmMenu>().SonarWaveOn)
         {
             arPlaneTrigger.transform.parent.gameObject.transform.eulerAngles = new Vector3(-90, this.transform.eulerAngles.y - 90.0f, 90);
             arPlaneTrigger.transform.localPosition -= new Vector3(0, 4.0f * Time.deltaTime, 0);
@@ -59,8 +51,21 @@ public class SonarWave : MonoBehaviour
             //arPlaneTrigger.transform.forward = new Vector3(0, 4.0f * Time.deltaTime, 0);
             drawSonar();
         }
+        if(on && !ArmMenu.GetComponent<ArmMenu>().SonarWaveOn)
+        {
+            stopSonar();
+        }
     }
 
+    void stopSonar()
+    {
+        arPlaneTrigger.GetComponent<BoxCollider>().enabled = false;
+        on = false;
+        sonarMat.SetFloat("_WaveActive", 0.0f);
+        //volume.weight = 0.0f;
+        sonarMat.SetFloat("_WaveDistance", 0.0f);
+        sonarMat.SetFloat("_WaveAlpha", 1.0f);
+    }
     void drawSonar()
     {
         if (sonarMat.GetFloat("_WaveDistance") < 20)
@@ -76,6 +81,7 @@ public class SonarWave : MonoBehaviour
             arPlaneTrigger.GetComponent<BoxCollider>().transform.localPosition = arPlaneTrigger.transform.localPosition;
             arPlaneTrigger.GetComponent<BoxCollider>().transform.localEulerAngles = arPlaneTrigger.transform.localEulerAngles;
             sonarMat.SetFloat("_WaveDistance", 0.0f);
+            stopSonar();
             //sonarMat.SetFloat("_WaveAlpha", 1.0f);
         }
     }
