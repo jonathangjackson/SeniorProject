@@ -6,6 +6,8 @@ public class ButtonFour : MonoBehaviour
 {
     public GameObject redLight;
 
+    public int counter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,16 @@ public class ButtonFour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        counter += 1;
+
+        if (other.tag == "Player" && counter % 2 == 1)
         {      
             redLight.SetActive(true);
+        }
+
+        if (other.tag == "Player" && counter % 2 == 0)
+        {
+            redLight.SetActive(false);
         }
     }
 }
