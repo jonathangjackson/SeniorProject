@@ -15,6 +15,8 @@ public class PuzzleState : MonoBehaviour
 
     public GameObject hackingButton, doorLeft, doorRight, doorLeft2, doorRight2, fadeObject2, PostProcessingVolume, checkMark01, checkMark02;
 
+    public GameObject Tablet3, Tablet2, checkMark, redX;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +49,12 @@ public class PuzzleState : MonoBehaviour
                 redLight.SetActive(false);
                 blueLight.SetActive(false);
                 PostProcessingVolume.SetActive(true);
+
+                // Tablet stuff
+                Tablet3.SetActive(true);
+                Tablet2.SetActive(false);
+                checkMark.SetActive(false);
+                redX.SetActive(false);
             }
             
         }        
