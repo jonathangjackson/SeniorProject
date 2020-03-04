@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
+    public GameObject pod;
     public List<AudioClip> audioClips;
     public List<GameObject> tutorialObjects;
     public AudioSource audio;
@@ -51,5 +52,21 @@ public class TutorialManager : MonoBehaviour
     {
         tutorialObjects[0].SetActive(true);
         clipPlay = false;
+    }
+
+    public void parentDuringAnim(bool active)
+    {
+        if (active)
+        {
+            this.GetComponent<CharacterController>().enabled = false;
+            pod.GetComponent<Animator>().SetBool("Move", true);
+            this.transform.parent = pod.transform; 
+        }
+        else
+        {
+            pod.GetComponent<Animator>().SetBool("Move", false);
+            this.GetComponent<CharacterController>().enabled = true;
+            this.transform.parent = null;
+        }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 
 public class SwitchMat : MonoBehaviour
 {
+    public GameObject sonarOnOff;
     public Material replacementMat;
     private Material currentMat;
     Renderer rend;
@@ -26,13 +27,17 @@ public class SwitchMat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.Four))
+        if (sonarOnOff.GetComponent<ArmMenu>().SonarWaveOn && !on)
         {
-            if(!on)
-                rend.material = replacementMat;
-            else
-                rend.material = currentMat;
-            on = !on;
+            on = true;
+            rend.material = replacementMat;
+            return;
+        }
+        if (!sonarOnOff.GetComponent<ArmMenu>().SonarWaveOn && on)
+        {
+            on = false;
+            rend.material = currentMat;
+            return;
         }
     }
 }

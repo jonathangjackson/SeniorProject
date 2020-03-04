@@ -7,6 +7,7 @@ using OVR;
 
 public class ArmMenu : MonoBehaviour
 {
+    public bool SonarWaveOn = false;
     private IEnumerator coroutine;
     //Positions
     public GameObject VRMovement;
@@ -232,6 +233,14 @@ public class ArmMenu : MonoBehaviour
         gun.gameObject.SetActive(true);
         rend.material = hologramMat;
         grabGun = true;
+    }
+
+    public void activateSonar()
+    {
+        if (!SonarWaveOn)
+            SonarWaveOn = true;
+        else
+            SonarWaveOn = false;
     }
 
     public void closeTools()
