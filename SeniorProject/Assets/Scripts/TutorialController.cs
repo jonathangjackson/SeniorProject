@@ -4,37 +4,112 @@ using UnityEngine;
 
 public class TutorialController : MonoBehaviour
 {
-    public TutorialManager tm;
-    public bool parentThis = false;
-    private bool currentParent = false;
-    public bool buttonTrigger = false;
+    public enum TriggerType
+    {
+        Collision,
+        Controller,
+        UIButton,
+        Animation
+    }
+    public TriggerType triggerType;
+    public AudioClip audioClip;
+    public bool hasHighlights = false;
+    public List<GameObject> highlightObjects;
+    public bool triggerActivated = false;
+    public Material highlightMaterial;
+
+    private List<Material> originalMaterial = new List<Material>();
+
+    void Start()
+    {
+        if (hasHighlights)
+        {
+            storeMaterials();
+        }
+    }
+
     void Update()
     {
-        if (parentThis != currentParent)
+        /*
+        switch (triggerType)
         {
-            callTutorialManagerParent(parentThis);
-            currentParent = parentThis;
-
-        }
+            case TriggerType.Controller:
+                controllerButtonTrigger();
+                break;
+            case TriggerType.UIButton:
+                uiButtonTrigger();
+                break;
+        }*/
     }
+
+    public void setChildActive(int pos)
+    {
+        if(this.transform.childCount > 0)
+            this.transform.GetChild(pos).gameObject.SetActive(true);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "tutorial")
+        if(other.tag == "tutorial" && triggerType == TriggerType.Collision)
         {
-            if (this.name == "TutorialTrigger2")
-            {
-                Debug.Log("Trigger2");
-                parentThis = true;
-                Debug.Log(parentThis != currentParent);
-            }
-            tm.triggerNext();
-            this.GetComponent<BoxCollider>().enabled = false;
+            triggerActivated = true;
         }
     }
 
-    public void callTutorialManagerParent(bool value)
+    private void controllerButtonTrigger()
     {
-        Debug.Log("Start Animation");
-        tm.parentDuringAnim(value);
+        triggerActivated = true;
+    }
+
+    public void uiButtonTrigger()
+    {
+        Debug.Log("TRIGGER UI ACTIVATED");
+        triggerActivated = true;
+    }
+
+    public AudioClip getAudioClip()
+    {
+        return audioClip;
+    }
+
+
+    private void storeMaterials()
+    {
+        for(int i = 0; i < highlightObjects.Count; i++)
+        {
+            Material mat = highlightObjects[i].GetComponent<Renderer>().material;
+            originalMaterial.Add(mat);
+        }
+    }
+
+    public void activateHighlights()
+    {
+        if (highlightObjects == null || !hasHighlights)
+            return;
+        //Set Material to Highlight Material
+        for(int i = 0; i < highlightObjects.Count; i++)
+        {
+            highlightObjects[i].GetComponent<Renderer>().material = highlightMaterial;
+        }
+    }
+
+    public void deactivateHighlight()
+    {
+        if (highlightObjects == null || !hasHighlights)
+            return;
+        //Set Material to Old Material
+        for (int i = 0; i < highlightObjects.Count; i++)
+        {
+            highlightObjects[i].GetComponent<Renderer>().material = originalMaterial[i];
+        }
+    }
+
+    public void destroyTutorial()
+    {
+        if (hasHighlights)
+        {
+            deactivateHighlight();
+        }
+        this.gameObject.SetActive(false);
     }
 }

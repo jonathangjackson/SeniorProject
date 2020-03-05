@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
-    public GameObject pod;
-    public List<AudioClip> audioClips;
-    public List<GameObject> tutorialObjects;
+    public List<TutorialController> tutorialControllers;
     public AudioSource audio;
     private bool clipPlay = false;
+    private int currentPosition = 0;
+    public bool skipTutorial = false;
     
     void Start()
     {
-        playAudioClip(audioClips[0]);
+        if (skipTutorial)
+            skipTutorialClips();
+
+        playAudioClip(tutorialControllers[currentPosition].getAudioClip());
         clipPlay = true;
     }
 
@@ -21,6 +24,22 @@ public class TutorialManager : MonoBehaviour
         if (!audio.isPlaying && clipPlay)
         {
             onClipEnd();
+        }
+        if (tutorialControllers[0].triggerActivated)
+        {
+            tutorialControllers[0].destroyTutorial();
+            tutorialControllers.RemoveAt(0);
+
+            //END of Tutorial
+            if (tutorialControllers.Count == 0)
+            {
+                Debug.Log("END OF Tutorial");
+                Destroy(this);
+            }
+            else
+            {
+                playAudioClip(tutorialControllers[0].getAudioClip());
+            }
         }
     }
 
@@ -32,41 +51,20 @@ public class TutorialManager : MonoBehaviour
         clipPlay = true;
     }
 
-    public void triggerNext()
-    {
-        if (audioClips.Count > 0)
-        {
-            tutorialObjects[0].SetActive(false);
-            tutorialObjects.RemoveAt(0);
-            audioClips.RemoveAt(0);
-            playAudioClip(audioClips[0]);
-            
-        }
-        else
-        {
-            Debug.Log("Tutorial Done");
-        }
-    }
-
     public void onClipEnd()
     {
-        tutorialObjects[0].SetActive(true);
+        //currentPosition++;
         clipPlay = false;
+        tutorialControllers[0].setChildActive(0);
+        if (tutorialControllers[0].hasHighlights)
+        {
+            tutorialControllers[0].activateHighlights();
+        }
     }
 
-    public void parentDuringAnim(bool active)
+    private void skipTutorialClips()
     {
-        if (active)
-        {
-            this.GetComponent<CharacterController>().enabled = false;
-            pod.GetComponent<Animator>().SetBool("Move", true);
-            this.transform.parent = pod.transform; 
-        }
-        else
-        {
-            pod.GetComponent<Animator>().SetBool("Move", false);
-            this.GetComponent<CharacterController>().enabled = true;
-            this.transform.parent = null;
-        }
+        //Play Animation and let the player move 
+        Destroy(this);
     }
 }

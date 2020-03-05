@@ -230,6 +230,7 @@ public class ArmMenu : MonoBehaviour
 
     public void openTools()
     {
+        Debug.Log("OPEN TOOLS");
         gun.gameObject.SetActive(true);
         rend.material = hologramMat;
         grabGun = true;
