@@ -38,6 +38,7 @@ public class TutorialManager : MonoBehaviour
             }
             else
             {
+                tutorialControllers[0].gameObject.SetActive(true);
                 playAudioClip(tutorialControllers[0].getAudioClip());
             }
         }

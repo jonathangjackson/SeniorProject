@@ -11,7 +11,21 @@ public class TutorialController : MonoBehaviour
         UIButton,
         Animation
     }
+
+    public enum ButtonType
+    {
+        x,
+        y, 
+        a,
+        b,
+        lIndex,
+        lMiddle,
+        rIndex,
+        rMiddle
+    }
+
     public TriggerType triggerType;
+    public ButtonType buttonType;
     public AudioClip audioClip;
     public bool hasHighlights = false;
     public List<GameObject> highlightObjects;
@@ -30,16 +44,13 @@ public class TutorialController : MonoBehaviour
 
     void Update()
     {
-        /*
+        
         switch (triggerType)
         {
             case TriggerType.Controller:
                 controllerButtonTrigger();
                 break;
-            case TriggerType.UIButton:
-                uiButtonTrigger();
-                break;
-        }*/
+        }
     }
 
     public void setChildActive(int pos)
@@ -58,7 +69,33 @@ public class TutorialController : MonoBehaviour
 
     private void controllerButtonTrigger()
     {
-        triggerActivated = true;
+        switch (buttonType)
+        {
+            case ButtonType.y:
+                if (OVRInput.GetDown(OVRInput.Button.Four))
+                    triggerActivated = true;
+                break;
+            case ButtonType.x:
+                if (OVRInput.GetDown(OVRInput.Button.Three))
+                    triggerActivated = true;
+                break;
+            case ButtonType.a:
+                if (OVRInput.GetDown(OVRInput.Button.One))
+                    triggerActivated = true;
+                break;
+            case ButtonType.b:
+                if (OVRInput.GetDown(OVRInput.Button.Two))
+                    triggerActivated = true;
+                break;
+            case ButtonType.lIndex:
+                if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger) > 0.9f)
+                    triggerActivated = true;
+                break;
+            case ButtonType.rIndex:
+                if (OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger) > 0.9f)
+                    triggerActivated = true;
+                break;
+        }
     }
 
     public void uiButtonTrigger()
