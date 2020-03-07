@@ -132,7 +132,7 @@ public class ArmMenu : MonoBehaviour
         rightController.SetActive(true);
 
         Vector3 AntPos = antPlacementPosition.transform.position;
-        AntPos = new Vector3(AntPos.x, AntPos.y, AntPos.z);
+        AntPos = new Vector3(AntPos.x, AntPos.y + 1f, AntPos.z);
 
         //Disable Tracking on Minerva IK
         leftIK.GetComponent<InverseKinematics>().enabled = false;
@@ -152,7 +152,7 @@ public class ArmMenu : MonoBehaviour
         //this.transform.parent = S5Ant.transform; OLD
 
         //sets new height for S5Ant
-        //trackingSpace.transform.localPosition = new Vector3(0, -2.0f, 0);
+        trackingSpace.transform.localPosition = new Vector3(0, -0.63f, 0);
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
     }
