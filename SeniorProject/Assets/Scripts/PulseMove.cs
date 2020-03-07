@@ -31,6 +31,8 @@ public class PulseMove : MonoBehaviour
         other.tag = "hit";
         Vector3 dir = other.gameObject.transform.position - transform.position;
         dir = dir.normalized;
+        other.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         other.gameObject.GetComponent<Rigidbody>().AddForce(dir * force);
     }
 

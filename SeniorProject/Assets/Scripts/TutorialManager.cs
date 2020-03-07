@@ -14,9 +14,11 @@ public class TutorialManager : MonoBehaviour
     {
         if (skipTutorial)
             skipTutorialClips();
-
-        playAudioClip(tutorialControllers[currentPosition].getAudioClip());
-        clipPlay = true;
+        else
+        {
+            playAudioClip(tutorialControllers[currentPosition].getAudioClip());
+            clipPlay = true;
+        }
     }
 
     void Update()
@@ -65,6 +67,7 @@ public class TutorialManager : MonoBehaviour
 
     private void skipTutorialClips()
     {
+        tutorialControllers[0].gameObject.SetActive(false);
         //Play Animation and let the player move 
         Destroy(this);
     }

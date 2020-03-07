@@ -12,7 +12,6 @@ public class ArmMenu : MonoBehaviour
     //Positions
     public GameObject VRMovement;
     public GameObject minerva;
-    public GameObject ant;
     public GameObject rig;
     public GameObject leftIK;
     public GameObject rightIK;
@@ -28,6 +27,11 @@ public class ArmMenu : MonoBehaviour
     Renderer rend;
     Material currentMat;
 
+
+    //NEW INPUT FOR ANT PLACEMENT
+    public GameObject antHologramGrp;
+    public GameObject antPlacementPosition;
+    public GameObject S5Ant;
 
     //Input for Ant Placement
     public GameObject antHologram;
@@ -79,7 +83,7 @@ public class ArmMenu : MonoBehaviour
         if (placeAnt)
         {
             activateBotPlacement();
-            if (OVRInput.GetDown(OVRInput.Button.Two))
+            if (OVRInput.GetDown(OVRInput.Button.Two) && antPlacementPosition.active)
             {
                 placeBot();
                 antLineRender.enabled = false;
@@ -107,12 +111,13 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToBot()
     {
-        //Close Menu
-        menuOn = !menuOn;
-        transform.GetChild(0).gameObject.SetActive(menuOn);
+
+        closeMenu();
 
         //set ant placement to active 
         placeAnt = true;
+        antHologramGrp.SetActive(true);
+        antPlacementPosition.SetActive(true);
 
     }
 
@@ -121,13 +126,15 @@ public class ArmMenu : MonoBehaviour
     {
         //centerEyeCamera.GetComponent<Camera>().nearClipPlane = 1.0f;
         placeAnt = true;
-        //Turn on touch controllers
+
+        //OLD DELETE THESE LINES AND OBJECTS Turn on touch controllers
         leftController.SetActive(true);
         rightController.SetActive(true);
 
-        Vector3 AntPos = antHologram.transform.position;
-        AntPos = new Vector3(AntPos.x, AntPos.y + 1.0f, AntPos.z);
+        Vector3 AntPos = antPlacementPosition.transform.position;
+        AntPos = new Vector3(AntPos.x, AntPos.y, AntPos.z);
 
+        //Disable Tracking on Minerva IK
         leftIK.GetComponent<InverseKinematics>().enabled = false;
         rightIK.GetComponent<InverseKinematics>().enabled = false;
         minerva.GetComponent<PositionConstraint>().enabled = false;
@@ -137,19 +144,15 @@ public class ArmMenu : MonoBehaviour
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = AntPos;//
 
+        S5Ant.gameObject.SetActive(true);
+        S5Ant.transform.position = AntPos;
+        S5Ant.transform.parent = rig.transform;
+        S5Ant.GetComponent<PositionConstraint>().enabled = true;
+        //S5Ant.transform.localPosition = new Vector3(0, -0.156f, -0.163f);
+        //this.transform.parent = S5Ant.transform; OLD
 
-        ant.GetComponent<LookAtConstraint>().enabled = false;
-        //ant.transform.parent = centerEyeCamera.transform;
-        ant.GetComponent<PositionConstraint>().constraintActive = true;
-        ant.transform.position = new Vector3(ant.transform.position.x, ant.transform.position.y, ant.transform.position.z);
-        ant.transform.localEulerAngles = new Vector3(0, 90, 0);
-        this.transform.parent = ant.transform;
-        //this.transform.position = new Vector3(17, 12.3f, -80.9f);
-        this.GetComponent<RectTransform>().localPosition = new Vector3(17, 12.3f, -100.9f);
-
-        this.GetComponent<RectTransform>().localEulerAngles = new Vector3(0, -180, 0);
-
-        trackingSpace.transform.localPosition = new Vector3(0, -0.719f, 0);
+        //sets new height for S5Ant
+        //trackingSpace.transform.localPosition = new Vector3(0, -2.0f, 0);
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
     }
@@ -162,31 +165,33 @@ public class ArmMenu : MonoBehaviour
 
     private void activateBotPlacement()
     {
-
+        
         Vector3 rightHandPos = indexPos.transform.position;
         Vector3 rayDirection = rightAnchor.transform.forward;
         //Debug.Log(transform.forward);
         Ray rayscastRay = new Ray(rightHandPos, rayDirection);
         RaycastHit raycastHit;
-
+        
         Vector3 rayEndPos = rightHandPos + rayDirection * rayLength;
 
         bool objectHit = Physics.Raycast(rayscastRay, out raycastHit, rayLength);
-
+        
         if (objectHit)
         {
+
+            antPlacementPosition.SetActive(true);
             antLineRender.enabled = true;
-            antHologram.SetActive(true);
             GameObject hitObject = raycastHit.transform.gameObject;
             Vector3 pos = raycastHit.point;
-            antHologram.transform.localPosition = pos;
-
+            //antHologram.transform.localPosition = pos;
+            antPlacementPosition.transform.localPosition = pos;
             antLineRender.SetPosition(0, rightHandPos);
             antLineRender.SetPosition(1, pos);
         }
         else
         {
             antLineRender.enabled = false;
+            antPlacementPosition.SetActive(false);
             //antHologram.SetActive(false);
         }
     }
@@ -201,7 +206,7 @@ public class ArmMenu : MonoBehaviour
 
         Vector3 MinervaPos = minerva.transform.position;
 
-        ant.transform.parent = null;
+        //ant.transform.parent = null;
 
         rig.GetComponent<CharacterController>().height = 1.9f;
 
@@ -209,7 +214,7 @@ public class ArmMenu : MonoBehaviour
         rig.transform.position = MinervaPos;
         //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
 
-        ant.GetComponent<LookAtConstraint>().enabled = true;
+        //ant.GetComponent<LookAtConstraint>().enabled = true;
         minerva.transform.parent = rig.transform;
         minerva.transform.localEulerAngles = new Vector3(0, 0, 0);
         //ant.transform.position = new Vector3(0, 0, 0);
@@ -230,7 +235,9 @@ public class ArmMenu : MonoBehaviour
 
     public void openTools()
     {
-        Debug.Log("OPEN TOOLS");
+
+        closeMenu();
+
         gun.gameObject.SetActive(true);
         rend.material = hologramMat;
         grabGun = true;
@@ -238,6 +245,8 @@ public class ArmMenu : MonoBehaviour
 
     public void activateSonar()
     {
+        closeMenu();
+
         if (!SonarWaveOn)
             SonarWaveOn = true;
         else
@@ -247,5 +256,14 @@ public class ArmMenu : MonoBehaviour
     public void closeTools()
     {
 
+    }
+
+    private void closeMenu()
+    {
+
+        //Close Menu
+        menuOn = !menuOn;
+        transform.GetChild(0).gameObject.SetActive(menuOn);
+        //Set Slider to 0
     }
 }
