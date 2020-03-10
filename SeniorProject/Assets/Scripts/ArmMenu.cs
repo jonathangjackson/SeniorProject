@@ -72,7 +72,7 @@ public class ArmMenu : MonoBehaviour
          //   transform.GetChild(0).gameObject.SetActive(menuOn);
         //}
 
-        if (slider.value == 1)
+        if (slider.value == 3)
         {
             menuOn = true;
             transform.GetChild(0).gameObject.SetActive(menuOn);
@@ -196,6 +196,7 @@ public class ArmMenu : MonoBehaviour
             antLineRender.enabled = true;
             GameObject hitObject = raycastHit.transform.gameObject;
             Vector3 pos = raycastHit.point;
+            pos = new Vector3(pos.x, pos.y + 0.01f, pos.z);
             //antHologram.transform.localPosition = pos;
             antPlacementPosition.transform.localPosition = pos;
             antLineRender.SetPosition(0, rightHandPos);
