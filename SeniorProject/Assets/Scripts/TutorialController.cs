@@ -31,6 +31,7 @@ public class TutorialController : MonoBehaviour
     public List<GameObject> highlightObjects;
     public bool triggerActivated = false;
     public Material highlightMaterial;
+    public Animator animationController;
 
     private List<Material> originalMaterial = new List<Material>();
 
@@ -44,12 +45,19 @@ public class TutorialController : MonoBehaviour
 
     void Update()
     {
-        
         switch (triggerType)
         {
             case TriggerType.Controller:
                 controllerButtonTrigger();
                 break;
+            case TriggerType.Animation:
+                animationTrigger();
+                break;
+        }
+
+        if (Input.GetKeyDown("space"))
+        {
+            triggerActivated = true;
         }
     }
 
@@ -65,6 +73,26 @@ public class TutorialController : MonoBehaviour
         {
             triggerActivated = true;
         }
+    }
+
+    public void startAnimation()
+    {
+        animationController.SetBool("Move", true);
+    }
+
+    private void animationTrigger()
+    {
+
+        AnimatorClipInfo[] m_CurrentClipInfo;
+        m_CurrentClipInfo = animationController.GetCurrentAnimatorClipInfo(0);
+        Debug.Log(m_CurrentClipInfo[1].clip.name);
+        /*
+        if ()
+        {
+            Debug.Log("ANIM TRIGGER CALLED ");
+            triggerActivated = true;
+            animationController.SetBool("Move", false);
+        } */
     }
 
     private void controllerButtonTrigger()

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.UI;
 using OVR;
+using UnityEngine.EventSystems;
 
 public class ArmMenu : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class ArmMenu : MonoBehaviour
     public GameObject antHologramGrp;
     public GameObject antPlacementPosition;
     public GameObject S5Ant;
+    public GameObject eventSystem;
+    public GameObject leftBotHand;
+    public GameObject pointerIndex;
+    public GameObject laserPointer;
 
     //Input for Ant Placement
     public GameObject antHologram;
@@ -39,7 +44,7 @@ public class ArmMenu : MonoBehaviour
     public GameObject indexPos;
     public GameObject rightAnchor;
 
-    public GameObject leftController, rightController;
+    public GameObject leftBotIK, rightBotIK;
 
     private bool menuOn = false;
     private bool placeAnt = false;
@@ -124,12 +129,15 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
+        eventSystem.GetComponent<OVRInputModule>().rayTransform = leftBotHand.transform;
+        laserPointer.GetComponent<LaserPointer>().maxLength = 10.0f;
+        S5Ant.transform.GetChild(1).gameObject.SetActive(false);
         //centerEyeCamera.GetComponent<Camera>().nearClipPlane = 1.0f;
         placeAnt = true;
+        antHologramGrp.SetActive(false);
+        antPlacementPosition.SetActive(false);
 
         //OLD DELETE THESE LINES AND OBJECTS Turn on touch controllers
-        leftController.SetActive(true);
-        rightController.SetActive(true);
 
         Vector3 AntPos = antPlacementPosition.transform.position;
         AntPos = new Vector3(AntPos.x, AntPos.y + 1f, AntPos.z);
@@ -144,10 +152,15 @@ public class ArmMenu : MonoBehaviour
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = AntPos;//
 
+        S5Ant.transform.localEulerAngles = new Vector3(0, 0, 0);
+        leftBotIK.GetComponent<InverseKinematics>().enabled = true;
+        rightBotIK.GetComponent<InverseKinematics>().enabled = true;
+
         S5Ant.gameObject.SetActive(true);
         S5Ant.transform.position = AntPos;
         S5Ant.transform.parent = rig.transform;
         S5Ant.GetComponent<PositionConstraint>().enabled = true;
+        S5Ant.GetComponent<RotationConstraint>().enabled = true;
         //S5Ant.transform.localPosition = new Vector3(0, -0.156f, -0.163f);
         //this.transform.parent = S5Ant.transform; OLD
 
@@ -196,24 +209,28 @@ public class ArmMenu : MonoBehaviour
         }
     }
 
-
     public void swapToMinerva()
     {
+        eventSystem.GetComponent<OVRInputModule>().rayTransform = pointerIndex.transform;
+        laserPointer.GetComponent<LaserPointer>().maxLength = 0.03f;
+        S5Ant.transform.GetChild(1).gameObject.SetActive(true);
         centerEyeCamera.GetComponent<Camera>().nearClipPlane = 0.01f;
 
-        leftController.SetActive(false);
-        rightController.SetActive(false);
+        leftBotIK.GetComponent<InverseKinematics>().enabled = false;
+        rightBotIK.GetComponent<InverseKinematics>().enabled = false;
 
         Vector3 MinervaPos = minerva.transform.position;
-
+        S5Ant.transform.parent = null;
         //ant.transform.parent = null;
 
-        rig.GetComponent<CharacterController>().height = 1.9f;
+        rig.GetComponent<CharacterController>().height = 1.1f;
 
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = MinervaPos;
         //VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
 
+        S5Ant.GetComponent<PositionConstraint>().enabled = false;
+        S5Ant.GetComponent<RotationConstraint>().enabled = false;
         //ant.GetComponent<LookAtConstraint>().enabled = true;
         minerva.transform.parent = rig.transform;
         minerva.transform.localEulerAngles = new Vector3(0, 0, 0);

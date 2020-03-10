@@ -9,6 +9,8 @@ public class TutorialManager : MonoBehaviour
     private bool clipPlay = false;
     private int currentPosition = 0;
     public bool skipTutorial = false;
+    public GameObject OVRRig;
+    public GameObject Pod;
     
     void Start()
     {
@@ -56,12 +58,19 @@ public class TutorialManager : MonoBehaviour
 
     public void onClipEnd()
     {
+        Debug.Log("CLIP END");
         //currentPosition++;
         clipPlay = false;
         tutorialControllers[0].setChildActive(0);
         if (tutorialControllers[0].hasHighlights)
         {
             tutorialControllers[0].activateHighlights();
+        }
+        if(tutorialControllers[0].triggerType.CompareTo(TutorialController.TriggerType.Animation) == 0)
+        {
+            Debug.Log("anim");
+            OVRRig.transform.parent = Pod.transform;
+            tutorialControllers[0].startAnimation();
         }
     }
 
