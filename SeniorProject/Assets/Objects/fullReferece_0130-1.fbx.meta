@@ -422,6 +422,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwaySection1_levelOne_jg_lambert2
+    second: {fileID: 2100000, guid: f3fad7fbabd2436489a4a87e7b5b5b28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_powerCell_global_jg1_lambert2
     second: {fileID: 2100000, guid: dfce34d718238634a9a2b67f7c027345, type: 2}
   - first:
@@ -432,8 +437,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_lambert2
+    second: {fileID: 2100000, guid: da1834683d0c7c94fafe7c78aa824ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_tutorial_balcony_lambert2
     second: {fileID: 2100000, guid: ddb4908668acc0f4086cb1360cbd8c9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ventFace_global_jg_lambert2
+    second: {fileID: 2100000, guid: 3d5c3d36f63dfcf4d9262949895f5634, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -479,6 +494,46 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_walls_levelOne_jg_lambert9
     second: {fileID: 2100000, guid: 695e4852334d06943932829d2cf4f80b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate1_global_sj_textured1_Box
+    second: {fileID: 2100000, guid: 3ad861408e27ab941b82d336d94fd4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate1_global_sj_textured_Box
+    second: {fileID: 2100000, guid: 9b2cd2ce5b5d99d4889430709f420939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate2_global_sj_textured_BoxHoldingTubes
+    second: {fileID: 2100000, guid: ae18eea424a5d454abccdf0bd2b1e81a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate2_global_sj_textured_Tube
+    second: {fileID: 2100000, guid: f3f64909a0bc75440afd5977c7e0964a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate4Seperate_global_sj_textured_boxBottom
+    second: {fileID: 2100000, guid: 2d29229011ab12a48b70ef34386fee20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate4Seperate_global_sj_textured_boxTop
+    second: {fileID: 2100000, guid: 057e917ae77e63e419ed2c2fefb157c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate5_global_jg_textured_boxBottom
+    second: {fileID: 2100000, guid: c8aa7558836b1be48b934b9b82ed919f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate5_global_jg_textured_boxTop
+    second: {fileID: 2100000, guid: a9d607fc8ba546740a6f195c5b276a3a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -777,6 +832,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lambert5
+    second: {fileID: 2100000, guid: 81b7c40bd87cdd24ea9ce4a819b2e622, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lambert6
+    second: {fileID: 2100000, guid: bb6b3d8578120c240ade7a336c66ddfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lambert7
+    second: {fileID: 2100000, guid: 70f258e9acf7c924f8a2ef7e2d7b6ef9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallway_global_jg_lambert2
+    second: {fileID: 2100000, guid: 0d7a29df28383804cb316067e13ff0f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelTwo_Generator_boxCrate1_global_sj1_Box
     second: {fileID: 2100000, guid: 2bc91249ab70e5f44bf784fd6e3394f2, type: 2}
   - first:
@@ -1059,6 +1134,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelTwo_Generator_walls_levelTwo_jg_textured_ceiling
     second: {fileID: 2100000, guid: 54a73ae4edc3a4d4fa43c2c0e87109fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_walls_levelTwo_jg_textured_fan
+    second: {fileID: 2100000, guid: 8ce7bfec627678549bdae1927694660b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
