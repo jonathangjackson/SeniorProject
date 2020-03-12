@@ -17455,7 +17455,6 @@ GameObject:
   - component: {fileID: 1300243514}
   - component: {fileID: 1300243518}
   - component: {fileID: 1300243517}
-  - component: {fileID: 1300243516}
   - component: {fileID: 1300243515}
   m_Layer: 5
   m_Name: Image power cell
@@ -17503,18 +17502,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1300243516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300243513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1300243517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34672,7 +34659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7241555008736987665}
-  m_LocalRotation: {x: -0.50046664, y: -0.5468584, z: -0.4907131, w: -0.45790803}
+  m_LocalRotation: {x: -0.5004669, y: -0.5468582, z: -0.49071285, w: -0.45790836}
   m_LocalPosition: {x: 0.109366775, y: -0.031950623, z: -0.10251117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -35291,18 +35278,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831062646660078193}
   m_CullTransparentMesh: 0
---- !u!114 &831062646660078189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831062646660078193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &831062646660078192
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35334,7 +35309,6 @@ GameObject:
   - component: {fileID: 831062646660078192}
   - component: {fileID: 831062646660078188}
   - component: {fileID: 831062646660078195}
-  - component: {fileID: 831062646660078189}
   - component: {fileID: 831062646660078194}
   m_Layer: 5
   m_Name: Image Avium Container
@@ -36281,18 +36255,6 @@ RectTransform:
   m_AnchoredPosition: {x: 7.000306, y: 238.50003}
   m_SizeDelta: {x: 932.3, y: 495.2}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1787865085761917614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787865085761917618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &1787865085761917615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36359,7 +36321,6 @@ GameObject:
   - component: {fileID: 1787865085761917619}
   - component: {fileID: 1787865085761917615}
   - component: {fileID: 1787865085761917616}
-  - component: {fileID: 1787865085761917614}
   - component: {fileID: 1787865085761917617}
   m_Layer: 5
   m_Name: Image Door Panel
@@ -40797,7 +40758,6 @@ GameObject:
   - component: {fileID: 2650356464932924907}
   - component: {fileID: 2650356464932924919}
   - component: {fileID: 2650356464932924904}
-  - component: {fileID: 2650356464932924918}
   - component: {fileID: 2650356464932924905}
   m_Layer: 5
   m_Name: Image lever
@@ -40826,18 +40786,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00030517578, y: 57.5}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2650356464932924918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2650356464932924906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &2650356464932924919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42735,7 +42683,6 @@ GameObject:
   - component: {fileID: 3369233870681847522}
   - component: {fileID: 3369233870681847550}
   - component: {fileID: 3369233870681847521}
-  - component: {fileID: 3369233870681847551}
   - component: {fileID: 3369233870681847520}
   m_Layer: 5
   m_Name: Image Lab Button Right
@@ -42752,18 +42699,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3369233870681847523}
   m_CullTransparentMesh: 0
---- !u!114 &3369233870681847551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3369233870681847523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3369233870935322704
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43123,7 +43058,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186483664188599882}
-  m_LocalRotation: {x: 0.071650244, y: 0.88295984, z: 0.35226604, w: -0.30192178}
+  m_LocalRotation: {x: 0.07165025, y: 0.8829597, z: 0.35226604, w: -0.3019222}
   m_LocalPosition: {x: 0.28761747, y: -0.0000006337636, z: -0.00000045522034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -45063,7 +44998,6 @@ GameObject:
   - component: {fileID: 5611217829845290181}
   - component: {fileID: 5611217829845290201}
   - component: {fileID: 5611217829845290182}
-  - component: {fileID: 5611217829845290200}
   - component: {fileID: 5611217829845290183}
   m_Layer: 5
   m_Name: Image generator
@@ -45139,18 +45073,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5611217829845290200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5611217829845290180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &5611217829845290201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49611,18 +49533,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -475.90002}
   m_SizeDelta: {x: 481.8, y: 169.90002}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8931712200871507944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8931712200871507956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c461a49b58961cb48b524d33d47555f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &8931712200871507945
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49642,7 +49552,6 @@ GameObject:
   - component: {fileID: 8931712200871507957}
   - component: {fileID: 8931712200871507945}
   - component: {fileID: 8931712200871507958}
-  - component: {fileID: 8931712200871507944}
   - component: {fileID: 8931712200871507959}
   m_Layer: 5
   m_Name: Image Lab Button Left
@@ -50066,7 +49975,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120515600821958391}
-  m_LocalRotation: {x: -0.6996264, y: -0.60997766, z: 0.18462662, w: -0.32305297}
+  m_LocalRotation: {x: -0.69962627, y: -0.6099778, z: 0.18462662, w: -0.32305297}
   m_LocalPosition: {x: 0.5576477, y: 0.0033680415, z: 0.0011508589}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

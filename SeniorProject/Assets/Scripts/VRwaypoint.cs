@@ -28,7 +28,7 @@ public class VRwaypoint : MonoBehaviour
     {
 
         meter.text = ((int)Vector3.Distance(target.position, VRcamera.transform.position)).ToString() + "m";
-        canvas.transform.LookAt(VRcamera.transform.position + VRcamera.transform.rotation * Vector3.forward, VRcamera.transform.rotation * Vector3.up);
+        canvas.transform.LookAt(VRcamera.transform.position + VRcamera.transform.rotation * Vector3.back, VRcamera.transform.rotation * Vector3.up);
         canvas.transform.Rotate(0, 180, 0);
 
         canvas.transform.localScale = Vector3.Distance(VRcamera.transform.position, canvas.transform.position) * ScaleFactor;
