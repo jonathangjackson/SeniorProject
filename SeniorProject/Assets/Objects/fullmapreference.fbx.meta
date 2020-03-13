@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 4a9dbbfc72eb80b4fb69af2a574471de
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: cdddb6e48b3aee849a6f0ee5cf2b37c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_balcony_levelOne_jg_textured_BalconyFloor
+    second: {fileID: 2100000, guid: 7bcb5bffaac93f84e84419dd50b47e17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_balcony_levelOne_jg_textured_Pillars
+    second: {fileID: 2100000, guid: 81947fca171903641b5693a0961cc1e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_balcony_levelOne_jg_textured_Railings
+    second: {fileID: 2100000, guid: 1d06db34b131fa44ba3342ff7fab28fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj1_Box
+    second: {fileID: 2100000, guid: cd66d4d3b52ebbc4c8b994d22d185644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj2_Box
+    second: {fileID: 2100000, guid: 1216522699fa0104d9f75f77c9fccad2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj3_Box
+    second: {fileID: 2100000, guid: bf7e49e7500b2f14fb70bfd9ced4feb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj_textured1_Box
+    second: {fileID: 2100000, guid: 502393de55165cc45bb581a89c505c2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj_textured2_Box
+    second: {fileID: 2100000, guid: c3b883065ea4c154f9164efe1ee0cae6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj_textured3_Box
+    second: {fileID: 2100000, guid: 7b38279f39c0ca94abc60ffb89d27836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj_textured4_Box
+    second: {fileID: 2100000, guid: 2d5ab5f0d50e10c4eabb64d9e4f318aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate1_global_sj_textured_Box
+    second: {fileID: 2100000, guid: 9558d52c6ebf7bc4f92aa085f2cface9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj1_BoxHoldingTubes
+    second: {fileID: 2100000, guid: 8e849122adfa82843bd0cd5bf52cf24e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj1_Tube
+    second: {fileID: 2100000, guid: 2b6e57134d87f7940a529acc9c099562, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured1_BoxHoldingTubes
+    second: {fileID: 2100000, guid: 9866358b2f5aad740a713e2bfebd2617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured1_Tube
+    second: {fileID: 2100000, guid: 3f7f952ef4f1bda42b93ca27a6d4ccd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured2_BoxHoldingTubes
+    second: {fileID: 2100000, guid: 6eac6da9bb2bb2747b79ee9ea17e620d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured2_Tube
+    second: {fileID: 2100000, guid: 4c15d07a8e11e9f4cb7e7c32ec18694b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured3_BoxHoldingTubes
+    second: {fileID: 2100000, guid: 7cc91ce61bb4eee4b8f7df56c38abc2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured3_Tube
+    second: {fileID: 2100000, guid: e68d32f0119de824bb058b5ebf8d348d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured_BoxHoldingTubes
+    second: {fileID: 2100000, guid: 05594d3330430cd4daaecca47fa8752b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate2_global_sj_textured_Tube
+    second: {fileID: 2100000, guid: f24eb307e573fea4ebc85f54f688c877, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate4Seperate_global_sj_textured1_boxBottom
+    second: {fileID: 2100000, guid: 3e66d977b67ecd14483b3996ed369ed5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate4Seperate_global_sj_textured1_boxTop
+    second: {fileID: 2100000, guid: 173f87e4d07c98a43ab78c855ba0a87c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate4Seperate_global_sj_textured2_boxBottom
+    second: {fileID: 2100000, guid: fbea6d50d8df93b4f96c931ebed12ca1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate4Seperate_global_sj_textured2_boxTop
+    second: {fileID: 2100000, guid: 744f6e2604bb559488c0772a89d2822f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate4Seperate_global_sj_textured_boxBottom
+    second: {fileID: 2100000, guid: 6653e86d36d62d64ab989a62f068dead, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate4Seperate_global_sj_textured_boxTop
+    second: {fileID: 2100000, guid: 9b2902c3e8337354da25052206bd5591, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg1_boxBottom
+    second: {fileID: 2100000, guid: 62f8e890372ea25468b255a92973476a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg1_boxTop
+    second: {fileID: 2100000, guid: 65ce1731f6c0779458193442276a91b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg3_boxBottom
+    second: {fileID: 2100000, guid: f232de00d604b394faaf35b282833747, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg3_boxTop
+    second: {fileID: 2100000, guid: 89ae65e8b5b0d7b4d8cb0a97a452f1f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg4_boxBottom
+    second: {fileID: 2100000, guid: af44e91826dd4d1438108dfd8aeb93b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg4_boxTop
+    second: {fileID: 2100000, guid: 9207f8d3d2f44934abbf22cfe74efe07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg_textured1_boxBottom
+    second: {fileID: 2100000, guid: dc0c88c3ddffa1e41ab513faebfec1c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg_textured1_boxTop
+    second: {fileID: 2100000, guid: 48d69a1fceac0c74a9a8f8e2898fe2fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg_textured2_boxBottom
+    second: {fileID: 2100000, guid: a777c98e4642b274cba6da70dca415d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg_textured2_boxTop
+    second: {fileID: 2100000, guid: 29e8df88927b4094ea738e7e5c4fe7b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg_textured_boxBottom
+    second: {fileID: 2100000, guid: 696fd225c2d9d3947a0795fa6a3aecbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxCrate5_global_jg_textured_boxTop
+    second: {fileID: 2100000, guid: 1ef42f86c89b7314f98820d8360ee4f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxShelf_levelOne_jg_legs
+    second: {fileID: 2100000, guid: 9cfd4c703c704354c8c3ba9f75bf1b78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_boxShelf_levelOne_jg_shelves
+    second: {fileID: 2100000, guid: 374562b268801f448846aab9361d917b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ceiling_levelOne_jg_ceiling
+    second: {fileID: 2100000, guid: e092e5c1f7d5ae74cad78e6921156626, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ceiling_levelOne_jg_ceiling_lights
+    second: {fileID: 2100000, guid: a0fa95159e2b0a842820a5313149aa6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ceiling_levelOne_jg_ceiling_vents
+    second: {fileID: 2100000, guid: 94e8a09ec83714646b14b79c1d1150c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface1
+    second: {fileID: 2100000, guid: 20b55d9a1701aae44955b3ea124c8bc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface2
+    second: {fileID: 2100000, guid: 2bb9e8649354c594c995ca89e430b68f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface3
+    second: {fileID: 2100000, guid: d78a25ee034a5014db6776427dbc6ea5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface4
+    second: {fileID: 2100000, guid: 80dce56270fdb124b9b315731e38c7fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface5
+    second: {fileID: 2100000, guid: 7fd7c2f096eff1b4a8b6e0b3db7107da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface6
+    second: {fileID: 2100000, guid: 5ae558b05e0f4d04ea4e7483ed10d282, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg3_DoorButton
+    second: {fileID: 2100000, guid: ac62aef931d06364c983c201c1b689ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg3_DoorOutline
+    second: {fileID: 2100000, guid: 4946ff7ad12002b4d9d77ea62ffc5da4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg3_DoorSideAccents
+    second: {fileID: 2100000, guid: 5c9d7419269e86b4f9e0ec66332f2885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg3_InnerDoorOurline
+    second: {fileID: 2100000, guid: 5e0e6df121ab5304fbd4d731ed69cc4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg3_MiddleDivider
+    second: {fileID: 2100000, guid: d6d18e3e8d7a5d942b0018d8eb3a54f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg4_DoorButton
+    second: {fileID: 2100000, guid: a24a8a8ae3b2e084f933a6e7d0f6f328, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg4_DoorOutline
+    second: {fileID: 2100000, guid: 378a306af7ef6334a9b43ac8c903c986, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg4_DoorSideAccents
+    second: {fileID: 2100000, guid: a8dd42fa2958a19439048be870eadac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg4_InnerDoorOurline
+    second: {fileID: 2100000, guid: d748bb6521de95544965f12fdc839d02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg4_MiddleDivider
+    second: {fileID: 2100000, guid: 0e69d484fc8992a4399a59daa1045873, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg_textured_DoorButton
+    second: {fileID: 2100000, guid: c3e6699bba9a01944b7374e956bdd50c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg_textured_DoorOutline
+    second: {fileID: 2100000, guid: b768fb4815b1b0047b014efdbf299bef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg_textured_DoorSideAccents
+    second: {fileID: 2100000, guid: cfc4b4f11e2bbfa449c6efde12b6b0c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg_textured_InnerDoorOurline
+    second: {fileID: 2100000, guid: c91b4559d85ba3844b6a404728f50e13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_door_global_jg_textured_MiddleDivider
+    second: {fileID: 2100000, guid: feda15ca59bf9124284e8c12c6e21e91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_electricalBox_global_sj1_lambert2
+    second: {fileID: 2100000, guid: 778e79736a5fc254aa6333452144ea69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_electricalBox_global_sj1_lambert3
+    second: {fileID: 2100000, guid: 5a8e12aa5d99ec546a8dc06826d0efa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_hallwayLevel2Entrance_hallwaySection1_levelOne_jg_lambert2
+    second: {fileID: 2100000, guid: 48d86ddf969d87248b4ca8d62631c027, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwaySection1_levelOne_jg_lambert2
+    second: {fileID: 2100000, guid: f3fad7fbabd2436489a4a87e7b5b5b28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_pod2_global_nc1_lambert2
+    second: {fileID: 2100000, guid: 9c08d955cae42e14385e0c1b896161eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg1_lambert2
+    second: {fileID: 2100000, guid: 5a944e362ff75f448aaec15ea01460c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg_lambert2
+    second: {fileID: 2100000, guid: 442fe003bf7ab844bb9ba648f9e8f3bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_lambert2
+    second: {fileID: 2100000, guid: da1834683d0c7c94fafe7c78aa824ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ventFace_global_jg_lambert2
+    second: {fileID: 2100000, guid: 3d5c3d36f63dfcf4d9262949895f5634, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_BaseWall
+    second: {fileID: 2100000, guid: 74e6844dde231d74097e00448ce27d92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_Floor
+    second: {fileID: 2100000, guid: c222e1842dc8b3b4980cd42974809c96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_Walkway
+    second: {fileID: 2100000, guid: 0637ff4dd372266469242ec352c4e453, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_WallLights
+    second: {fileID: 2100000, guid: 5cc8e132e2a590a4ea933441ca3ff5ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_WallPillars
+    second: {fileID: 2100000, guid: ca05171bdf007264ea9bb657c9bd4ad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_WallStripes
+    second: {fileID: 2100000, guid: b9e3109bcac522e499f332b66a953ad5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_WallWindowOutlines
+    second: {fileID: 2100000, guid: 741aecc71b7069f49859ce0670d586e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_walls_levelOne_jg_WallWindowPane
+    second: {fileID: 2100000, guid: ceeff112cfe5f864ea9c2d3d2a64bb47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate1_global_sj_textured1_Box
+    second: {fileID: 2100000, guid: 3ad861408e27ab941b82d336d94fd4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate1_global_sj_textured_Box
+    second: {fileID: 2100000, guid: 9b2cd2ce5b5d99d4889430709f420939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate2_global_sj_textured_BoxHoldingTubes
+    second: {fileID: 2100000, guid: ae18eea424a5d454abccdf0bd2b1e81a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate2_global_sj_textured_Tube
+    second: {fileID: 2100000, guid: f3f64909a0bc75440afd5977c7e0964a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate4Seperate_global_sj_textured_boxBottom
+    second: {fileID: 2100000, guid: 2d29229011ab12a48b70ef34386fee20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate4Seperate_global_sj_textured_boxTop
+    second: {fileID: 2100000, guid: 057e917ae77e63e419ed2c2fefb157c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate5_global_jg_textured_boxBottom
+    second: {fileID: 2100000, guid: c8aa7558836b1be48b934b9b82ed919f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_boxCrate5_global_jg_textured_boxTop
+    second: {fileID: 2100000, guid: a9d607fc8ba546740a6f195c5b276a3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured1_DoorButton
+    second: {fileID: 2100000, guid: 966e762152eb0f247b34b2a49fafebd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured1_DoorOutline
+    second: {fileID: 2100000, guid: c59d136cf97bb324bbbe54c2b37dfb10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured1_DoorSideAccents
+    second: {fileID: 2100000, guid: 8ea7091736468b245ba830b72a38897b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured1_InnerDoorOurline
+    second: {fileID: 2100000, guid: cc4dacf88afdb2344bf31c1a12dd47d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured1_MiddleDivider
+    second: {fileID: 2100000, guid: 04a404c1decad224ea038d4122f83938, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured2_DoorButton
+    second: {fileID: 2100000, guid: 97cf5046bf8964b4287caba804a23187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured2_DoorOutline
+    second: {fileID: 2100000, guid: 12034287b3f51e64a8df51e65850fad7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured2_DoorSideAccents
+    second: {fileID: 2100000, guid: ccb34bb9fd3bab247888634da2d0f48c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured2_InnerDoorOurline
+    second: {fileID: 2100000, guid: 2a17368d4c86c4e419d2eef119b59615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured2_MiddleDivider
+    second: {fileID: 2100000, guid: 556e604bb44fd674cabd7c6387f8cfd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured3_DoorButton
+    second: {fileID: 2100000, guid: 83e769a55d1dfae429086b1bdc7dca57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured3_DoorOutline
+    second: {fileID: 2100000, guid: f1f49749636d16c43bc2a6a9ba0c70cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured3_DoorSideAccents
+    second: {fileID: 2100000, guid: c101e5bf3cebcd24796b4d3c10f50c0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured3_InnerDoorOurline
+    second: {fileID: 2100000, guid: 48c92016328213e46993f84e52bc3955, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured3_MiddleDivider
+    second: {fileID: 2100000, guid: 77712b11f245415448e726e7d53b2153, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured4_DoorButton
+    second: {fileID: 2100000, guid: df5b5adeaa738304f89bf026c113a626, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured4_DoorOutline
+    second: {fileID: 2100000, guid: e977abe74ca1c30418f8943a85f2538b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured4_DoorSideAccents
+    second: {fileID: 2100000, guid: d93e002b129e1d74884234b6f8c3220e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured4_InnerDoorOurline
+    second: {fileID: 2100000, guid: 87c2308f3d436794b8610f56c5123089, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured4_MiddleDivider
+    second: {fileID: 2100000, guid: 3626931dd70c45c409271b4f65b60c53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured_DoorButton
+    second: {fileID: 2100000, guid: 9c0c4dabe792a5746b7ffbfa62bbbce8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured_DoorOutline
+    second: {fileID: 2100000, guid: b7db5726bf17972468e264df7a19df7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured_DoorSideAccents
+    second: {fileID: 2100000, guid: fda225adbcb7eac45b755dc747fa708b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured_InnerDoorOurline
+    second: {fileID: 2100000, guid: 2d1fb84f9109e8e4ab417495e4d58749, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_door_global_jg_textured_MiddleDivider
+    second: {fileID: 2100000, guid: ae7636ad879048e41abe5657930180e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_glassFloor_levelThree_jg_glassFloor
+    second: {fileID: 2100000, guid: 0a65bece434e14f40baba373cb8317bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_hallway_global_jg4_lambert2
+    second: {fileID: 2100000, guid: 731db7471c1708f489b9c1d5c94b1519, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_hallway_global_jg5_lambert2
+    second: {fileID: 2100000, guid: 1f6860339213e6746ada2db3240c16c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_hallway_global_jg6_lambert2
+    second: {fileID: 2100000, guid: 124d99c234d736f4c806d231dcbb415a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_hallway_global_jg_lambert2
+    second: {fileID: 2100000, guid: 8e0611b33ebd90247bd30c638d1bce52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_base
+    second: {fileID: 2100000, guid: 008b9fb8e1e15c442b001d237933b4ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_button
+    second: {fileID: 2100000, guid: cc0f8639f042e9d4e8d90003b2273eea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_handle
+    second: {fileID: 2100000, guid: 6adcfba7bcd6c764ba63f5b28ad20db8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_hologram
+    second: {fileID: 2100000, guid: 8a5a09675fea626499c7efd8a6b6d1a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_innerPlatform
+    second: {fileID: 2100000, guid: 798ba72c4539cc945b2919841bd518d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_innerSupports
+    second: {fileID: 2100000, guid: 8d34994944a6a124280575cbd489daf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_pipe
+    second: {fileID: 2100000, guid: 6f57a71805ad0ea4c9a43c4925b68a9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_supports
+    second: {fileID: 2100000, guid: 953ddf64491729a418be1928a2ab5fbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1AeviumContainer_levelThree_jg_lab1AeviumContainer_levelThree_wheels
+    second: {fileID: 2100000, guid: bc00cd4139188ef44842fcf14243d822, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CenterConsole_levelThree_jg_lab1CenterConsole_levelThree_base
+    second: {fileID: 2100000, guid: 1fb7cb289064a5243a13c3e78ab43c0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CenterConsole_levelThree_jg_lab1CenterConsole_levelThree_hologram
+    second: {fileID: 2100000, guid: 8badb7ac19aca0e4393bba4e547e6647, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CenterConsole_levelThree_jg_lab1CenterConsole_levelThree_hologramGlass
+    second: {fileID: 2100000, guid: 9e9668c1fd9a28c438a2c32e1b6b30e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CenterConsole_levelThree_jg_lab1CenterConsole_levelThree_underside
+    second: {fileID: 2100000, guid: cdd81043a0760e64da453dfaf96f9742, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CornerDesk_levelThree_jg_lab1CornerDesk_levelThree_base
+    second: {fileID: 2100000, guid: a0ff958e9825d3943bf048baf3fb3995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CornerDesk_levelThree_jg_lab1CornerDesk_levelThree_hologram
+    second: {fileID: 2100000, guid: 5497b84fd93b9f84fbc88b5abbe09f8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1CornerDesk_levelThree_jg_lab1CornerDesk_levelThree_underside
+    second: {fileID: 2100000, guid: 7d28317d1024d3c4897aa974ba744a7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Desk_levelThree_jg_lab1Desk_levelThree_base
+    second: {fileID: 2100000, guid: b74e902deaa20c14a89e89e35c602e4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Desk_levelThree_jg_lab1Desk_levelThree_hologram
+    second: {fileID: 2100000, guid: a2ea6c97893ea924ab021ce140e2b053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Desk_levelThree_jg_lab1Desk_levelThree_underside
+    second: {fileID: 2100000, guid: 60c7fac21a749cf45a198a507f96654c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Lights_levelThree_jg_lab1Lights_levelThree_base
+    second: {fileID: 2100000, guid: 6b379a3ccb28ebc4b9776a67430f3060, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Lights_levelThree_jg_lab1Lights_levelThree_emission
+    second: {fileID: 2100000, guid: 8845ebc3956797545b6143ad359db065, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Platform_levelThree_jg_lab1Platform_levelthree_base
+    second: {fileID: 2100000, guid: 57f12f664889550439d5474d50fdd02c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Platform_levelThree_jg_lab1Platform_levelthree_emission
+    second: {fileID: 2100000, guid: 5f35e2e533008544780cebdd006d8baf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Railing_levelThree_jg_lab1Railing_levelThree_ground
+    second: {fileID: 2100000, guid: d72f9440acd7a5545bc98bd54955cc94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Railing_levelThree_jg_lab1Railing_levelThree_pillars
+    second: {fileID: 2100000, guid: aacae442d1cfad64988c3e9da3962c48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Railing_levelThree_jg_lab1Railing_levelThree_railing
+    second: {fileID: 2100000, guid: 6abad9dd1d4f6694c8c9544a5282481a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lab1Walls_levelThree_floor
+    second: {fileID: 2100000, guid: e57a779f5e4fbff4f826e47d5e8452a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lab1Walls_levelThree_pipes
+    second: {fileID: 2100000, guid: 0c8c18ea88e0b9140b08e121fa104d55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lab1Walls_levelThree_wallPanels
+    second: {fileID: 2100000, guid: 93c9c093e1229df4696c95195516b8ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lab1Walls_levelThree_wallSupports
+    second: {fileID: 2100000, guid: c1e6dbbd021671c4f83e3ac92b21c1ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lab1Walls_levelThree_walls
+    second: {fileID: 2100000, guid: 22b60899dd4e1f8459c998e5ac09e0f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab1Walls_levelThree_jg_lambert8
+    second: {fileID: 2100000, guid: 196e042bc332ebe47ba745d04859af82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Desk_levelThree_jg_lab2Desk_levelThree_base
+    second: {fileID: 2100000, guid: e830592297506ea41930e796a5ed5848, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Desk_levelThree_jg_lab2Desk_levelThree_underside
+    second: {fileID: 2100000, guid: c22f43e9464abea4db2ca93c31ffdbae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Experiment_levelThree_jg_lab2Experiment_levelThree_base1
+    second: {fileID: 2100000, guid: a5a9f247dbb6b024880d0a562b41af34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Experiment_levelThree_jg_lab2Experiment_levelThree_glass
+    second: {fileID: 2100000, guid: 76d70629a6224d44ea2d80bab3a0ccc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Experiment_levelThree_jg_lab2Experiment_levelThree_pipes
+    second: {fileID: 2100000, guid: 4cf3928b55f85cb43a1a37d2a0e182a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Experiment_levelThree_jg_lab2Experiment_levelThree_showerHead
+    second: {fileID: 2100000, guid: 48c5714f49fbc944ba3bd6f9689693e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Lights_levelThree_jg_lab2Lights_levelThree_base
+    second: {fileID: 2100000, guid: fc1b25a5dd25c7f4287beb7d1cf5ab03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Lights_levelThree_jg_lab2Lights_levelThree_emission
+    second: {fileID: 2100000, guid: 3a7bdb8b60a10544fbb77fac8558db67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Railing_levelThree_jg_lab2Railing_levelThree_railing
+    second: {fileID: 2100000, guid: f1926253c982dd94a9b116ddeebb68da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Railing_levelThree_jg_lab2Railing_levelThree_walls
+    second: {fileID: 2100000, guid: ef54cbde68ea85a40b52292e15c5dad6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Railing_levelThree_jg_lab2Railing_levelThree_windows
+    second: {fileID: 2100000, guid: b9e3235262fa22f408871ffb30016dc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Walls_levelThree_jg1_lab2Walls_levelThree_floor
+    second: {fileID: 2100000, guid: c2be2b456bded7a4fb34da302b0b8718, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Walls_levelThree_jg1_lab2Walls_levelThree_walkway1
+    second: {fileID: 2100000, guid: b2739710e570c97468f6c1759842a746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Walls_levelThree_jg1_lab2Walls_levelThree_wallAccent
+    second: {fileID: 2100000, guid: 0bcab118904eaf845a76e9349eab0b27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Walls_levelThree_jg1_lab2Walls_levelThree_wallBase
+    second: {fileID: 2100000, guid: d56cae5552d01b145a152828210ebb99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Walls_levelThree_jg1_lab2Walls_levelThree_wallPanels
+    second: {fileID: 2100000, guid: bdb9806f295476541bc7f6dd2bd093a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab2Walls_levelThree_jg1_lab2Walls_levelThree_wallsupports
+    second: {fileID: 2100000, guid: 10117faf933c8be45ab133065245fe21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ControlPanel_levelThree_jg_button
+    second: {fileID: 2100000, guid: d3fcdccdee45f00469578005a9a75104, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ControlPanel_levelThree_jg_controlPanelBase
+    second: {fileID: 2100000, guid: 6da641f48e1a3da40bcb74d1a254aefc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ControlPanel_levelThree_jg_hologramPanel
+    second: {fileID: 2100000, guid: d89d4ca19919c1544aff02dabc6c8fc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallway_global_jg_lambert2
+    second: {fileID: 2100000, guid: 0d7a29df28383804cb316067e13ff0f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_01
+    second: {fileID: 2100000, guid: eb36a766d11389041854576e438fa012, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_02
+    second: {fileID: 2100000, guid: 5e9db367db40b1e41982da9f5aa4a6e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_03
+    second: {fileID: 2100000, guid: 7b95a1f647f32ad4b96d5a39ad5b7fda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_04
+    second: {fileID: 2100000, guid: 6236f45e06bef394e958e317d518abd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_05
+    second: {fileID: 2100000, guid: 8a6d55d0cc89bb04093dc0ec35dc277c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_boxCrate1_global_sj1_Box
+    second: {fileID: 2100000, guid: 2bc91249ab70e5f44bf784fd6e3394f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_boxCrate1_global_sj_Box
+    second: {fileID: 2100000, guid: 80406518965501f4e9dc7b7d9927c9a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_boxCrate4Combined_global_sj_lambert2
+    second: {fileID: 2100000, guid: ae03ae4c3041a724db69a2580c3937b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_circularLight_levelTwo_jg_lambert2
+    second: {fileID: 2100000, guid: c7fcc54c7cdd3f04bbec00c18f4f9a5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_computerController_levelTwo_jg_lambert2
+    second: {fileID: 2100000, guid: 6dc01cd9accc1734abe3682b4065d316, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg3_DoorButton
+    second: {fileID: 2100000, guid: 49cc22afee08aa1458c2476a666c4d8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg3_DoorOutline
+    second: {fileID: 2100000, guid: c7c39297b878c2f45a6f3f8d545788cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg3_DoorSideAccents
+    second: {fileID: 2100000, guid: a13fb173e2b37d8488b2f18184d12863, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg3_InnerDoorOurline
+    second: {fileID: 2100000, guid: 6951d62b013002648804d66336cd83ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg3_MiddleDivider
+    second: {fileID: 2100000, guid: 1cdfe85f87754f34aab79c1f4b1baab7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured1_DoorButton
+    second: {fileID: 2100000, guid: 1d915a11f5ba4df49a8af6a76289927a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured1_DoorOutline
+    second: {fileID: 2100000, guid: 1ca303d5766aca643a19cf7623fd8608, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured1_DoorSideAccents
+    second: {fileID: 2100000, guid: c74b386050b31d14eb1aa8f8651ad8ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured1_InnerDoorOurline
+    second: {fileID: 2100000, guid: a5f18ff6089c02b4ebf5af0496a07d23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured1_MiddleDivider
+    second: {fileID: 2100000, guid: 2822460335001884cad2c78b1fbd9b23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured2_DoorButton
+    second: {fileID: 2100000, guid: acf701ea8064eb04d91bfc4ea19d19a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured2_DoorOutline
+    second: {fileID: 2100000, guid: 301fc5dd6da009849b33df52d9192683, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured2_DoorSideAccents
+    second: {fileID: 2100000, guid: 741a2f11f95ff7346b93419d495dbc83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured2_InnerDoorOurline
+    second: {fileID: 2100000, guid: 5c9c71bc75e92ef45b1ee979b85d4f3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured2_MiddleDivider
+    second: {fileID: 2100000, guid: c434228338a6bae428660e1df6b24ed3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured_DoorButton
+    second: {fileID: 2100000, guid: c1e7d639bc06264488bb9a95c54a04ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured_DoorOutline
+    second: {fileID: 2100000, guid: 0b4ccd7b9768e6e439b7d5b8aa7a2b5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured_DoorSideAccents
+    second: {fileID: 2100000, guid: ca5c01a2d7f15e146985ca2ad214a0a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured_InnerDoorOurline
+    second: {fileID: 2100000, guid: 9a278c6846bf7484f83e8c25ab54e1b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_door_global_jg_textured_MiddleDivider
+    second: {fileID: 2100000, guid: e356bb3e6407b4548aadfd38c8abe37f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_controlBox
+    second: {fileID: 2100000, guid: 0cc90a155fc8f3340b8087345f027d3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_lambert2
+    second: {fileID: 2100000, guid: 2fa909ab97049324ab7fc84c8f0158e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_miscMetal
+    second: {fileID: 2100000, guid: 8a3b4afc65b93d345a1d87f54299cfcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_pipes
+    second: {fileID: 2100000, guid: 3a5764f390c90ae4a89086aef36f8ba3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_railings
+    second: {fileID: 2100000, guid: 7a86b687bfb35c74292006338f36b408, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_screen
+    second: {fileID: 2100000, guid: 2df3546e809d8b245a23f9eea87c143e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generatorSupports_levelTwo_jg_supportBases
+    second: {fileID: 2100000, guid: ebd96fdd42f46db4991a2d31cf8635f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_GlassCover
+    second: {fileID: 2100000, guid: 3fd770307ebf6474faae7c50e87c975a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_baseGenerator
+    second: {fileID: 2100000, guid: f11e7aa5eb8457f4c8806fbf6eb97d3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_beamPistons
+    second: {fileID: 2100000, guid: d8a076ee970ca7a4b8fca3e040effacc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_generatorBeams
+    second: {fileID: 2100000, guid: 65943b3be2a71d14faf2b3ae00be71ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_generatorPipes
+    second: {fileID: 2100000, guid: 4c07df2969332564fa656cbc9d44bfee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_generatorRailing
+    second: {fileID: 2100000, guid: 025c6e7984a39b546a17d4eb470fe5e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_generatorSwitches
+    second: {fileID: 2100000, guid: 61d2df50df7573a4287758575017ee0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_generator_levelTwo_jg_lambert2
+    second: {fileID: 2100000, guid: a619261cce3d5fb4690ed9cec1be1ac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg2_spinningParts
+    second: {fileID: 2100000, guid: f7d8fde6e55ef9041a3dcae1f14fa3f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_generator_levelTwo_jg3_generator_levelTwo_jg_lambert2
+    second: {fileID: 2100000, guid: d84ecc8f26c37194e8098fd349e7eca6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_hallway_global_jg1_lambert2
+    second: {fileID: 2100000, guid: 4cb6671edafdd02498cedf0b7a4f3672, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_hallway_global_jg_lambert2
+    second: {fileID: 2100000, guid: 778155bffec3fe748b8400fbec011e5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_ventFace_global_jg2_lambert2
+    second: {fileID: 2100000, guid: aa68d8bc02ca1cc499818cdda527ab64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_ventFace_global_jg_lambert2
+    second: {fileID: 2100000, guid: 3dc75cfb4bee4314fa78e08bc41dad58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_walls_levelTwo_jg_textured_baseWalls
+    second: {fileID: 2100000, guid: a967f3de9c77ce9438262aca20b278e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_walls_levelTwo_jg_textured_ceiling
+    second: {fileID: 2100000, guid: 54a73ae4edc3a4d4fa43c2c0e87109fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_walls_levelTwo_jg_textured_fan
+    second: {fileID: 2100000, guid: 8ce7bfec627678549bdae1927694660b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_walls_levelTwo_jg_textured_floor
+    second: {fileID: 2100000, guid: e65fd564abc7b8948a132399098f0d2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_walls_levelTwo_jg_textured_floorPath
+    second: {fileID: 2100000, guid: 77846f703a72d93419fc3189064296a6, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
