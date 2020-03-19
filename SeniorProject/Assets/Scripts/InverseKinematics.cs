@@ -51,7 +51,7 @@ public class InverseKinematics : MonoBehaviour {
 			adyacent = ((upperArm_Length * upperArm_Length) - (forearm_Length * forearm_Length) + (targetDistance * targetDistance)) / (2*targetDistance);
 
 			angle = Mathf.Acos (adyacent / upperArm_Length) * Mathf.Rad2Deg;
-
+            //add a try and get and set it to a older working position, cross, angle 
 			upperArm.RotateAround (upperArm.position, cross, -angle);
 
 			forearm.LookAt(target, cross);

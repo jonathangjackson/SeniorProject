@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gunBarrel
+    second: {fileID: 2100000, guid: 670035262ba4b504ea8d74eee9e50825, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gunBase
+    second: {fileID: 2100000, guid: 70754c5ac06ea204a81e81fd14adbe2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scope
+    second: {fileID: 2100000, guid: 800d2817b3e7b924a904abb6b7ca4841, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trigger
+    second: {fileID: 2100000, guid: 2f8ef1506ef0d5b41a239c33be7523ca, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

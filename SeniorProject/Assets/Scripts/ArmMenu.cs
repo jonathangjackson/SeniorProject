@@ -19,14 +19,14 @@ public class ArmMenu : MonoBehaviour
     public GameObject centerEyeCamera;
     public GameObject rightElbowObj;
     public GameObject trackingSpace;
-    public GameObject gun;
+    public GameObject[] gun = new GameObject[4];//0 = trigger, 1 = barrel, 2 = pulsescript, 3 = hologram
     public Material hologramMat;
     private Vector3 originalPos;
     private Vector3 originalRot;
     private bool grabGun = false;
     private bool grabbedGun = false;
-    Renderer rend;
-    Material currentMat;
+    Renderer[] rend = new Renderer[2];
+    Material[] currentMat = new Material[4];
 
 
     //NEW INPUT FOR ANT PLACEMENT
@@ -48,6 +48,7 @@ public class ArmMenu : MonoBehaviour
 
     private bool menuOn = false;
     private bool placeAnt = false;
+    private float dissolveState = 1.0f;
 
     private float rayLength = 2.0f;
 
@@ -56,8 +57,12 @@ public class ArmMenu : MonoBehaviour
     void Start()
     {
 
-        rend = gun.GetComponent<Renderer>();
-        currentMat = rend.material;
+        rend[0] = gun[0].GetComponent<Renderer>();
+        rend[1] = gun[1].GetComponent<Renderer>();
+        currentMat[0] = rend[0].materials[0];
+        currentMat[1] = rend[0].materials[1];
+        currentMat[2] = rend[1].materials[0];
+        currentMat[3] = rend[1].materials[1];
         originalPos = this.GetComponent<RectTransform>().localPosition;
         originalRot = this.GetComponent<RectTransform>().localEulerAngles;
     }
@@ -72,12 +77,12 @@ public class ArmMenu : MonoBehaviour
          //   transform.GetChild(0).gameObject.SetActive(menuOn);
         //}
 
-        if (slider.value == 3)
+        if (slider.value == 1.0f)
         {
             menuOn = true;
             transform.GetChild(0).gameObject.SetActive(menuOn);
         }
-        if(slider.value == 0)
+        if(slider.value == 0.0f)
         {
             menuOn = false;
             transform.GetChild(0).gameObject.SetActive(menuOn);
@@ -102,14 +107,38 @@ public class ArmMenu : MonoBehaviour
         {
             grabbedGun = true;
             grabGun = false;
-            rend.material = currentMat;
-            gun.transform.GetChild(0).GetComponent<Pulse>().isActive = true;
+
+            gun[2].GetComponent<Pulse>().isActive = true;
+        }
+        if(grabbedGun && !grabGun && dissolveState > 0.0f)
+        {
+            dissolveState -= (0.5f) * Time.deltaTime;
+            for (int i = 0; i < 4; i++)
+            {
+                currentMat[i].SetFloat("Vector1_51085A6D", dissolveState);
+            }
+            if(dissolveState <= 0.0f)
+            {
+                gun[3].SetActive(false);
+                dissolveState = 0.0f;
+            }
         }
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) < 0.9f && grabbedGun)
         {
             grabbedGun = false;
-            gun.transform.GetChild(0).GetComponent<Pulse>().isActive = false;
-            gun.gameObject.SetActive(false);
+            gun[2].GetComponent<Pulse>().isActive = false;
+        }
+        if (!grabbedGun && dissolveState < 1.0f)
+        {
+            dissolveState += (0.5f) * Time.deltaTime;
+            for (int i = 0; i < 4; i++)
+            {
+                currentMat[i].SetFloat("Vector1_51085A6D", dissolveState);
+            }
+            if (dissolveState >= 1.0f)
+            {
+                dissolveState = 1.0f;
+            }
         }
 
     }
@@ -255,9 +284,7 @@ public class ArmMenu : MonoBehaviour
     {
 
         closeMenu();
-
-        gun.gameObject.SetActive(true);
-        rend.material = hologramMat;
+        gun[3].SetActive(true);
         grabGun = true;
     }
 
@@ -278,7 +305,7 @@ public class ArmMenu : MonoBehaviour
 
     private void closeMenu()
     {
-
+        slider.value = 0.0f;
         //Close Menu
         menuOn = !menuOn;
         transform.GetChild(0).gameObject.SetActive(menuOn);

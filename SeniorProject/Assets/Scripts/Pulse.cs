@@ -22,6 +22,7 @@ public class Pulse : MonoBehaviour
             pulseClone.transform.parent = gameObject.transform;
             pulseClone.transform.localEulerAngles = rotate;
             pulseClone.transform.parent = null;
+            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
             coroutine = StopParticle(0.5f);
             StartCoroutine(coroutine);
             //pulseClone.GetComponent<ConstantForce>().force = new Vector3(speed, 0, 0);
@@ -34,5 +35,6 @@ public class Pulse : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         this.transform.parent.GetComponent<Animator>().SetBool("Play", false);
         fire.Stop();
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 }
