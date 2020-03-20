@@ -26,15 +26,13 @@ public class Lab1Door : MonoBehaviour
         {
             audio1.PlayOneShot(audio1.clip);
 
-            animator1.SetTrigger("Open");
-            animator1.ResetTrigger("Reverse");
+            animator1.Play("Door_Open");
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        animator1.SetTrigger("Close");
-        animator1.ResetTrigger("Open");
+        animator1.Play("Door_Close");
         audio1.Play();
     }
 }

@@ -9,7 +9,7 @@ public class Lab2Doors : MonoBehaviour
     AudioSource audio2;
 
 
-    public Lever2 lever2;
+    public SVLever2 lever2;
 
     // Start is called before the first frame update
     void Start()
@@ -26,22 +26,20 @@ public class Lab2Doors : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (lever2.lever2active == true)
+        if (lever2.leverIsOn == true)
         {
             if (collider.gameObject.name == "Player")
             {
                 audio2.PlayOneShot(audio2.clip);
 
-                animator2.SetTrigger("Open");
-                animator2.ResetTrigger("Reverse");
+                animator2.Play("Door_Open");
             }
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        animator2.SetTrigger("Close");
-        animator2.ResetTrigger("Open");
+        animator2.Play("Door_Close");
         audio2.Play();
     }
 }
