@@ -19,7 +19,7 @@ public class SVLever2 : MonoBehaviour
 
     private HingeJoint leverHingeJoint;
 
-    private OVRGrabbable grabbable;
+    public OVRGrabbable grabbable;
     private bool wasGrabbed = false;
 
     private Vector3 startingEuler;
