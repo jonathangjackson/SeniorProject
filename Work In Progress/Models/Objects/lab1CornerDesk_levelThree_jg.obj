@@ -363,7 +363,7 @@ vn -0.000000 1.000000 0.000000
 vn -0.000000 1.000000 0.000000
 s 1
 g pCube126 grp_lab1_cornerDesk
-usemtl aiStandardSurface2SG
+usemtl lab1CornerDesk_levelThree_base1
 f 15/45/1 19/46/2 20/47/3 5/48/4
 s 2
 f 24/104/5 25/105/6 15/106/7 5/107/8
@@ -386,24 +386,24 @@ f 20/47/3 19/46/2 16/51/36 3/52/37
 s 3
 f 22/5/38 23/2/10 20/1/9 3/6/39
 s off
-usemtl aiStandardSurface1SG
+usemtl lab1CornerDesk_levelThree_underside1
 f 51/21/40 50/22/41 52/23/42 53/24/43
 s 3
-usemtl aiStandardSurface2SG
+usemtl lab1CornerDesk_levelThree_base1
 f 24/3/11 23/2/10 21/7/44 6/8/45
 s 2
 f 14/108/46 25/105/6 24/104/5 6/109/47
 s off
-usemtl aiStandardSurface1SG
+usemtl lab1CornerDesk_levelThree_underside1
 f 54/124/48 55/125/49 56/126/50 57/127/51
 s 7
-usemtl aiStandardSurface2SG
+usemtl lab1CornerDesk_levelThree_base1
 f 27/11/27 40/10/26 41/15/52 12/16/53
 s off
-usemtl aiStandardSurface1SG
+usemtl lab1CornerDesk_levelThree_underside1
 f 59/128/54 58/129/55 60/130/56 61/131/57
 s 2
-usemtl aiStandardSurface2SG
+usemtl lab1CornerDesk_levelThree_base1
 f 7/114/58 26/112/59 30/110/29 29/115/60
 f 31/111/30 30/110/29 26/112/59 8/113/61
 s 1
@@ -418,10 +418,10 @@ f 34/65/66 45/62/65 46/66/22 38/68/21
 s 7
 f 35/13/70 36/14/69 40/10/26 39/9/25
 s off
-usemtl aiStandardSurface1SG
+usemtl lab1CornerDesk_levelThree_underside1
 f 63/25/73 62/26/74 64/27/75 65/28/76
 s 1
-usemtl aiStandardSurface2SG
+usemtl lab1CornerDesk_levelThree_base1
 f 43/57/18 42/61/34 9/58/64 18/54/63
 f 44/56/19 43/57/18 18/54/63 8/53/62
 f 45/62/65 44/56/19 8/53/62 35/63/77
@@ -813,7 +813,7 @@ vn -0.326506 0.945195 0.000000
 vn -0.326506 0.945195 0.000000
 s 1
 g grp_lab1_cornerDesk pPlane10
-usemtl aiStandardSurface3SG
+usemtl lab1CornerDesk_levelThree_hologram1
 f 66/148/148 67/149/149 78/150/150 77/151/151
 f 67/149/149 68/152/152 79/153/153 78/150/150
 f 68/152/152 69/156/154 80/157/155 79/153/153
@@ -1280,7 +1280,7 @@ vn 0.000000 0.962895 0.269876
 vn 0.000000 0.962895 0.269876
 s 1
 g grp_lab1_cornerDesk pPlane9
-usemtl aiStandardSurface3SG
+usemtl lab1CornerDesk_levelThree_hologram1
 f 187/269/269 188/270/270 199/271/271 198/272/272
 f 188/270/270 189/273/273 200/274/274 199/271/271
 f 189/273/273 190/277/275 201/278/276 200/274/274

@@ -1,52 +1,52 @@
-newmtl aiStandardSurface1SG
+newmtl lab1AeviumContainer_levelThree_base1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface2SG
+newmtl lab1AeviumContainer_levelThree_button1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface3SG
+newmtl lab1AeviumContainer_levelThree_handle1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface4SG
+newmtl lab1AeviumContainer_levelThree_hologram1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface5SG
+newmtl lab1AeviumContainer_levelThree_innerPlatform1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface6SG
+newmtl lab1AeviumContainer_levelThree_innerSupports1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface7SG
+newmtl lab1AeviumContainer_levelThree_pipe1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface8SG
+newmtl lab1AeviumContainer_levelThree_supports1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 0.00
-newmtl aiStandardSurface9SG
+newmtl lab1AeviumContainer_levelThree_wheels1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
