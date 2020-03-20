@@ -32,14 +32,16 @@ public class Lab2Doors : MonoBehaviour
             {
                 audio2.PlayOneShot(audio2.clip);
 
-                animator2.Play("Door_Open");
+                animator2.SetTrigger("Open");
+                animator2.ResetTrigger("Reverse");
             }
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        animator2.Play("Door_Close");
+        animator2.SetTrigger("Close");
+        animator2.ResetTrigger("Open");
         audio2.Play();
     }
 }
