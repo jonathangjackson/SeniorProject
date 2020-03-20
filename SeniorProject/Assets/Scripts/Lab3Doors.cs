@@ -31,14 +31,16 @@ public class Lab3Doors : MonoBehaviour
             {
                 audio3.PlayOneShot(audio3.clip);
 
-                animator3.Play("Door_Open");
+                animator3.SetTrigger("Open");
+                animator3.ResetTrigger("Reverse");
             }
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        animator3.Play("Door_Close");
+        animator3.SetTrigger("Close");
+        animator3.ResetTrigger("Open");
         audio3.Play();
     }
 }
