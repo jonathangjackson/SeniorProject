@@ -8,7 +8,7 @@ public class Lab3Doors : MonoBehaviour
     AudioSource audio3;
 
 
-    public Lever3 lever3;
+    public SVLever3 lever3;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class Lab3Doors : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (lever3.lever3active == true)
+        if (lever3.leverIsOn == true)
         {
             if (collider.gameObject.name == "Player")
             {
