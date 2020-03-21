@@ -9,11 +9,9 @@ public class TeleportPlayer : MonoBehaviour
     public GameObject thePlayer;
     public GameObject VRMovement;
     public GameObject fadeObject1;
-    public GameObject PostProcessingVolume;
 
     void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("test");
         if (other.tag == "Player")
         {
             VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
@@ -22,7 +20,6 @@ public class TeleportPlayer : MonoBehaviour
             coroutine = WaitAndPrint(1.0f);
             StartCoroutine(coroutine);
             fadeObject1.SetActive(true);
-            PostProcessingVolume.SetActive(false);
         }
     }
 
