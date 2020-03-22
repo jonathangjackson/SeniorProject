@@ -10,6 +10,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: 892c23b066fc3f049a582c5259c57d42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert1
     second: {fileID: 2100000, guid: cdddb6e48b3aee849a6f0ee5cf2b37c4, type: 2}
   - first:
@@ -27,6 +32,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_balcony_levelOne_jg_textured_Railings
     second: {fileID: 2100000, guid: 1d06db34b131fa44ba3342ff7fab28fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_balcony_levelOne_jg_textured_lambert2
+    second: {fileID: 2100000, guid: 203196be9744f024a9b56cd1746e7bef, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -355,8 +365,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwayArches
+    second: {fileID: 2100000, guid: 0f3d2053f8a58a645acf197ae93eec9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwayFloor
+    second: {fileID: 2100000, guid: 3777b93853e5905419f22c25dd8f86c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwayLights
+    second: {fileID: 2100000, guid: adcfab1938e9c1b4db9fc6e255cfd8c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwayPipes
+    second: {fileID: 2100000, guid: 0cf7b31c577889243a87587733def3c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwayRoof
+    second: {fileID: 2100000, guid: 0d64f69c9ac00684dac26a3b01bb7c5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwaySection1_levelOne_jg_lambert2
     second: {fileID: 2100000, guid: f3fad7fbabd2436489a4a87e7b5b5b28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_lvl1Entrance_levelOne_jg_hallwayWalls
+    second: {fileID: 2100000, guid: 3018aabb97bad4344bdd2e449d37fcbd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -365,8 +405,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_pod2_global_nc1_podEngines
+    second: {fileID: 2100000, guid: d67e19bb639c33b478f3c00018bb5846, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_powerCell_global_jg1_lambert2
     second: {fileID: 2100000, guid: 5a944e362ff75f448aaec15ea01460c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg1_powerCellCore
+    second: {fileID: 2100000, guid: 3f349efd52bf5e847bb3df8669b5fc0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg1_powerCellEnds
+    second: {fileID: 2100000, guid: a4c55960d8177a34f809a283b84fd0bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg1_powerCellGlass
+    second: {fileID: 2100000, guid: 95acae1e6f6620d4aa94da1f91f9de95, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -375,8 +435,58 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg_powerCellCore
+    second: {fileID: 2100000, guid: 770b30984efbc7d40bd8f3af737bdb72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg_powerCellEnds
+    second: {fileID: 2100000, guid: 780297c89734bae42b6aab3a8c2be86f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_powerCell_global_jg_powerCellGlass
+    second: {fileID: 2100000, guid: 8c0b081f551a0084e83e64c0a7f3ba95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_controlPanel
+    second: {fileID: 2100000, guid: ca90384216c10b34bb9ea7e1d9b5a7c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_doors
+    second: {fileID: 2100000, guid: 9bbff5a986c6fc54581c55ae5b9851ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_glass
+    second: {fileID: 2100000, guid: 4a2c2ca8c71744a47bd123c48dfb4ab2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_storageEntrance_levelOne_jg_lambert2
     second: {fileID: 2100000, guid: da1834683d0c7c94fafe7c78aa824ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_lights
+    second: {fileID: 2100000, guid: dd31bc38b1b3a6d4984440b0429436c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_roomWalls
+    second: {fileID: 2100000, guid: 8797ed4af3e141a48807b5164951ae1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_wallAccents
+    second: {fileID: 2100000, guid: 27e2bad014edd6742957100c1d793865, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_storageEntrance_levelOne_jg_windowCasing
+    second: {fileID: 2100000, guid: ccebc7ae58fdf9448ac3a9b5ac2bfd7d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -425,6 +535,56 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_aiStandardSurface2
+    second: {fileID: 2100000, guid: da13e5f5e36476e438d97415a84c49f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_base
+    second: {fileID: 2100000, guid: cf727ccf4ce002d459a025c1ceed37ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_front
+    second: {fileID: 2100000, guid: 1cd68ed24f773434ca28cc90b6e9cfd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_powerCellholder
+    second: {fileID: 2100000, guid: 50f34bd70418870429043756d55fa9a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_screen
+    second: {fileID: 2100000, guid: 7f933a2264914ce4e9b7f15ad42bc00d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_aiStandardSurface2
+    second: {fileID: 2100000, guid: 9e3a9ec0edd651b4f9a0f3412c1e7a3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_base
+    second: {fileID: 2100000, guid: 8e1115229d17fdd4bafee6893b6ecb10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_front
+    second: {fileID: 2100000, guid: 14ee44cc828e66d46a6bc91bfc6ba782, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_powerCellholder
+    second: {fileID: 2100000, guid: 3ef194ce55906f54f8b9e6979ea3f718, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_screen
+    second: {fileID: 2100000, guid: a8cdb75551980c64694c11ed95bab2a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_boxCrate1_global_sj_textured1_Box
     second: {fileID: 2100000, guid: 3ad861408e27ab941b82d336d94fd4da, type: 2}
   - first:
@@ -462,6 +622,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelThree_Lab_boxCrate5_global_jg_textured_boxTop
     second: {fileID: 2100000, guid: a9d607fc8ba546740a6f195c5b276a3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_chairs_levelThree_jg_ChairBackPillow
+    second: {fileID: 2100000, guid: 75e23ef8314a357489531fad4fbc2f93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_chairs_levelThree_jg_ChairSeats
+    second: {fileID: 2100000, guid: 5e7b0a82bd36fb54abf6f00d2e12ed29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_chairs_levelThree_jg_ChairSupports
+    second: {fileID: 2100000, guid: c7da10c26ddf58c449dc98575dce9936, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -860,6 +1035,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ControlPanel_levelThree_jg1_button
+    second: {fileID: 2100000, guid: f6090574b44c47e4cbb548e4808c547b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ControlPanel_levelThree_jg1_controlPanelBase
+    second: {fileID: 2100000, guid: 3212e8d1cf882d642b6e81dacf120655, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ControlPanel_levelThree_jg1_hologramPanel
+    second: {fileID: 2100000, guid: ada17576859f0da47b622148613e3b24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_lab3ControlPanel_levelThree_jg_button
     second: {fileID: 2100000, guid: d3fcdccdee45f00469578005a9a75104, type: 2}
   - first:
@@ -875,6 +1065,121 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Desk_levelThree_jg_Screens
+    second: {fileID: 2100000, guid: c5afcd5b2441ae446a4bcf7256963dca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Desk_levelThree_jg_desks
+    second: {fileID: 2100000, guid: a5fe9f2fbf50e0a4bb9e74c032e7725c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Experiment_levelThree_jg_lab3Experiment_levelThree_base
+    second: {fileID: 2100000, guid: bbf53666b150c634e9f34e1db351d954, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Experiment_levelThree_jg_lab3Experiment_levelThree_glass
+    second: {fileID: 2100000, guid: f9f7a3918093dcb4698fb11abbdfd415, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Experiment_levelThree_jg_lab3Experiment_levelThree_vacuum
+    second: {fileID: 2100000, guid: 39826d986614b9547b3c0327b0168621, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Lights_levelThree_jg_light
+    second: {fileID: 2100000, guid: 030909a825cae1649a46377556e3eff9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Lights_levelThree_jg_lightCasing
+    second: {fileID: 2100000, guid: e63ddc15dc1113542a62e942b9fd5a2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Railing_levelThree_jg_glassPanels
+    second: {fileID: 2100000, guid: b4f1f058adb2bd244a2cc67feb0b7f1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Railing_levelThree_jg_railingWall
+    second: {fileID: 2100000, guid: 619b30d4dad0d84469fdf7a083a5f61d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Railing_levelThree_jg_stairsRailing
+    second: {fileID: 2100000, guid: 6ca55b9594022c44695fd8b3bdee63fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3ShowerHead_levelThree_jg_showerHead
+    second: {fileID: 2100000, guid: fa7ab55677df3ef4c86c41b3db8394aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3TeleporterPad_levelThree_jg_pipes
+    second: {fileID: 2100000, guid: c38cf69b22916ea44819100dafd00617, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3TeleporterPad_levelThree_jg_teleporterPad
+    second: {fileID: 2100000, guid: eb0ede28905c31f4d9cc382acbbae34d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Walls_levelThree_jg_labFloor
+    second: {fileID: 2100000, guid: 8a5fefea757d1c744963017917d2824d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Walls_levelThree_jg_labPillars
+    second: {fileID: 2100000, guid: 8c1c550a7a2df1245bc55bc9b080f404, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Walls_levelThree_jg_labRoof
+    second: {fileID: 2100000, guid: 44bdbb9b652eab34cbd7123c5c129e9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Walls_levelThree_jg_labWallAccentsBig
+    second: {fileID: 2100000, guid: e0e02d6b0c1339d499351780588e55d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Walls_levelThree_jg_labWallAccentsSmall
+    second: {fileID: 2100000, guid: 85d7ffc0ca1fe4045bf3a2c91e8d8d71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_lab3Walls_levelThree_jg_labWalls
+    second: {fileID: 2100000, guid: 74ff8edd3155d11478047a856051c962, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallwayArches
+    second: {fileID: 2100000, guid: 25d41ee11aa5bd140820d1e6dba40223, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallwayFloor
+    second: {fileID: 2100000, guid: 138ab88c897496d46bb0a69060e2dc61, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallwayRoof
+    second: {fileID: 2100000, guid: 98a902c4593dad44d918e2e09d537a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallwayWalls
+    second: {fileID: 2100000, guid: ed8c3bfdb8cfb8047bbe460928432197, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_levelThreeEntrace_levelThree_jg_hallway_global_jg_lambert2
     second: {fileID: 2100000, guid: 0d7a29df28383804cb316067e13ff0f7, type: 2}
   - first:
@@ -885,8 +1190,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_01_Cyan
+    second: {fileID: 2100000, guid: 0689ca1cde6eea449b600875d1a78ec9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_02
     second: {fileID: 2100000, guid: 5e9db367db40b1e41982da9f5aa4a6e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_02_Red
+    second: {fileID: 2100000, guid: 267b9e35b4a06354abd10bcf2c36f810, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -895,13 +1210,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_03_Green
+    second: {fileID: 2100000, guid: 60ea549d2d3c64c4c8de78e87771d6d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_04
     second: {fileID: 2100000, guid: 6236f45e06bef394e958e317d518abd6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_04_Purple
+    second: {fileID: 2100000, guid: 06c2c1d339a77e5419b8c994af4e3db5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_05
     second: {fileID: 2100000, guid: 8a6d55d0cc89bb04093dc0ec35dc277c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_powerLine_levelThree_jg_floorPipe_05_Yellow
+    second: {fileID: 2100000, guid: a9e587dc7617e31469aff30ed6562ada, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -925,8 +1255,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_computerController_levelTwo_jg_controllerOutline
+    second: {fileID: 2100000, guid: 0a69c4ec11946da4f99c3ad52145c6dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_computerController_levelTwo_jg_controllerSwitch
+    second: {fileID: 2100000, guid: ef06e9285102d6444905cae83bbdae36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelTwo_Generator_computerController_levelTwo_jg_lambert2
     second: {fileID: 2100000, guid: 6dc01cd9accc1734abe3682b4065d316, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_computerController_levelTwo_jg_screens
+    second: {fileID: 2100000, guid: 6e293d3e880cb3640a7d0b690abf2cce, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -1115,6 +1460,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_hackingTerminal_global_jg_hackingTerminal_base
+    second: {fileID: 2100000, guid: 388f8fd0eae5c0148b8a0004b7ddbcba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_hackingTerminal_global_jg_hackingTerminal_buttons
+    second: {fileID: 2100000, guid: 4a70c4c9870c47f42ac80c1bb97c4b1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_hackingTerminal_global_jg_hackingTerminal_screen
+    second: {fileID: 2100000, guid: 693c2b36a90d66b44b89651b70c4b069, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_hackingTerminal_global_jg_hackingTerminal_wires
+    second: {fileID: 2100000, guid: 626974e376fe7f14aa8482a4ba87dedb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelTwo_Generator_hallway_global_jg1_lambert2
     second: {fileID: 2100000, guid: 4cb6671edafdd02498cedf0b7a4f3672, type: 2}
   - first:
@@ -1122,6 +1487,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelTwo_Generator_hallway_global_jg_lambert2
     second: {fileID: 2100000, guid: 778155bffec3fe748b8400fbec011e5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_labLevers_levelThree_jg_leverBases
+    second: {fileID: 2100000, guid: b9656d30552b09d4086fd00bbb287b11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelTwo_Generator_labLevers_levelThree_jg_leverHandles
+    second: {fileID: 2100000, guid: af86c88e47555e646b36b0f7d0613396, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
