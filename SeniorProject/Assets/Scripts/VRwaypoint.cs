@@ -35,7 +35,7 @@ public class VRwaypoint : MonoBehaviour
 
         if ((canvas.transform.localScale.x <= maximumScaleX) && (canvas.transform.localScale.y <= 0.0003514537) && (canvas.transform.localScale.z <= 0.0003514537))
         {
-            canvas.transform.localScale = new Vector3(maximumScaleX, maximumScaleY, maximumScaleZ);
+            //canvas.transform.localScale = new Vector3(maximumScaleX, maximumScaleY, maximumScaleZ);
         }
 
         canvas.transform.position = (target.position + offset);

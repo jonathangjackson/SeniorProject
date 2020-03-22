@@ -10,7 +10,7 @@ public class LoadHackingWorld : MonoBehaviour
     public HackingWorldManager hackingWorld;
     public int[] buttonSequence = new int[4];
     public int[] lightToButton = new int[4];
-
+    public List<Animator> unlockDoorAnims = new List<Animator>();
 
     public Transform teleportTarget;
     public GameObject thePlayer;
@@ -32,6 +32,10 @@ public class LoadHackingWorld : MonoBehaviour
     {
         if (hackingWorld.isHacked)
         {
+            for(int i = 0; i < unlockDoorAnims.Count; i++)
+            {
+                unlockDoorAnims[i].SetBool("Locked", false);
+            }
             Debug.Log("HACKED");
             //Then the user completed the sequence
             //teleport them back
@@ -39,7 +43,7 @@ public class LoadHackingWorld : MonoBehaviour
             //set this component to inactive 
 
             VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
-            coroutine = pauseMinerva(0.5f, respwanPoint);
+            coroutine = pauseMinerva(0.1f, respwanPoint);
             StartCoroutine(coroutine);
             nextSprite(2);
             //this.GetComponent<LoadHackingWorld>().enabled = false;
@@ -91,7 +95,7 @@ public class LoadHackingWorld : MonoBehaviour
             //hackingWorld.resetSequencePress();
 
             VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
-            coroutine = pauseMinerva(0.5f, teleportTarget.transform);
+            coroutine = pauseMinerva(0.1f, teleportTarget.transform);
             StartCoroutine(coroutine);
         }
     }

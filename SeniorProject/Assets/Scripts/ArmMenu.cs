@@ -37,6 +37,7 @@ public class ArmMenu : MonoBehaviour
     public GameObject leftBotHand;
     public GameObject pointerIndex;
     public GameObject laserPointer;
+    public GameObject botMenu;
 
     //Input for Ant Placement
     public GameObject antHologram;
@@ -46,6 +47,8 @@ public class ArmMenu : MonoBehaviour
 
     public GameObject leftBotIK, rightBotIK;
 
+    private bool wait = false;
+    private int body = 0; //0 = minerva 1 = bot
     private bool menuOn = false;
     private bool placeAnt = false;
     private float dissolveState = 1.0f;
@@ -95,6 +98,7 @@ public class ArmMenu : MonoBehaviour
             activateBotPlacement();
             if (OVRInput.GetDown(OVRInput.Button.Two) && antPlacementPosition.active)
             {
+                Debug.Log("PLACEMENT BEING CALLED");
                 placeBot();
                 antLineRender.enabled = false;
                 //antHologram.SetActive(false); 
@@ -140,6 +144,21 @@ public class ArmMenu : MonoBehaviour
                 dissolveState = 1.0f;
             }
         }
+        if(body == 1 && OVRInput.Get(OVRInput.Button.Start) && !wait) 
+        {
+            wait = true;
+            if (botMenu.activeSelf)
+                botMenu.SetActive(false);
+            else
+                botMenu.SetActive(true);
+            coroutine = waitForMenu(0.2f);
+            StartCoroutine(coroutine);
+        }
+    }
+    private IEnumerator waitForMenu(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        wait = false;
 
     }
 
@@ -158,6 +177,7 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
+        body = 1;
         eventSystem.GetComponent<OVRInputModule>().rayTransform = leftBotHand.transform;
         laserPointer.GetComponent<LaserPointer>().maxLength = 10.0f;
         S5Ant.transform.GetChild(1).gameObject.SetActive(false);
@@ -241,6 +261,7 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
+        body = 0;
         eventSystem.GetComponent<OVRInputModule>().rayTransform = pointerIndex.transform;
         laserPointer.GetComponent<LaserPointer>().maxLength = 0.03f;
         S5Ant.transform.GetChild(1).gameObject.SetActive(true);
@@ -249,11 +270,11 @@ public class ArmMenu : MonoBehaviour
         leftBotIK.GetComponent<InverseKinematics>().enabled = false;
         rightBotIK.GetComponent<InverseKinematics>().enabled = false;
 
-        Vector3 MinervaPos = minerva.transform.position;
+        Vector3 MinervaPos = (minerva.transform.position + new Vector3(0, 0.1f, 0));
         S5Ant.transform.parent = null;
         //ant.transform.parent = null;
 
-        rig.GetComponent<CharacterController>().height = 1.1f;
+        rig.GetComponent<CharacterController>().height = 1.0f;
 
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = MinervaPos;

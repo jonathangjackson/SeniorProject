@@ -10,6 +10,7 @@ TagManager:
   - hit
   - tutorial
   - Hand
+  - Claw
   layers:
   - Default
   - TransparentFX

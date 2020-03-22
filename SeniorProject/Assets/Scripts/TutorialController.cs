@@ -83,9 +83,9 @@ public class TutorialController : MonoBehaviour
     private void animationTrigger()
     {
 
-        AnimatorClipInfo[] m_CurrentClipInfo;
-        m_CurrentClipInfo = animationController.GetCurrentAnimatorClipInfo(0);
-        Debug.Log(m_CurrentClipInfo[1].clip.name);
+        //AnimatorClipInfo[] m_CurrentClipInfo;
+        //m_CurrentClipInfo = animationController.GetCurrentAnimatorClipInfo(0);
+        //Debug.Log(m_CurrentClipInfo[1].clip.name);
         /*
         if ()
         {

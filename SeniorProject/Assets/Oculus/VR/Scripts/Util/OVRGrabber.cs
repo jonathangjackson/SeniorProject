@@ -146,7 +146,7 @@ public class OVRGrabber : MonoBehaviour
 
 		float prevFlex = m_prevFlex;
 		// Update values from inputs
-		m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, m_controller);
+		m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
 
 		CheckForGrabOrRelease(prevFlex);
     }
@@ -371,6 +371,7 @@ public class OVRGrabber : MonoBehaviour
         Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
         Quaternion grabbableRotation = rot * m_grabbedObjectRotOff;
 
+        
         if (forceTeleport)
         {
             grabbedRigidbody.transform.position = grabbablePosition;
