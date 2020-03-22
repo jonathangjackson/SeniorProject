@@ -6,7 +6,42 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fingers
+    second: {fileID: 2100000, guid: 5408e5e1a5ae01946821270f6c54f633, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: handBase
+    second: {fileID: 2100000, guid: 87404a681ad78bc448f22b61a78b6a98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: innerHand
+    second: {fileID: 2100000, guid: 68111942efcb3054a9698fbb6fe4e5a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: knuckles
+    second: {fileID: 2100000, guid: 61b76d3ac25dacd469b44321b09a8b6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scanner
+    second: {fileID: 2100000, guid: d8989501b62a478419d323a045536a95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wires
+    second: {fileID: 2100000, guid: c813c0ec072d5814ca3ef6ff732169a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wrist
+    second: {fileID: 2100000, guid: acd5bf0bc9219b24b80fe0c91e30f0c9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
