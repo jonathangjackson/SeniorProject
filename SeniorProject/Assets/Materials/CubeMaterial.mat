@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CubeMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: de2a03740141d4040b01ae8fc6db3c11,
+  m_Shader: {fileID: -6465566751694194690, guid: f4b2c2610a8dabd49a8223028ec6557b,
     type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
@@ -63,6 +63,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_51085A6D: 0.2
+    - Vector1_5D1B6B4A: 0.2
     - Vector1_6B5914D6: 15
     - Vector1_73D08DC0: 0.03
     - Vector1_BE017534: 0.01

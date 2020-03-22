@@ -3,7 +3,27 @@ guid: 2edbc4ba3ffd89e41a12d1f3d6e95c59
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MinervaBlueLight
+    second: {fileID: 2100000, guid: e3ed5fb27008bcc49a89d796e1d129f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MinervaPipes
+    second: {fileID: 2100000, guid: cd96314c9040a4c42a4b6febb65f2e23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: minervaAccents
+    second: {fileID: 2100000, guid: 877319246014bd441a3581aedeb9ace6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: minervaBase
+    second: {fileID: 2100000, guid: 43690f92d6f55bd4d9919b550464dc2b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
