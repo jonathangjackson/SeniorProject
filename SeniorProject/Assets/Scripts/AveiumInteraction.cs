@@ -17,19 +17,21 @@ public class AveiumInteraction : MonoBehaviour
 
     public int ButtonPressCounter = 0;
 
-    Collider theCollider;
+    public CapsuleCollider button;
+
+    public float dissolveState = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        theCollider = GetComponent<Collider>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown("B") && ButtonPressCounter < 3)
+        if (Input.GetKeyDown(KeyCode.B) && ButtonPressCounter < 3)
         {
             ButtonPressed = true;
             ButtonPressCounter += 1;
@@ -38,7 +40,7 @@ public class AveiumInteraction : MonoBehaviour
         if (ButtonPressed == true)
         {
             AeviumParticleSystem.SetActive(true);
-            theCollider.GetComponent<Collider>().enabled = false;
+            button.GetComponent<CapsuleCollider>().enabled = false;
 
             coroutine = WaitAndPrint(7.5f);
             StartCoroutine(coroutine);
@@ -53,18 +55,28 @@ public class AveiumInteraction : MonoBehaviour
                 AeviumDrip2.SetActive(true);
             }
 
-            if (time < 0)
+            if (time < 0 && ButtonPressCounter < 3)
             {
                 AeviumParticleSystem.SetActive(false);
                 AeviumDrip.SetActive(false);
                 AeviumDrip2.SetActive(false);
                 //ButtonPressCounter += 1;
                 ButtonPressed = false;
-                theCollider.GetComponent<Collider>().enabled = true; ;
+                button.GetComponent<CapsuleCollider>().enabled = true; ;
                 time = 7.5f;
             }
 
-            if (ButtonPressCounter == 1 && time < 2.32)
+            if (time < 0 && ButtonPressCounter == 3)
+            {
+                AeviumParticleSystem.SetActive(false);
+                AeviumDrip.SetActive(false);
+                AeviumDrip2.SetActive(false);
+                //ButtonPressCounter += 1;
+                ButtonPressed = false;
+                button.GetComponent<CapsuleCollider>().enabled = true; ;
+            }
+
+                if (ButtonPressCounter == 1 && time < 2.32)
             {
                 Tube.GetComponent<Renderer>().material = Tube01;
             }
@@ -77,10 +89,17 @@ public class AveiumInteraction : MonoBehaviour
             if (ButtonPressCounter == 3 && time < 2.32)
             {
                 Tube.GetComponent<Renderer>().material = Tube03;
-                AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
+                //AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
                 Lab02Done = true;
-            }
-            
+            }          
+
+        }
+
+        if (ButtonPressCounter == 3 && time < 0.1 && dissolveState < 1.0f)
+        {
+            dissolveState += (0.3f) * Time.deltaTime;
+            AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
+            CubeDissolve.SetFloat("Vector1_5D1B6B4A", dissolveState);
         }
     }
 
