@@ -27,7 +27,6 @@ public class ARStayActive : MonoBehaviour
         if (other.tag == "Player")
         {
             playerTrigger = false;
-            this.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 

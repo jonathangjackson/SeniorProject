@@ -30,8 +30,9 @@ public class VRwaypoint : MonoBehaviour
         meter.text = ((int)Vector3.Distance(target.position, VRcamera.transform.position)).ToString() + "m";
         canvas.transform.LookAt(VRcamera.transform.position + VRcamera.transform.rotation * Vector3.back, VRcamera.transform.rotation * Vector3.up);
         canvas.transform.Rotate(0, 180, 0);
+        canvas.transform.localScale = new Vector3(maximumScaleX, maximumScaleY, maximumScaleZ);
 
-        canvas.transform.localScale = Vector3.Distance(VRcamera.transform.position, canvas.transform.position) * ScaleFactor;
+        //canvas.transform.localScale = Vector3.Distance(VRcamera.transform.position, canvas.transform.position) * ScaleFactor;
 
         if ((canvas.transform.localScale.x <= maximumScaleX) && (canvas.transform.localScale.y <= 0.0003514537) && (canvas.transform.localScale.z <= 0.0003514537))
         {
