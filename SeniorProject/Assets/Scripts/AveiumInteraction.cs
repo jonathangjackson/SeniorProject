@@ -30,7 +30,7 @@ public class AveiumInteraction : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown("B") && ButtonPressCounter < 3)
+        if ((Input.GetKeyDown(KeyCode.B)) && ButtonPressCounter < 3)
         {
             ButtonPressed = true;
             ButtonPressCounter += 1;

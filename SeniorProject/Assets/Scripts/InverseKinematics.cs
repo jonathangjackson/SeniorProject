@@ -52,15 +52,7 @@ public class InverseKinematics : MonoBehaviour {
 
 			angle = Mathf.Acos (adyacent / upperArm_Length) * Mathf.Rad2Deg;
             //add a try and get and set it to a older working position, cross, angle 
-            try
-            {
-                upperArm.RotateAround(upperArm.position, cross, -angle);
-            }
-            catch
-            {
-                Debug.LogError("INVALID IK SOLVE");
-            }
-
+            upperArm.RotateAround(upperArm.position, cross, -angle);
 			forearm.LookAt(target, cross);
 			forearm.Rotate (forearm_OffsetRotation);
 

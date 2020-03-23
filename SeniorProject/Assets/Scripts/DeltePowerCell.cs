@@ -16,7 +16,7 @@ public class DeltePowerCell : MonoBehaviour
     {
         if (other.tag == "PowerCell")
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
             powerCell.SetActive(true);
             for(int i = 0; i < animController.Count; i++)
             {
