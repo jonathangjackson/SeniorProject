@@ -29,6 +29,7 @@ public class AveiumInteraction : MonoBehaviour
     void Update()
     {
 
+
         if (Input.GetKeyDown("B") && ButtonPressCounter < 3)
         {
             ButtonPressed = true;
