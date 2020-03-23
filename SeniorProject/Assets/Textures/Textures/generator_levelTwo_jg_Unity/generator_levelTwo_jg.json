@@ -1,0 +1,51 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                }
+            },
+            "shader": "pbr-metal-rough-with-alpha-blending",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "GlassCover1": {
+            "shader": "Main shader"
+        },
+        "baseGenerator1": {
+            "shader": "Main shader"
+        },
+        "beamPistons1": {
+            "shader": "Main shader"
+        },
+        "generatorBeams1": {
+            "shader": "Main shader"
+        },
+        "generatorPipes1": {
+            "shader": "Main shader"
+        },
+        "generatorRailing1": {
+            "shader": "Main shader"
+        },
+        "generatorSwitches1": {
+            "shader": "Main shader"
+        },
+        "spinningParts1": {
+            "shader": "Main shader"
+        }
+    }
+}

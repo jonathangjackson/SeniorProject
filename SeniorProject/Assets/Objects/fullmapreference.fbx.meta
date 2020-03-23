@@ -245,6 +245,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_Desk
+    second: {fileID: 2100000, guid: bfee245f265510f4d8d71af0b181ab4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface1
     second: {fileID: 2100000, guid: 20b55d9a1701aae44955b3ea124c8bc8, type: 2}
   - first:
@@ -272,6 +277,26 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_aiStandardSurface6
     second: {fileID: 2100000, guid: 5ae558b05e0f4d04ea4e7483ed10d282, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_keyBoard
+    second: {fileID: 2100000, guid: b5f720695ce522a4388b1e99134a04f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_monitor
+    second: {fileID: 2100000, guid: 128f83af5c3955a4bb229c2a09cc3334, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_screens
+    second: {fileID: 2100000, guid: 8973c8c174ef56248bdcb0d96a028cd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_computerDesk_levelOne_jj_textured_tableLegs
+    second: {fileID: 2100000, guid: a379155c9f65b1e47b9f086a83d3f965, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -405,8 +430,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_pod2_global_nc1_podBase
+    second: {fileID: 2100000, guid: 6441308acd4bd7a40a763f67f21694d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_pod2_global_nc1_podEngines
     second: {fileID: 2100000, guid: d67e19bb639c33b478f3c00018bb5846, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_pod2_global_nc1_window
+    second: {fileID: 2100000, guid: f87daa4a58fcc2d48baccb087dd340ba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -540,6 +575,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_ScreenBoarder
+    second: {fileID: 2100000, guid: aaa9eaa6f44c7eb49974051065d131c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_base
     second: {fileID: 2100000, guid: cf727ccf4ce002d459a025c1ceed37ad, type: 2}
   - first:
@@ -547,6 +587,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_front
     second: {fileID: 2100000, guid: 1cd68ed24f773434ca28cc90b6e9cfd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc1_audioLogPanel_pipes
+    second: {fileID: 2100000, guid: e48b9e7344896ca449a8631b7bdcd43a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -565,6 +610,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_ScreenBoarder
+    second: {fileID: 2100000, guid: 562480945331ba34c9b5be56ab8eab99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_base
     second: {fileID: 2100000, guid: 8e1115229d17fdd4bafee6893b6ecb10, type: 2}
   - first:
@@ -572,6 +622,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_front
     second: {fileID: 2100000, guid: 14ee44cc828e66d46a6bc91bfc6ba782, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_audioLogPanel_global_nc_audioLogPanel_pipes
+    second: {fileID: 2100000, guid: 10015d315b2776846975c3a8027e49b7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
