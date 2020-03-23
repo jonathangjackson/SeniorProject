@@ -77,7 +77,7 @@ public class TutorialController : MonoBehaviour
 
     public void startAnimation()
     {
-        animationController.SetBool("Move", true);
+        animationController.SetBool("Locked", false);
     }
 
     private void animationTrigger()

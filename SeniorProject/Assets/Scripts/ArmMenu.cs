@@ -38,7 +38,7 @@ public class ArmMenu : MonoBehaviour
     public GameObject pointerIndex;
     public GameObject laserPointer;
     public GameObject botMenu;
-
+    public GameObject minervaHead;
     //Input for Ant Placement
     public GameObject antHologram;
     public LineRenderer antLineRender;
@@ -177,6 +177,7 @@ public class ArmMenu : MonoBehaviour
 
     private void placeBot()
     {
+        minervaHead.SetActive(true);
         body = 1;
         eventSystem.GetComponent<OVRInputModule>().rayTransform = leftBotHand.transform;
         laserPointer.GetComponent<LaserPointer>().maxLength = 10.0f;
@@ -261,6 +262,8 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
+        minervaHead.SetActive(false
+            );
         body = 0;
         eventSystem.GetComponent<OVRInputModule>().rayTransform = pointerIndex.transform;
         laserPointer.GetComponent<LaserPointer>().maxLength = 0.03f;

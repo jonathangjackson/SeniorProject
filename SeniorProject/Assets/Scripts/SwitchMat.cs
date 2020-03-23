@@ -7,7 +7,7 @@ public class SwitchMat : MonoBehaviour
 {
     public GameObject sonarOnOff;
     public Material replacementMat;
-    private Material currentMat;
+    private List<Material> currentMat = new List<Material>();
     Renderer rend;
     private bool on = false;
     // Start is called before the first frame update
@@ -20,7 +20,10 @@ public class SwitchMat : MonoBehaviour
         else
         {
             rend = GetComponent<Renderer>();
-            currentMat = rend.material;
+            for(int i = 0; i < rend.materials.Length; i++)
+            {
+                currentMat.Add(rend.materials[i]);
+            }
         }
     }
 
@@ -30,13 +33,26 @@ public class SwitchMat : MonoBehaviour
         if (sonarOnOff.GetComponent<ArmMenu>().SonarWaveOn && !on)
         {
             on = true;
-            rend.material = replacementMat;
+            Material[] tempMats = new Material[rend.materials.Length];
+
+            for (int i = 0; i < currentMat.Count; i++)
+            {
+                tempMats[i] = replacementMat;
+            }
+            rend.materials = tempMats;
             return;
         }
         if (!sonarOnOff.GetComponent<ArmMenu>().SonarWaveOn && on)
         {
             on = false;
-            rend.material = currentMat;
+
+            Material[] tempMats = new Material[currentMat.Count];
+            for (int i = 0; i < currentMat.Count; i++)
+            {
+                tempMats[i] = currentMat[i];
+            }
+            rend.materials = tempMats;
+
             return;
         }
     }

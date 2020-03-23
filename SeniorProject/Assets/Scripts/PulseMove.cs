@@ -23,7 +23,7 @@ public class PulseMove : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "hit" ||  other.GetComponent<Rigidbody>() == null)
+        if (other.tag == "hit" || other.GetComponent<Rigidbody>() == null || other.tag == "AR" || other.tag == "PowerCell")
             return;
 
         coroutine = ClearTag(0.2f, other.gameObject);

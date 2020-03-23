@@ -11,6 +11,7 @@ TagManager:
   - tutorial
   - Hand
   - Claw
+  - PowerCell
   layers:
   - Default
   - TransparentFX
