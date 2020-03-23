@@ -19,12 +19,13 @@ public class GetLevel3 : MonoBehaviour
     {
         if(lab.Lab03Done && interaction.Lab02Done)
         {
-            this.transform.GetChild(0).gameObject.SetActive(true);
-            this.enabled = false;
-        }
-        if (hackingManager.GetComponent<LoadHackingWorld>().isHacked)
-        {
             animatorController.SetBool("Play", true);
+            this.transform.GetChild(0).gameObject.SetActive(true);
+            //this.enabled = false;
         }
+       // if (hackingManager.GetComponent<LoadHackingWorld>().isHacked)
+        //{
+        //    animatorController.SetBool("Play", true);
+      //  }
     }
 }
