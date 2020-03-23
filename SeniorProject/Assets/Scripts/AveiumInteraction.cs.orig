@@ -29,9 +29,14 @@ public class AveiumInteraction : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+<<<<<<< HEAD
+    {
+        if ((Input.GetKeyDown(KeyCode.B)) && ButtonPressCounter < 3)
+=======
     {    
         if (Input.GetKeyDown(KeyCode.B) && ButtonPressCounter < 3)
 
+>>>>>>> 5e06fc2b55e2566554bf1153db696dd34506da7d
         {
             ButtonPressed = true;
             ButtonPressCounter += 1;
