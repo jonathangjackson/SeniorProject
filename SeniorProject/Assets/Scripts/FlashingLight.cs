@@ -30,7 +30,11 @@ public class FlashingLight : MonoBehaviour
         }
         if (flasing)
         {
-            if (timer < 1.0f)
+            if (timer > 0.0f)
+            {
+                timer -= 0.5f * Time.deltaTime;
+            }
+            else
             {
 
             }
