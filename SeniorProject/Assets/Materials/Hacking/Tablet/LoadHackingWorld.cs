@@ -21,6 +21,7 @@ public class LoadHackingWorld : MonoBehaviour
     private bool isCollided = false;
     private GameObject terminalAccessUI;
     private GameObject terminal;
+    public bool isHacked = false;
     void Start()
     {
         terminal = this.gameObject;
@@ -48,6 +49,7 @@ public class LoadHackingWorld : MonoBehaviour
             nextSprite(2);
             //this.GetComponent<LoadHackingWorld>().enabled = false;
             hackingWorld.isHacked = false;
+            isHacked = true;
         }
     }
 
