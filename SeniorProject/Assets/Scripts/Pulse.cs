@@ -16,8 +16,8 @@ public class Pulse : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.Two) && isActive)
         {
-            this.transform.parent.GetComponent<Animator>().SetBool("Play", true);
-            fire.Play();
+       //     this.transform.parent.GetComponent<Animator>().SetBool("Play", true);
+       //     fire.Play();
             GameObject pulseClone = Instantiate(pulseObj, this.transform.position, this.transform.localRotation);//Quaternion.Euler(this.transform.localEulerAngles.x, this.transform.localEulerAngles.x + 90, this.transform.localEulerAngles.z)
             pulseClone.transform.parent = gameObject.transform;
             pulseClone.transform.localEulerAngles = rotate;
@@ -33,8 +33,8 @@ public class Pulse : MonoBehaviour
     private IEnumerator StopParticle(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        this.transform.parent.GetComponent<Animator>().SetBool("Play", false);
-        fire.Stop();
+      //  this.transform.parent.GetComponent<Animator>().SetBool("Play", false);
+       // fire.Stop();
         OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
     }
 }
