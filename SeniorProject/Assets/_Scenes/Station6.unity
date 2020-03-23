@@ -32982,7 +32982,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d69fa8f7a8cca554d89c2ac1c8dd42e5, type: 2}
+      objectReference: {fileID: 2100000, guid: 267b9e35b4a06354abd10bcf2c36f810, type: 2}
     - target: {fileID: -2121013399410019227, guid: 4a9dbbfc72eb80b4fb69af2a574471de,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -33038,6 +33038,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1798d66354f281e4db01391ff7f959dd, type: 2}
+    - target: {fileID: 9036384962822583683, guid: 4a9dbbfc72eb80b4fb69af2a574471de,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46e51e357c9f2ab48a6005ab4e00e4af, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9dbbfc72eb80b4fb69af2a574471de, type: 3}
 --- !u!4 &1229593926 stripped
@@ -35103,16 +35108,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 82070314}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: f319cac17e5ab734c9bef124c4a51ca1,
-        type: 3}
-      propertyPath: m_Name
-      value: HologramCone
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f319cac17e5ab734c9bef124c4a51ca1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f319cac17e5ab734c9bef124c4a51ca1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35182,6 +35177,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6595344
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f319cac17e5ab734c9bef124c4a51ca1,
+        type: 3}
+      propertyPath: m_Name
+      value: HologramCone
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f319cac17e5ab734c9bef124c4a51ca1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f319cac17e5ab734c9bef124c4a51ca1,
         type: 3}
@@ -79419,11 +79424,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5789263546852714878, guid: 7b327c3827fc44242b83eb577c8bc52b,
-        type: 3}
-      propertyPath: m_Name
-      value: AudioLog
-      objectReference: {fileID: 0}
     - target: {fileID: 5789263546852714866, guid: 7b327c3827fc44242b83eb577c8bc52b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -79543,6 +79543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.00082197884
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789263546852714878, guid: 7b327c3827fc44242b83eb577c8bc52b,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioLog
       objectReference: {fileID: 0}
     - target: {fileID: 5789263546852714867, guid: 7b327c3827fc44242b83eb577c8bc52b,
         type: 3}

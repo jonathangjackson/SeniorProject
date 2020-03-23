@@ -425,6 +425,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_pod2_global_nc1_bottomLight
+    second: {fileID: 2100000, guid: f2542ef924bf12b49b0fc3c34b696ed9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_pod2_global_nc1_lambert2
     second: {fileID: 2100000, guid: 9c08d955cae42e14385e0c1b896161eb, type: 2}
   - first:
@@ -530,6 +535,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ventFace_global_jg_ventFace
+    second: {fileID: 2100000, guid: 71934ddd69201b943bb39ebea04c1b12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelOne_Tutorial_ventMaze_levelOne_jg_levelOne_Tutorial_ventMaze_levelOne_jg_ventMaze
+    second: {fileID: 2100000, guid: f0286bf3ce499a44781ed0f33251cd64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_walls_levelOne_jg_BaseWall
     second: {fileID: 2100000, guid: 74e6844dde231d74097e00448ce27d92, type: 2}
   - first:
@@ -567,6 +582,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: levelOne_Tutorial_walls_levelOne_jg_WallWindowPane
     second: {fileID: 2100000, guid: ceeff112cfe5f864ea9c2d3d2a64bb47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: levelThree_Lab_Aevium_global_sj_Aevium
+    second: {fileID: 2100000, guid: 4fe254d20f53a6f46a7f327ff19160dd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
