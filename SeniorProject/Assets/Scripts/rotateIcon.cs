@@ -25,6 +25,8 @@ public class rotateIcon : MonoBehaviour
 
     private bool iscalled;
 
+    public GameObject parent;
+
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +87,7 @@ public class rotateIcon : MonoBehaviour
 
     void hide()
     {
-        this.transform.GetChild(0).gameObject.SetActive(false);
+        parent.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)

@@ -105,9 +105,10 @@ public class AveiumInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && ButtonPressCounter < 3)
+        if (other.tag == "Hand" && ButtonPressCounter < 3)
         {
             ButtonPressed = true;
+            ButtonPressCounter += 1;
         }
     }
 
