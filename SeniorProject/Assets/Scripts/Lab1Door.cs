@@ -22,12 +22,12 @@ public class Lab1Door : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.name == "Player")
+        if (collider.gameObject.tag == "Player")
         {
             audio1.PlayOneShot(audio1.clip);
 
             animator1.SetTrigger("Open");
-            animator1.ResetTrigger("Reverse");
+            animator1.ResetTrigger("Close");
         }
     }
 
