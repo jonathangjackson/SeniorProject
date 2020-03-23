@@ -58,6 +58,7 @@ public class HackingWorldManager : MonoBehaviour
         {
             if (checkSequence())
             {
+                posInSequence = 0;
                 isHacked = true;
             }
             else
