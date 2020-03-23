@@ -29,7 +29,7 @@ public class AveiumInteraction : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("space") && ButtonPressCounter < 3)
+        if (Input.GetKeyDown("B") && ButtonPressCounter < 3)
         {
             ButtonPressed = true;
             ButtonPressCounter += 1;
