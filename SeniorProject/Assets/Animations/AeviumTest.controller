@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5716107780994300927}
-    m_Position: {x: 310, y: 80, z: 0}
+    m_Position: {x: 290, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1835459054618962942}
     m_Position: {x: 345, y: 145, z: 0}
@@ -57,7 +57,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AeviumCube
+  m_Name: AeviumTest
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

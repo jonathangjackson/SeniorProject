@@ -53,6 +53,7 @@ public class rotateIcon : MonoBehaviour
             animator.ResetTrigger("Spin");
 
             animator.SetTrigger("Reverse");
+            
         }
     }
 
@@ -80,6 +81,11 @@ public class rotateIcon : MonoBehaviour
 
         informationBackground.enabled = false;
         infoText.enabled = false;
+    }
+
+    void hide()
+    {
+        this.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
