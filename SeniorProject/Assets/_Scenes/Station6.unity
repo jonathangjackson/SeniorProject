@@ -44494,6 +44494,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sonarOnOff: {fileID: 3677615175749009198}
   replacementMat: {fileID: 2100000, guid: 50afee429b94e7c438f62c1fa22b525a, type: 2}
+--- !u!114 &1844243167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844243161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fcbe71c40681b42a7bb572cc941885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 1629967580}
+  grabbedObject: {fileID: 1844243163}
 --- !u!1 &1844383265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 759958533259711844, guid: 4a9dbbfc72eb80b4fb69af2a574471de,
