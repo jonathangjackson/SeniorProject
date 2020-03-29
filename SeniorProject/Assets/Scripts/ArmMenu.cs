@@ -56,6 +56,9 @@ public class ArmMenu : MonoBehaviour
     private float rayLength = 2.0f;
 
     public Slider slider;
+
+    public AudioSource menuOnSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +87,7 @@ public class ArmMenu : MonoBehaviour
         {
             menuOn = true;
             transform.GetChild(0).gameObject.SetActive(menuOn);
+            menuOnSound.Play();
         }
         if(slider.value == 0.0f)
         {
