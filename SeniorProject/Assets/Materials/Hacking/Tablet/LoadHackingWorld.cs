@@ -92,18 +92,19 @@ public class LoadHackingWorld : MonoBehaviour
         {
             buttons[i].getLight(lights[lightToButton[i]]);//ex. i = 0 button1.getLight(green) lightToButton[0] = 1, lights[1] = green 
             buttons[i].reset();
-
-            hackingWorld.loadSequence(buttonSequence);
-            //hackingWorld.resetSequencePress();
-
-            VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
-            coroutine = pauseMinerva(0.1f, teleportTarget.transform);
-            StartCoroutine(coroutine);
         }
+
+        hackingWorld.loadSequence(buttonSequence);
+        //hackingWorld.resetSequencePress();
+
+        VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
+        coroutine = pauseMinerva(0.1f, teleportTarget.transform);
+        StartCoroutine(coroutine);
     }
 
     private IEnumerator pauseMinerva(float waitTime, Transform pos)
     {
+        Debug.Log("PAUSE MINERVA");
         yield return new WaitForSeconds(waitTime);
         thePlayer.transform.position = pos.position;
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;

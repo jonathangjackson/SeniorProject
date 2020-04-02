@@ -43,14 +43,14 @@ public class rotateIcon : MonoBehaviour
     {
         if (arStay.playerTrigger)
         {
-            print("Collision, can spin icon");
+            //print("Collision, can spin icon");
             animator.SetTrigger("Spin");
             animator.ResetTrigger("Reverse");
         }
 
         else
         {
-            print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
+            //print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
 
             animator.ResetTrigger("Spin");
 

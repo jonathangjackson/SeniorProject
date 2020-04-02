@@ -27,6 +27,8 @@ public class TutorialController : MonoBehaviour
     public TriggerType triggerType;
     public ButtonType buttonType;
     public AudioClip audioClip;
+    public bool hasSequential = false;
+    public List<SequentialTutorialTrigger> sequentialTriggers;
     public bool hasHighlights = false;
     public List<GameObject> highlightObjects;
     public bool triggerActivated = false;
@@ -100,27 +102,27 @@ public class TutorialController : MonoBehaviour
         switch (buttonType)
         {
             case ButtonType.y:
-                if (OVRInput.GetDown(OVRInput.Button.Four))
+                if (OVRInput.GetDown(OVRInput.Button.Four) && !hasSequential)
                     triggerActivated = true;
                 break;
             case ButtonType.x:
-                if (OVRInput.GetDown(OVRInput.Button.Three))
+                if (OVRInput.GetDown(OVRInput.Button.Three) && !hasSequential)
                     triggerActivated = true;
                 break;
             case ButtonType.a:
-                if (OVRInput.GetDown(OVRInput.Button.One))
+                if (OVRInput.GetDown(OVRInput.Button.One) && !hasSequential)
                     triggerActivated = true;
                 break;
             case ButtonType.b:
-                if (OVRInput.GetDown(OVRInput.Button.Two))
+                if (OVRInput.GetDown(OVRInput.Button.Two) && !hasSequential)
                     triggerActivated = true;
                 break;
             case ButtonType.lIndex:
-                if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger) > 0.9f)
+                if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger) > 0.9f && !hasSequential)
                     triggerActivated = true;
                 break;
             case ButtonType.rIndex:
-                if (OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger) > 0.9f)
+                if (OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger) > 0.9f && !hasSequential)
                     triggerActivated = true;
                 break;
         }
