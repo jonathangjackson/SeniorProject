@@ -21,6 +21,8 @@ public class AveiumInteraction : MonoBehaviour
 
     public float dissolveState = 0.0f;
 
+    public AudioSource tubeSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,17 +81,20 @@ public class AveiumInteraction : MonoBehaviour
                 if (ButtonPressCounter == 1 && time < 2.32)
             {
                 Tube.GetComponent<Renderer>().material = Tube01;
+                tubeSound.Play();
             }
 
             if (ButtonPressCounter == 2 && time < 2.32)
             {
                 Tube.GetComponent<Renderer>().material = Tube02;
+                tubeSound.Play();
             }
 
             if (ButtonPressCounter == 3 && time < 2.32)
             {
                 Tube.GetComponent<Renderer>().material = Tube03;
                 //AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
+                tubeSound.Play();
                 Lab02Done = true;
             }          
 
