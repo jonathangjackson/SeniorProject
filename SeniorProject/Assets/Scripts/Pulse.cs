@@ -10,6 +10,7 @@ public class Pulse : MonoBehaviour
     public Vector3 rotate = new Vector3(0,0,0);
     public ParticleSystem fire;
     private IEnumerator coroutine;
+    public AudioSource fireSound;
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +23,7 @@ public class Pulse : MonoBehaviour
             pulseClone.transform.parent = gameObject.transform;
             pulseClone.transform.localEulerAngles = rotate;
             pulseClone.transform.parent = null;
+            fireSound.Play();
             OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
             coroutine = StopParticle(0.5f);
             StartCoroutine(coroutine);

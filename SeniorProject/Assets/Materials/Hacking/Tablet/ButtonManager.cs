@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     public int buttonID = 0;
     public HackingWorldManager hackingWorld;
     public Animator animController;
+    public AudioSource buttonPressSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class ButtonManager : MonoBehaviour
         {
             active = true;
             light.lightOn();
+            buttonPressSound.Play();
             hackingWorld.buttonPressed(buttonID);
             animController.SetBool("Play", true);
         }

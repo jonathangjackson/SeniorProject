@@ -56,6 +56,10 @@ public class ArmMenu : MonoBehaviour
     private float rayLength = 2.0f;
 
     public Slider slider;
+
+    public AudioSource menuOpenSound;
+    public AudioSource pulseGunSpawnSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +88,7 @@ public class ArmMenu : MonoBehaviour
         {
             menuOn = true;
             transform.GetChild(0).gameObject.SetActive(menuOn);
+            menuOpenSound.Play();
         }
         if(slider.value == 0.0f)
         {
@@ -113,6 +118,7 @@ public class ArmMenu : MonoBehaviour
             grabGun = false;
 
             gun[2].GetComponent<Pulse>().isActive = true;
+            pulseGunSpawnSound.Play();
         }
         if(grabbedGun && !grabGun && dissolveState > 0.0f)
         {
