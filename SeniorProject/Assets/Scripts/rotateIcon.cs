@@ -27,6 +27,8 @@ public class rotateIcon : MonoBehaviour
 
     public GameObject parent;
 
+    public ArmMenu ArmMenu; 
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,19 +45,22 @@ public class rotateIcon : MonoBehaviour
     {
         if (arStay.playerTrigger)
         {
-            print("Collision, can spin icon");
-            animator.SetTrigger("Spin");
-            animator.ResetTrigger("Reverse");
+            if (ArmMenu.SonarWaveOn == true)
+            {
+                print("Collision, can spin icon");
+                animator.SetTrigger("Spin");
+                animator.ResetTrigger("Reverse");
+            }
         }
 
         else
         {
-            print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
-
-            animator.ResetTrigger("Spin");
-
-            animator.SetTrigger("Reverse");
-            
+            if (ArmMenu.SonarWaveOn == true)
+            {
+                print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
+                animator.SetTrigger("Reverse");
+                animator.ResetTrigger("Spin");
+            }       
         }
     }
 
