@@ -16,8 +16,6 @@ public class SequentialTutorialTrigger : MonoBehaviour
     public string collisionTag;
     public bool triggered = false;
 
-
-
     public void setActive()
     {
         this.gameObject.SetActive(true);

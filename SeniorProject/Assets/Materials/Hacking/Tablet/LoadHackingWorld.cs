@@ -87,6 +87,7 @@ public class LoadHackingWorld : MonoBehaviour
 
     public void acceptEntryToHackingWorld()
     {
+        Debug.Log("ACCEPT ENTRY");
         //Go To Hacking World
         for(int i = 0; i < 4; i++)
         {

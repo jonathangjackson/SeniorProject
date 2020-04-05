@@ -20,7 +20,7 @@ public class ButtonManager : MonoBehaviour
             animController.SetBool("Play", true);
         }
     }
-
+    
     public void getLight(LightManager l)
     {
         light = l;
@@ -28,9 +28,9 @@ public class ButtonManager : MonoBehaviour
 
     public void reset()
     {
+        Debug.Log("LIGHT RESET: " + this.buttonID);
         active = false;
         light.lightOff();
-        Debug.Log(this.gameObject.name + "Button With Error");
         animController.SetBool("Play", false);
     }
 
