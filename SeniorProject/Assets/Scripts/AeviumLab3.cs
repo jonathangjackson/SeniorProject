@@ -22,6 +22,7 @@ public class AeviumLab3 : MonoBehaviour
     public float dissolveState = 0.0f;
 
     public AudioSource tubeSound;
+    public AudioSource dissolveSound;
 
     // Start is called before the first frame update
     void Start()
@@ -98,6 +99,7 @@ public class AeviumLab3 : MonoBehaviour
             dissolveState += (0.3f) * Time.deltaTime;
             AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
             CubeDissolve.SetFloat("Vector1_5D1B6B4A", dissolveState);
+            dissolveSound.Play();
         }
     }
 
