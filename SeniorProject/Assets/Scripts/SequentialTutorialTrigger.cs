@@ -116,7 +116,7 @@ public class SequentialTutorialTrigger : MonoBehaviour
 
     public void setObjectActive(bool val)
     {
-        this.gameObject.SetActive(val);
+        //this.gameObject.SetActive(val);
     }
 
 }
