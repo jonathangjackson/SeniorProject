@@ -9,6 +9,18 @@ public class ButtonManager : MonoBehaviour
     public int buttonID = 0;
     public HackingWorldManager hackingWorld;
     public Animator animController;
+    public AudioSource buttonPressSound;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +28,7 @@ public class ButtonManager : MonoBehaviour
         {
             active = true;
             light.lightOn();
+            buttonPressSound.Play();
             hackingWorld.buttonPressed(buttonID);
             animController.SetBool("Play", true);
         }
@@ -31,6 +44,7 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("LIGHT RESET: " + this.buttonID);
         active = false;
         light.lightOff();
+        Debug.Log(this.gameObject.name + "Button With Error");
         animController.SetBool("Play", false);
     }
 

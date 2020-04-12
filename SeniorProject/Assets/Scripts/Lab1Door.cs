@@ -6,6 +6,7 @@ public class Lab1Door : MonoBehaviour
 {
     Animator animator1;
     AudioSource audio1;
+    public AudioSource doorOpen;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class Lab1Door : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             audio1.PlayOneShot(audio1.clip);
+            doorOpen.Play();
 
             animator1.SetTrigger("Open");
             animator1.ResetTrigger("Close");

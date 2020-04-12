@@ -56,6 +56,14 @@ public class ArmMenu : MonoBehaviour
     private float rayLength = 2.0f;
 
     public Slider slider;
+
+    public AudioSource menuOpenSound;
+    public AudioSource pulseGunSpawnSound;
+    public AudioSource pulseGunDissolveSound;
+    public AudioSource menuItemPressSound;
+    public AudioSource bodySwitchSound;
+    public AudioSource sonarSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +75,7 @@ public class ArmMenu : MonoBehaviour
         currentMat[2] = rend[1].materials[0];
         currentMat[3] = rend[1].materials[1];
         originalPos = this.GetComponent<RectTransform>().localPosition;
-        originalRot = this.GetComponent<RectTransform>().localEulerAngles;
+        originalRot = this.GetComponent<RectTransform>().localEulerAngles;     
     }
 
     // Update is called once per frame
@@ -84,6 +92,7 @@ public class ArmMenu : MonoBehaviour
         {
             menuOn = true;
             transform.GetChild(0).gameObject.SetActive(menuOn);
+            menuOpenSound.Play();
         }
         if(slider.value == 0.0f)
         {
@@ -100,6 +109,9 @@ public class ArmMenu : MonoBehaviour
             {
                 Debug.Log("PLACEMENT BEING CALLED");
                 placeBot();
+
+                //bodySwitchSound.Play();
+
                 antLineRender.enabled = false;
                 //antHologram.SetActive(false); 
                 placeAnt = false;
@@ -113,6 +125,7 @@ public class ArmMenu : MonoBehaviour
             grabGun = false;
 
             gun[2].GetComponent<Pulse>().isActive = true;
+            //pulseGunSpawnSound.Play();
         }
         if(grabbedGun && !grabGun && dissolveState > 0.0f)
         {
@@ -120,6 +133,7 @@ public class ArmMenu : MonoBehaviour
             for (int i = 0; i < 4; i++)
             {
                 currentMat[i].SetFloat("Vector1_51085A6D", dissolveState);
+                pulseGunSpawnSound.Play();
             }
             if(dissolveState <= 0.0f)
             {
@@ -138,6 +152,8 @@ public class ArmMenu : MonoBehaviour
             for (int i = 0; i < 4; i++)
             {
                 currentMat[i].SetFloat("Vector1_51085A6D", dissolveState);
+                pulseGunDissolveSound.Play();
+
             }
             if (dissolveState >= 1.0f)
             {
@@ -166,6 +182,7 @@ public class ArmMenu : MonoBehaviour
     {
 
         closeMenu();
+        menuItemPressSound.Play();
 
         //set ant placement to active 
         placeAnt = true;
@@ -218,6 +235,8 @@ public class ArmMenu : MonoBehaviour
         trackingSpace.transform.localPosition = new Vector3(0, -0.63f, 0);
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
+
+        bodySwitchSound.Play();
     }
     private IEnumerator WaitAndPrint(float waitTime)
     {
@@ -301,11 +320,13 @@ public class ArmMenu : MonoBehaviour
 
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
+
+        bodySwitchSound.Play();
     }
 
     public void openTools()
     {
-
+        menuItemPressSound.Play();
         closeMenu();
         gun[3].SetActive(true);
         grabGun = true;
@@ -314,9 +335,14 @@ public class ArmMenu : MonoBehaviour
     public void activateSonar()
     {
         closeMenu();
+        menuItemPressSound.Play();
 
         if (!SonarWaveOn)
+        {
             SonarWaveOn = true;
+            sonarSound.Play();
+        }            
+
         else
             SonarWaveOn = false;
     }

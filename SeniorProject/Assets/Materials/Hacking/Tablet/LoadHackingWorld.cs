@@ -22,6 +22,10 @@ public class LoadHackingWorld : MonoBehaviour
     private GameObject terminalAccessUI;
     private GameObject terminal;
     public bool isHacked = false;
+
+    public AudioSource teleportSound;
+    public AudioSource hackingSuccessSound;
+
     void Start()
     {
         terminal = this.gameObject;
@@ -38,6 +42,7 @@ public class LoadHackingWorld : MonoBehaviour
                 unlockDoorAnims[i].SetBool("Locked", false);
             }
             Debug.Log("HACKED");
+            hackingSuccessSound.Play();
             //Then the user completed the sequence
             //teleport them back
             //reset hacking world
@@ -46,6 +51,7 @@ public class LoadHackingWorld : MonoBehaviour
             VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
             coroutine = pauseMinerva(0.1f, respwanPoint);
             StartCoroutine(coroutine);
+            teleportSound.Play();
             nextSprite(2);
             //this.GetComponent<LoadHackingWorld>().enabled = false;
             hackingWorld.isHacked = false;
@@ -95,12 +101,14 @@ public class LoadHackingWorld : MonoBehaviour
             buttons[i].reset();
         }
 
-        hackingWorld.loadSequence(buttonSequence);
-        //hackingWorld.resetSequencePress();
+            hackingWorld.loadSequence(buttonSequence);
+            //hackingWorld.resetSequencePress();
 
-        VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
-        coroutine = pauseMinerva(0.1f, teleportTarget.transform);
-        StartCoroutine(coroutine);
+            VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
+            coroutine = pauseMinerva(0.1f, teleportTarget.transform);
+            teleportSound.Play();
+            StartCoroutine(coroutine);
+        }
     }
 
     private IEnumerator pauseMinerva(float waitTime, Transform pos)

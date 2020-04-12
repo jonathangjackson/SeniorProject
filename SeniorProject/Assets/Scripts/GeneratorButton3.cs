@@ -7,6 +7,9 @@ public class GeneratorButton3 : MonoBehaviour
     public GeneratorButton2 GeneratorButton2;
     public bool active = false;
     public Animator animController;
+
+    public AudioSource buttonPressSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class GeneratorButton3 : MonoBehaviour
     {
         if (other.tag == "Hand" && !active)
         {
+            buttonPressSound.Play();
             active = true;
             animController.SetBool("Play", true);
         }

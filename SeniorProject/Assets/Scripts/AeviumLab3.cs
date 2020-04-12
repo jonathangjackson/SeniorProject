@@ -21,6 +21,9 @@ public class AeviumLab3 : MonoBehaviour
 
     public float dissolveState = 0.0f;
 
+    public AudioSource tubeSound;
+    public AudioSource dissolveSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,11 +75,13 @@ public class AeviumLab3 : MonoBehaviour
             if (ButtonPressCounter == 1 && time < 1.8)
             {
                 Tube.GetComponent<Renderer>().material = Tube01;
+                tubeSound.Play();
             }
 
             if (ButtonPressCounter == 2 && time < 1.8)
             {
                 Tube.GetComponent<Renderer>().material = Tube02;
+                tubeSound.Play();
             }
 
             if (ButtonPressCounter == 3 && time < 1.8)
@@ -84,6 +89,7 @@ public class AeviumLab3 : MonoBehaviour
                 Tube.GetComponent<Renderer>().material = Tube03;
                 //AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
                 Lab03Done = true;
+                tubeSound.Play();
             }
 
         }
@@ -93,6 +99,7 @@ public class AeviumLab3 : MonoBehaviour
             dissolveState += (0.3f) * Time.deltaTime;
             AeviumCube.GetComponent<Renderer>().material = CubeDissolve;
             CubeDissolve.SetFloat("Vector1_5D1B6B4A", dissolveState);
+            dissolveSound.Play();
         }
     }
 
