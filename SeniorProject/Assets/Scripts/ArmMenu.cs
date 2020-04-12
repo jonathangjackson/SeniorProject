@@ -232,7 +232,7 @@ public class ArmMenu : MonoBehaviour
         //this.transform.parent = S5Ant.transform; OLD
 
         //sets new height for S5Ant
-        trackingSpace.transform.localPosition = new Vector3(0, -0.63f, 0);
+        trackingSpace.transform.localPosition = new Vector3(0, -0.871f, 0);
         coroutine = WaitAndPrint(0.1f);
         StartCoroutine(coroutine);
 

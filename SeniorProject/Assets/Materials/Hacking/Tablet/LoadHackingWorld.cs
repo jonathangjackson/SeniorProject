@@ -106,6 +106,7 @@ public class LoadHackingWorld : MonoBehaviour
 
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         coroutine = pauseMinerva(0.1f, teleportTarget.transform);
+        //thePlayer.transform.position = teleportTarget.transform.position;
         teleportSound.Play();
         StartCoroutine(coroutine);
         

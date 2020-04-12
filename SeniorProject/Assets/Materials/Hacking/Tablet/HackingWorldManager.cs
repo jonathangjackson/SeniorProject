@@ -13,6 +13,7 @@ public class HackingWorldManager : MonoBehaviour
     private int[] setSequence = new int[4];
     private int[] pressedSequence = new int[4];
     private int posInSequence = 0;
+    private IEnumerator coroutine;
     private void Start()
     {
         rend = hackingWorldObj.GetComponent<Renderer>();
@@ -32,7 +33,8 @@ public class HackingWorldManager : MonoBehaviour
             Debug.Log("Sequence: " + setSequence[i] + ", Pressed: " + pressedSequence[i]);
             if(setSequence[i] != pressedSequence[i])
             {
-                resetSequencePress();
+                coroutine = resetSequenceDelay(1f);
+                StartCoroutine(coroutine);
                 return false;
             }
         }
@@ -60,12 +62,17 @@ public class HackingWorldManager : MonoBehaviour
             {
                 posInSequence = 0;
                 isHacked = true;
+                
             }
             else
             {
                 dissolveMat.SetColor("Color_A232AC94", Color.red);
-
             }
         }
+    }
+    private IEnumerator resetSequenceDelay(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        resetSequencePress();
     }
 }

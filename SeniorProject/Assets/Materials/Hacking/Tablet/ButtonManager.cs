@@ -26,6 +26,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (other.tag == "Claw" && !active)
         {
+            Debug.Log("HIT");
             active = true;
             light.lightOn();
             buttonPressSound.Play();
@@ -44,8 +45,8 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("LIGHT RESET: " + this.buttonID);
         active = false;
         light.lightOff();
-        Debug.Log(this.gameObject.name + "Button With Error");
         animController.SetBool("Play", false);
+
     }
 
     public string getLightName()
