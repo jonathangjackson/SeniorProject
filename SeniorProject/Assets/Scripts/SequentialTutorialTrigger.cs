@@ -51,7 +51,6 @@ public class SequentialTutorialTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ARROW COLLISION?");
         if(triggerType == TriggerType.Collision)
         {
             if (other.tag == collisionTag)
@@ -116,7 +115,7 @@ public class SequentialTutorialTrigger : MonoBehaviour
 
     public void setObjectActive(bool val)
     {
-        //this.gameObject.SetActive(val);
+        this.gameObject.SetActive(val);
     }
 
 }

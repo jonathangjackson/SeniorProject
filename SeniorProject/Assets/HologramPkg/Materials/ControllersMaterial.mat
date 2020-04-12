@@ -31,7 +31,7 @@ Material:
     - _AlphaThreshold: 1
     - _GlitchIntensity: 0
     - _GlitchSpeed: 0
-    - _GlowIntensity: 0.186
+    - _GlowIntensity: 0.01
     - _Scale: 0.1
     - _ScrollSpeedV: 4.16
     m_Colors:

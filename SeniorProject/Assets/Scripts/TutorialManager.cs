@@ -37,6 +37,7 @@ public class TutorialManager : MonoBehaviour
         }
         if (tutorialControllers[0].triggerActivated)
         {
+            currentPosition++;
             tutorialControllers[0].destroyTutorial();
             tutorialControllers.RemoveAt(0);
             unlockDoor.SetBool("Locked", false);
@@ -44,7 +45,7 @@ public class TutorialManager : MonoBehaviour
             if (tutorialControllers.Count == 0)
             {
 
-                Debug.Log("END OF Tutorial");
+                //Debug.Log("END OF Tutorial");
                 Destroy(this);
             }
             else
@@ -76,7 +77,7 @@ public class TutorialManager : MonoBehaviour
 
     public void onClipEnd()
     {
-        currentPosition++;
+        //currentPosition++;
         clipPlay = false;
         tutorialControllers[0].sequentialTriggers[0].setObjectActive(true);
         //tutorialControllers[0].setChildActive(0);
@@ -84,8 +85,9 @@ public class TutorialManager : MonoBehaviour
         {
             tutorialControllers[0].activateHighlights();
         }
-        if(currentPosition == 3)
+        if(currentPosition == 2)
         {
+            Debug.Log("CAN MOVE");
             movement.canMove = true;
         }
         /*
