@@ -262,8 +262,7 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
-        minervaHead.SetActive(false
-            );
+        minervaHead.SetActive(false);
         body = 0;
         eventSystem.GetComponent<OVRInputModule>().rayTransform = pointerIndex.transform;
         laserPointer.GetComponent<LaserPointer>().maxLength = 0.03f;
@@ -277,7 +276,7 @@ public class ArmMenu : MonoBehaviour
         S5Ant.transform.parent = null;
         //ant.transform.parent = null;
 
-        rig.GetComponent<CharacterController>().height = 1.0f;
+        rig.GetComponent<CharacterController>().height = 1.57f;
 
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
         rig.transform.position = MinervaPos;

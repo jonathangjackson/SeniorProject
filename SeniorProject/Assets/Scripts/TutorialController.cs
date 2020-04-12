@@ -24,14 +24,13 @@ public class TutorialController : MonoBehaviour
         rMiddle
     }
 
-    public TriggerType triggerType;
-    public ButtonType buttonType;
+    public bool triggerActivated = false;
+    public int hologramAnimPosition;
+    public GameObject hologram;
     public AudioClip audioClip;
-    public bool hasSequential = false;
     public List<SequentialTutorialTrigger> sequentialTriggers;
     public bool hasHighlights = false;
     public List<GameObject> highlightObjects;
-    public bool triggerActivated = false;
     public Material highlightMaterial;
     public Animator animationController;
 
@@ -39,6 +38,7 @@ public class TutorialController : MonoBehaviour
 
     void Start()
     {
+        hologram.GetComponent<Animator>().SetInteger("Tutorial", hologramAnimPosition);
         if (hasHighlights)
         {
             storeMaterials();
@@ -47,34 +47,31 @@ public class TutorialController : MonoBehaviour
 
     void Update()
     {
-        switch (triggerType)
+        if (sequentialTriggers[0].triggerActivated)
         {
-            case TriggerType.Controller:
-                controllerButtonTrigger();
-                break;
-            case TriggerType.Animation:
-                animationTrigger();
-                break;
-        }
+            if (sequentialTriggers.Count == 1)
+            {
+                triggerActivated = true;
 
-        if (Input.GetKeyDown("space"))
-        {
-            triggerActivated = true;
+            }
+            else
+            {
+                sequentialTriggers.RemoveAt(0);
+                Debug.Log("Sequential Trigger Type = " + sequentialTriggers[0].triggerType.ToString()); 
+                if (sequentialTriggers[0].triggerType.ToString() == "Animation")
+                {
+                    sequentialTriggers[0].animationTrigger();
+                }
+                //sequentialTriggers[0].gameObject.SetActive(true);
+            }
+
         }
     }
-
+    
     public void setChildActive(int pos)
     {
         if(this.transform.childCount > 0)
             this.transform.GetChild(pos).gameObject.SetActive(true);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "tutorial" && triggerType == TriggerType.Collision)
-        {
-            triggerActivated = true;
-        }
     }
 
     public void startAnimation()
@@ -82,57 +79,6 @@ public class TutorialController : MonoBehaviour
         animationController.SetBool("Locked", false);
     }
 
-    private void animationTrigger()
-    {
-
-        //AnimatorClipInfo[] m_CurrentClipInfo;
-        //m_CurrentClipInfo = animationController.GetCurrentAnimatorClipInfo(0);
-        //Debug.Log(m_CurrentClipInfo[1].clip.name);
-        /*
-        if ()
-        {
-            Debug.Log("ANIM TRIGGER CALLED ");
-            triggerActivated = true;
-            animationController.SetBool("Move", false);
-        } */
-    }
-
-    private void controllerButtonTrigger()
-    {
-        switch (buttonType)
-        {
-            case ButtonType.y:
-                if (OVRInput.GetDown(OVRInput.Button.Four) && !hasSequential)
-                    triggerActivated = true;
-                break;
-            case ButtonType.x:
-                if (OVRInput.GetDown(OVRInput.Button.Three) && !hasSequential)
-                    triggerActivated = true;
-                break;
-            case ButtonType.a:
-                if (OVRInput.GetDown(OVRInput.Button.One) && !hasSequential)
-                    triggerActivated = true;
-                break;
-            case ButtonType.b:
-                if (OVRInput.GetDown(OVRInput.Button.Two) && !hasSequential)
-                    triggerActivated = true;
-                break;
-            case ButtonType.lIndex:
-                if (OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger) > 0.9f && !hasSequential)
-                    triggerActivated = true;
-                break;
-            case ButtonType.rIndex:
-                if (OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger) > 0.9f && !hasSequential)
-                    triggerActivated = true;
-                break;
-        }
-    }
-
-    public void uiButtonTrigger()
-    {
-        Debug.Log("TRIGGER UI ACTIVATED");
-        triggerActivated = true;
-    }
 
     public AudioClip getAudioClip()
     {

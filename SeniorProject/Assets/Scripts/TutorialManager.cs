@@ -12,6 +12,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject OVRRig;
     public VRMovementOculus movement;
     public GameObject Pod;
+    public Animator unlockDoor;
     
     void Start()
     {
@@ -22,6 +23,7 @@ public class TutorialManager : MonoBehaviour
         {
             playAudioClip(tutorialControllers[currentPosition].getAudioClip());
             clipPlay = true;
+            OVRRig.transform.parent = Pod.transform;
         }
     }
 
@@ -37,10 +39,11 @@ public class TutorialManager : MonoBehaviour
         {
             tutorialControllers[0].destroyTutorial();
             tutorialControllers.RemoveAt(0);
-
+            unlockDoor.SetBool("Locked", false);
             //END of Tutorial
             if (tutorialControllers.Count == 0)
             {
+
                 Debug.Log("END OF Tutorial");
                 Destroy(this);
             }
@@ -51,11 +54,16 @@ public class TutorialManager : MonoBehaviour
 
                 if (currentPosition == 2)
                 {
-                    OVRRig.transform.parent = Pod.transform;
+                    OVRRig.transform.parent = null;
                     Pod.GetComponent<Animator>().SetBool("Play", true);
                 }
             }
         }
+    }
+
+    public void replayAudioClip()
+    {
+        playAudioClip(tutorialControllers[0].getAudioClip());
     }
 
     void playAudioClip(AudioClip ac)
@@ -68,10 +76,10 @@ public class TutorialManager : MonoBehaviour
 
     public void onClipEnd()
     {
-        Debug.Log("CLIP END");
         currentPosition++;
         clipPlay = false;
-        tutorialControllers[0].setChildActive(0);
+        tutorialControllers[0].sequentialTriggers[0].setObjectActive(true);
+        //tutorialControllers[0].setChildActive(0);
         if (tutorialControllers[0].hasHighlights)
         {
             tutorialControllers[0].activateHighlights();
@@ -80,11 +88,12 @@ public class TutorialManager : MonoBehaviour
         {
             movement.canMove = true;
         }
+        /*
         if(tutorialControllers[0].triggerType.CompareTo(TutorialController.TriggerType.Animation) == 0)
         {
             Debug.Log("anim");
             tutorialControllers[0].startAnimation();
-        }
+        }*/
     }
 
     private void skipTutorialClips()
