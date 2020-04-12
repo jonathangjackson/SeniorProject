@@ -101,14 +101,14 @@ public class LoadHackingWorld : MonoBehaviour
             buttons[i].reset();
         }
 
-            hackingWorld.loadSequence(buttonSequence);
-            //hackingWorld.resetSequencePress();
+        hackingWorld.loadSequence(buttonSequence);
+        //hackingWorld.resetSequencePress();
 
-            VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
-            coroutine = pauseMinerva(0.1f, teleportTarget.transform);
-            teleportSound.Play();
-            StartCoroutine(coroutine);
-        }
+        VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = true;
+        coroutine = pauseMinerva(0.1f, teleportTarget.transform);
+        teleportSound.Play();
+        StartCoroutine(coroutine);
+        
     }
 
     private IEnumerator pauseMinerva(float waitTime, Transform pos)
@@ -119,3 +119,4 @@ public class LoadHackingWorld : MonoBehaviour
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
     }
 }
+
