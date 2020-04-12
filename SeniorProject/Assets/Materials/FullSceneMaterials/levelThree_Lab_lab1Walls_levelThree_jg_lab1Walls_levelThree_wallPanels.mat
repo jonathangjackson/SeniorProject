@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: levelThree_Lab_lab1Walls_levelThree_jg_lab1Walls_levelThree_wallPanels
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP
+  m_ShaderKeywords: _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -34,27 +34,27 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a80958bc2f3fbe842b27068713823b74, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9584d40a4a497d94a985f7b60fee8436, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c3dab4fa5cdd2894d85c6b943d45ffe9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6400599661c934740b9108404e80abee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: c00b74c16d690e940b9e659bd235b636, type: 3}
+        m_Texture: {fileID: 2800000, guid: 136a7a91120da9e49bda965c8046b1ad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a80958bc2f3fbe842b27068713823b74, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9584d40a4a497d94a985f7b60fee8436, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 6226577155bed0a4c9d593bce63b829c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 028824f880846684096184d15d83304d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7f53997461b10354ca3f5d852c95e93d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
