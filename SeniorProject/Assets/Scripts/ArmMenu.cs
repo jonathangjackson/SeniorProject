@@ -75,7 +75,7 @@ public class ArmMenu : MonoBehaviour
         currentMat[2] = rend[1].materials[0];
         currentMat[3] = rend[1].materials[1];
         originalPos = this.GetComponent<RectTransform>().localPosition;
-        originalRot = this.GetComponent<RectTransform>().localEulerAngles;
+        originalRot = this.GetComponent<RectTransform>().localEulerAngles;     
     }
 
     // Update is called once per frame
