@@ -10,6 +10,8 @@ public class finalLevel : MonoBehaviour
     public GameObject newToolTip;
     public GeneratorButton2 lab2;
     public GeneratorButton3 lab3;
+    public GameObject hackingWorldObj;
+    public GameObject doorLocked;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +28,12 @@ public class finalLevel : MonoBehaviour
             {
                 lab2.reset();
                 lab3.reset();
+                doorLocked.GetComponent<Animator>().SetBool("Locked", true);
                 // Play an audio source
                 hiddenToolTip.SetActive(false);
-                newToolTip.SetActive(true);
+                //newToolTip.SetActive(true);
                 grabTimes = 1;
+                hackingWorldObj.SetActive(true);
             }
         }
     }

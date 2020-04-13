@@ -24,7 +24,7 @@ public class GeneratorButton2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Hand" && !active)
+        if ((other.tag == "Hand" || other.tag == "Claw") && !active)
         {
             buttonPressSound.Play();
             active = true;

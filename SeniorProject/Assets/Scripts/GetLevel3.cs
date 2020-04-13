@@ -6,9 +6,11 @@ public class GetLevel3 : MonoBehaviour
 {
     public AeviumLab3 lab;//lab03
     public AveiumInteraction interaction;//lab02
-    public GameObject hackingManager;
+    //public GameObject hackingManager;
     public Animator animatorController;
     // Start is called before the first frame update
+
+    private bool played = false;
     void Start()
     {
         
@@ -17,15 +19,24 @@ public class GetLevel3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(lab.Lab03Done && interaction.Lab02Done)
-        {
-            animatorController.SetBool("Play", true);
-            this.transform.GetChild(0).gameObject.SetActive(true);
+        //if(lab.Lab03Done && interaction.Lab02Done)
+        //{
+            //animatorController.SetBool("Play", true);
+            //this.transform.GetChild(0).gameObject.SetActive(true);
             //this.enabled = false;
-        }
+        //}
        // if (hackingManager.GetComponent<LoadHackingWorld>().isHacked)
         //{
         //    animatorController.SetBool("Play", true);
       //  }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (played == false && other.tag == "Player" && lab.Lab03Done && interaction.Lab02Done)
+        {
+            played = true;
+            animatorController.SetBool("Play", true);
+        }
     }
 }

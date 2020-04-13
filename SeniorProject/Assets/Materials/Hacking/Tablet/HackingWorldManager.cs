@@ -23,6 +23,7 @@ public class HackingWorldManager : MonoBehaviour
     public void loadSequence(int[] sequence)
     {
         setSequence = sequence;
+        //Debug.Log("SEQUENCE ORDER 1. " + buttons[setSequence[0]].getLightName() + " 2. " + buttons[setSequence[1]].getLightName() + " 3. " + buttons[setSequence[2]].getLightName() + "4. " + buttons[setSequence[3]].getLightName());
     }
 
     //checks the correct sequence against the entered sequence 
@@ -30,7 +31,6 @@ public class HackingWorldManager : MonoBehaviour
     {
         for(int i = 0; i < 4; i++)
         {
-            Debug.Log("Sequence: " + setSequence[i] + ", Pressed: " + pressedSequence[i]);
             if(setSequence[i] != pressedSequence[i])
             {
                 coroutine = resetSequenceDelay(1f);
@@ -62,7 +62,6 @@ public class HackingWorldManager : MonoBehaviour
             {
                 posInSequence = 0;
                 isHacked = true;
-                
             }
             else
             {

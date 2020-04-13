@@ -20,7 +20,7 @@ public class Lab1Door : MonoBehaviour
     {
 
     }
-
+    /*
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Player")
@@ -38,5 +38,5 @@ public class Lab1Door : MonoBehaviour
         animator1.SetTrigger("Close");
         animator1.ResetTrigger("Open");
         audio1.Play();
-    }
+    }*/
 }

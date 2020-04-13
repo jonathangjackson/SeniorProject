@@ -119,6 +119,13 @@ public class ArmMenu : MonoBehaviour
             //and On Button Press  place Ant
         }
 
+        //Player Let go during 
+        if(OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) < 0.9f && dissolveState > 0.0f && dissolveState < 1.0f)
+        {
+
+        }
+
+        //Player is holding down the trigger
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) >= 0.9f && grabGun)
         {
             grabbedGun = true;
@@ -127,25 +134,30 @@ public class ArmMenu : MonoBehaviour
             gun[2].GetComponent<Pulse>().isActive = true;
             //pulseGunSpawnSound.Play();
         }
+        //Materialize the gun
         if(grabbedGun && !grabGun && dissolveState > 0.0f)
         {
             dissolveState -= (0.5f) * Time.deltaTime;
             for (int i = 0; i < 4; i++)
             {
                 currentMat[i].SetFloat("Vector1_51085A6D", dissolveState);
-                pulseGunSpawnSound.Play();
             }
-            if(dissolveState <= 0.0f)
+            pulseGunSpawnSound.Play();
+            if (dissolveState <= 0.0f)
             {
                 gun[3].SetActive(false);
                 dissolveState = 0.0f;
             }
         }
+        //Player Let Go Of the Gun
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) < 0.9f && grabbedGun)
         {
+            gun[3].SetActive(false);
             grabbedGun = false;
             gun[2].GetComponent<Pulse>().isActive = false;
         }
+
+        //Dissolve The Gun
         if (!grabbedGun && dissolveState < 1.0f)
         {
             dissolveState += (0.5f) * Time.deltaTime;

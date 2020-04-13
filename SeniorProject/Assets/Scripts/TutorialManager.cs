@@ -87,7 +87,6 @@ public class TutorialManager : MonoBehaviour
         }
         if(currentPosition == 2)
         {
-            Debug.Log("CAN MOVE");
             movement.canMove = true;
         }
         /*

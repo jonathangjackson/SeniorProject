@@ -37,11 +37,11 @@ public class LoadHackingWorld : MonoBehaviour
     {
         if (hackingWorld.isHacked)
         {
-            for(int i = 0; i < unlockDoorAnims.Count; i++)
+            Debug.Log("HACKING NAME Exited: " + this.gameObject.name);
+            for (int i = 0; i < unlockDoorAnims.Count; i++)
             {
                 unlockDoorAnims[i].SetBool("Locked", false);
             }
-            Debug.Log("HACKED");
             hackingSuccessSound.Play();
             //Then the user completed the sequence
             //teleport them back
@@ -93,7 +93,11 @@ public class LoadHackingWorld : MonoBehaviour
 
     public void acceptEntryToHackingWorld()
     {
-        Debug.Log("ACCEPT ENTRY");
+        Debug.Log("HACKING NAME Entered: " + this.gameObject.name);
+        //Can't Reenter Hacking World
+        if (this.isHacked)
+            return;
+
         //Go To Hacking World
         for(int i = 0; i < 4; i++)
         {
@@ -114,10 +118,11 @@ public class LoadHackingWorld : MonoBehaviour
 
     private IEnumerator pauseMinerva(float waitTime, Transform pos)
     {
-        Debug.Log("PAUSE MINERVA");
         yield return new WaitForSeconds(waitTime);
         thePlayer.transform.position = pos.position;
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
+        if (isHacked)
+            this.enabled = false;
     }
 }
 

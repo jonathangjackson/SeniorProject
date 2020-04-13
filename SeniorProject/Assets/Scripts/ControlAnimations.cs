@@ -7,7 +7,7 @@ public class ControlAnimations : MonoBehaviour
     public Animator animatorController;
     public bool triggerCollision = false;
     public bool externalCollision = false;
-
+    public bool lockOff = false;
     public AudioSource doorSound;
 
     // Start is called before the first frame update
@@ -15,6 +15,8 @@ public class ControlAnimations : MonoBehaviour
     {
         if (animatorController == null && triggerCollision)
             animatorController = this.GetComponent<Animator>();
+        if (lockOff)
+            animatorController.SetBool("Locked", false);
     }
     private void OnTriggerEnter(Collider other)
     {
