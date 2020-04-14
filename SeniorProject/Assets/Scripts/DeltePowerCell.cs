@@ -6,10 +6,16 @@ public class DeltePowerCell : MonoBehaviour
 {
     public GameObject powerCell;
     public List<Animator> animController = new List<Animator>();
+    public bool generatorPower;
+
+    void Start()
+    {
+        generatorPower = false;
+    }
 
     private void Update()
     {
-
+       
     }
 
     private void OnTriggerEnter(Collider other)
@@ -18,6 +24,7 @@ public class DeltePowerCell : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             powerCell.SetActive(true);
+            generatorPower = true;
             for(int i = 0; i < animController.Count; i++)
             {
                 animController[i].SetBool("Play", true);
