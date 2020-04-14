@@ -12,6 +12,10 @@ public class finalLevel : MonoBehaviour
     public GeneratorButton3 lab3;
     public GameObject hackingWorldObj;
     public GameObject doorLocked;
+    public GameObject pod;
+    public GameObject player;
+    public VRMovementOculus movement;
+    public bool skip = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class finalLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (grabbedObject.isGrabbed == true)
+        if (grabbedObject.isGrabbed == true || skip)
         {
             if(grabTimes == 0)
             {
@@ -34,6 +38,9 @@ public class finalLevel : MonoBehaviour
                 //newToolTip.SetActive(true);
                 grabTimes = 1;
                 hackingWorldObj.SetActive(true);
+                pod.GetComponent<ControlAnimations>().enabled = true;
+                player.transform.parent = pod.transform;
+                movement.canMove = false;
             }
         }
     }

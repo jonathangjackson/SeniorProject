@@ -40,11 +40,11 @@ public class TutorialManager : MonoBehaviour
             currentPosition++;
             tutorialControllers[0].destroyTutorial();
             tutorialControllers.RemoveAt(0);
-            unlockDoor.SetBool("Locked", false);
             //END of Tutorial
             if (tutorialControllers.Count == 0)
             {
 
+                unlockDoor.SetBool("Locked", false);
                 //Debug.Log("END OF Tutorial");
                 Destroy(this);
             }
@@ -99,6 +99,7 @@ public class TutorialManager : MonoBehaviour
 
     private void skipTutorialClips()
     {
+        OVRRig.transform.parent = null;
         movement.canMove = true;
         tutorialControllers[0].gameObject.SetActive(false);
         //Play Animation and let the player move 

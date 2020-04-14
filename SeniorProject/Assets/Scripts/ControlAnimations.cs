@@ -9,6 +9,8 @@ public class ControlAnimations : MonoBehaviour
     public bool externalCollision = false;
     public bool lockOff = false;
     public AudioSource doorSound;
+    public AudioClip finalLevel;
+    public string boolName;
 
     // Start is called before the first frame update
     void Start()
@@ -20,17 +22,17 @@ public class ControlAnimations : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && triggerCollision)
+        if(other.tag == "Player" && triggerCollision && this.enabled && !animatorController.GetBool("Locked"))
         {
-            animatorController.SetBool("Play", true);
+            animatorController.SetBool(boolName, true);
             doorSound.Play();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player" && triggerCollision)
+        if (other.tag == "Player" && triggerCollision && this.enabled && !animatorController.GetBool("Locked"))
         {
-            animatorController.SetBool("Play", false);
+            animatorController.SetBool(boolName, false);
         }
     }
 
@@ -38,7 +40,12 @@ public class ControlAnimations : MonoBehaviour
     {
         if (externalCollision)
         {
-            animatorController.SetBool("Play", false);
+            animatorController.SetBool(boolName, false);
+        }
+        if(animatorController.GetBool("Locked") && triggerCollision && boolName == "Final")
+        {
+            doorSound.clip = finalLevel;
+            doorSound.Play();
         }
     }
 }

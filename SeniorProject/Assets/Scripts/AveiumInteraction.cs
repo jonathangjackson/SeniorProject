@@ -23,11 +23,20 @@ public class AveiumInteraction : MonoBehaviour
 
     public AudioSource tubeSound;
     public AudioSource dissolveSound;
+    public List<Sprite> spritesList;
+    public GameObject charges;
 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+
+    private void nextSprite()
+    {
+        //goes to the given position in the sprite list 
+        charges.GetComponent<SpriteRenderer>().sprite = spritesList[ButtonPressCounter];
     }
 
     // Update is called once per frame
@@ -38,6 +47,7 @@ public class AveiumInteraction : MonoBehaviour
         {
             ButtonPressed = true;
             ButtonPressCounter += 1;
+            nextSprite();
         }
 
         if (ButtonPressed == true)
@@ -116,6 +126,7 @@ public class AveiumInteraction : MonoBehaviour
         {
             ButtonPressed = true;
             ButtonPressCounter += 1;
+            nextSprite();
         }
     }
 

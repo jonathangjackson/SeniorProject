@@ -51,7 +51,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 3538e32647353934ca8663eca0c13fb8, type: 3}
+  - {fileID: 2100000, guid: 5c0c938a4a3a486498b6cf5c66aa704d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   buttonID: 0
   hackingWorld: {fileID: 0}
   animController: {fileID: 1341891188039062318}
+  buttonPressSound: {fileID: 0}
 --- !u!1 &5354218056166526023
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 3538e32647353934ca8663eca0c13fb8, type: 3}
+  - {fileID: 2100000, guid: 360edab06119bf047afda6c12659ad6f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

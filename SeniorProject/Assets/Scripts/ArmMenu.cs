@@ -293,6 +293,7 @@ public class ArmMenu : MonoBehaviour
 
     public void swapToMinerva()
     {
+        botMenu.SetActive(false);
         minervaHead.SetActive(false);
         body = 0;
         eventSystem.GetComponent<OVRInputModule>().rayTransform = pointerIndex.transform;

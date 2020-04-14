@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb29eaf77179cd458bf892f23ba6916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleFactor: 50
-  force: 500
+  scaleFactor: 70
+  force: 800
   speed: 10
 --- !u!64 &4057228231302658865
 MeshCollider:
