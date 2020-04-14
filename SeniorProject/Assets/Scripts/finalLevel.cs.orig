@@ -1,0 +1,57 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class finalLevel : MonoBehaviour
+{
+    int grabTimes = 0;
+    public OVRGrabbable grabbedObject;
+    public GeneratorButton2 lab2;
+    public GeneratorButton3 lab3;
+    public GameObject hackingWorldObj;
+    public GameObject doorLocked;
+<<<<<<< HEAD:SeniorProject/Assets/finalLevel.cs
+    public GameObject pod;
+    public GameObject player;
+    public VRMovementOculus movement;
+    public bool skip = false;
+=======
+    public GameObject avium;
+    public bool aviumAcquired;
+    public GameObject debris;
+    public AudioSource Audio;
+>>>>>>> 5c802a8a577830b6d3c4cd9389b23d1544715879:SeniorProject/Assets/Scripts/finalLevel.cs
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Audio.GetComponent<AudioClip>();
+        aviumAcquired = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (grabbedObject.isGrabbed == true || skip)
+        {
+            if(grabTimes == 0)
+            {
+                lab2.reset();
+                lab3.reset();
+                doorLocked.GetComponent<Animator>().SetBool("Locked", true);
+                Audio.Play();
+                grabTimes = 1;
+                hackingWorldObj.SetActive(true);
+<<<<<<< HEAD:SeniorProject/Assets/finalLevel.cs
+                pod.GetComponent<ControlAnimations>().enabled = true;
+                player.transform.parent = pod.transform;
+                movement.canMove = false;
+=======
+                debris.SetActive(true);
+                avium.SetActive(false);
+                aviumAcquired = true;
+>>>>>>> 5c802a8a577830b6d3c4cd9389b23d1544715879:SeniorProject/Assets/Scripts/finalLevel.cs
+            }
+        }
+    }
+}
