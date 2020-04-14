@@ -13,20 +13,21 @@ public class WalkingSound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("PlayFootSteps", 0.0f, 0.5f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void PlaySound()
-    {
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) >= 0.9f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) >= 0.9f)
         {
             footsteps.Play();
-        }               
+        }
+
+        else
+        {
+            footsteps.Pause();
+        }
     }
+
 }

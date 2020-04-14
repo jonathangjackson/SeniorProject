@@ -9,6 +9,8 @@ public class GetLevel3 : MonoBehaviour
     //public GameObject hackingManager;
     public Animator animatorController;
     // Start is called before the first frame update
+    public rotateIcon tooltip;
+    public AudioSource Audio;
 
     private bool played = false;
     void Start()
@@ -37,6 +39,8 @@ public class GetLevel3 : MonoBehaviour
         {
             played = true;
             animatorController.SetBool("Play", true);
+            Audio.Play();
+            tooltip.infoText.text = "This is Aevium, the unstable material researchers on this ship were studying. Bring this material back to Station One for further research";
         }
     }
 }
