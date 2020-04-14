@@ -14,6 +14,8 @@ public class finalLevel : MonoBehaviour
     public bool aviumAcquired;
     public GameObject debris;
     public AudioSource Audio;
+    public GameObject Pod;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,8 @@ public class finalLevel : MonoBehaviour
                 debris.SetActive(true);
                 avium.SetActive(false);
                 aviumAcquired = true;
+                Pod.GetComponent<ControlAnimations>().enabled = true;
+                Player.transform.parent = Pod.transform;
             }
         }
     }

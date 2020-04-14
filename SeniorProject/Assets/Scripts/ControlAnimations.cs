@@ -27,6 +27,12 @@ public class ControlAnimations : MonoBehaviour
             animatorController.SetBool(boolName, true);
             doorSound.Play();
         }
+        if (triggerCollision && boolName == "Final" && this.enabled)
+        {
+            doorSound.clip = finalLevel;
+            doorSound.Play();
+            triggerCollision = false;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -42,10 +48,6 @@ public class ControlAnimations : MonoBehaviour
         {
             animatorController.SetBool(boolName, false);
         }
-        if(animatorController.GetBool("Locked") && triggerCollision && boolName == "Final")
-        {
-            doorSound.clip = finalLevel;
-            doorSound.Play();
-        }
+        
     }
 }

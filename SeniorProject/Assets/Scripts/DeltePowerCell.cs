@@ -7,6 +7,7 @@ public class DeltePowerCell : MonoBehaviour
     public GameObject powerCell;
     public List<Animator> animController = new List<Animator>();
     public bool generatorPower;
+    public Animator labDoor;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class DeltePowerCell : MonoBehaviour
             {
                 animController[i].SetBool("Play", true);
             }
+            labDoor.SetBool("Locked", false);
         }
     }
 }
