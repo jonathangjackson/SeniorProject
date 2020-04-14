@@ -55,12 +55,14 @@ public class rotateIcon : MonoBehaviour
 
         else
         {
-            if (ArmMenu.SonarWaveOn == true)
+            print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
+            animator.SetTrigger("Reverse");
+            animator.ResetTrigger("Spin");
+
+            if (ArmMenu.SonarWaveOn == false)
             {
-                print(gameObject.name + " and trigger object " + "" + " are no longer colliding");
-                animator.SetTrigger("Reverse");
-                animator.ResetTrigger("Spin");
-            }       
+                hide();
+            }
         }
     }
 
