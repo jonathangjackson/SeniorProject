@@ -12,11 +12,14 @@ public class finalLevel : MonoBehaviour
     public GeneratorButton3 lab3;
     public GameObject hackingWorldObj;
     public GameObject doorLocked;
+    public GameObject avium;
+    public bool aviumAcquired;
+    public GameObject debris;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        aviumAcquired = false;
     }
 
     // Update is called once per frame
@@ -34,6 +37,9 @@ public class finalLevel : MonoBehaviour
                 //newToolTip.SetActive(true);
                 grabTimes = 1;
                 hackingWorldObj.SetActive(true);
+                debris.SetActive(true);
+                avium.SetActive(false);
+                aviumAcquired = true;
             }
         }
     }
