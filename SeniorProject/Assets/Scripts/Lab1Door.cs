@@ -24,23 +24,29 @@ public class Lab1Door : MonoBehaviour
  
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (this.enabled)
         {
-            if (power.generatorPower == true)
+            if (collider.gameObject.tag == "Player")
             {
-                audio1.PlayOneShot(audio1.clip);
-                doorOpen.Play();
+                if (power.generatorPower == true)
+                {
+                    audio1.PlayOneShot(audio1.clip);
+                    doorOpen.Play();
 
-                animator1.SetTrigger("Open");
-                animator1.ResetTrigger("Close");
+                    animator1.SetTrigger("Open");
+                    animator1.ResetTrigger("Close");
+                }
             }
         }
     }
 
     void OnTriggerExit(Collider collider)
     {
-        animator1.SetTrigger("Close");
-        animator1.ResetTrigger("Open");
-        audio1.Play();
+        if (this.enabled)
+        {
+            animator1.SetTrigger("Close");
+            animator1.ResetTrigger("Open");
+            audio1.Play();
+        }
     }
 }
