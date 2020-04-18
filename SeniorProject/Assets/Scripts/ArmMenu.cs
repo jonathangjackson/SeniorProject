@@ -90,9 +90,12 @@ public class ArmMenu : MonoBehaviour
 
         if (slider.value == 1.0f)
         {
-            menuOn = true;
+            if (!menuOn)
+            {
+                menuOpenSound.Play();
+            }
             transform.GetChild(0).gameObject.SetActive(menuOn);
-            menuOpenSound.Play();
+            menuOn = true;
         }
         if(slider.value == 0.0f)
         {
@@ -117,12 +120,6 @@ public class ArmMenu : MonoBehaviour
                 placeAnt = false;
             }
             //and On Button Press  place Ant
-        }
-
-        //Player Let go during 
-        if(OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) < 0.9f && dissolveState > 0.0f && dissolveState < 1.0f)
-        {
-
         }
 
         //Player is holding down the trigger

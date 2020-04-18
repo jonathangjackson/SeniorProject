@@ -32,7 +32,7 @@ Material:
     - _GlitchIntensity: 0
     - _GlitchSpeed: 0
     - _GlowIntensity: 0.01
-    - _Scale: 0.1
-    - _ScrollSpeedV: 4.16
+    - _Scale: 11.39
+    - _ScrollSpeedV: 0
     m_Colors:
     - _Color: {r: 0.5137255, g: 0.56666666, b: 0.7254902, a: 1}

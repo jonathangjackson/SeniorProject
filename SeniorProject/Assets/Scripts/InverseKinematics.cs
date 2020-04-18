@@ -27,8 +27,9 @@ public class InverseKinematics : MonoBehaviour {
 	float targetDistance;
 	float adyacent;
 
-	// Use this for initialization
-	void Start () {
+    float armAngle =0.0f;
+    // Use this for initialization
+    void Start () {
 
 	}
 	
@@ -49,10 +50,18 @@ public class InverseKinematics : MonoBehaviour {
 			targetDistance = Mathf.Min (targetDistance, arm_Length - arm_Length * 0.001f);
 
 			adyacent = ((upperArm_Length * upperArm_Length) - (forearm_Length * forearm_Length) + (targetDistance * targetDistance)) / (2*targetDistance);
-
 			angle = Mathf.Acos (adyacent / upperArm_Length) * Mathf.Rad2Deg;
-            //add a try and get and set it to a older working position, cross, angle 
+            //add a try and catch and set it to a older working position, cross, angle 
+            if(float.IsNaN(-angle))
+            {
+                angle = armAngle;
+            }
+            else
+            {
+                armAngle = angle;
+            }
             upperArm.RotateAround(upperArm.position, cross, -angle);
+
 			forearm.LookAt(target, cross);
 			forearm.Rotate (forearm_OffsetRotation);
 
