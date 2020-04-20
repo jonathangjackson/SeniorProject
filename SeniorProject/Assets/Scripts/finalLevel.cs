@@ -16,6 +16,9 @@ public class finalLevel : MonoBehaviour
     public AudioSource Audio;
     public GameObject Pod;
     public GameObject Player;
+    public Shader Dissolve;
+    public Material aviumMat;
+    public float dissolveState = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class finalLevel : MonoBehaviour
     {
         if (grabbedObject.isGrabbed == true)
         {
-            if(grabTimes == 0)
+            if (grabTimes == 0)
             {
                 lab2.reset();
                 lab3.reset();
@@ -38,10 +41,17 @@ public class finalLevel : MonoBehaviour
                 grabTimes = 1;
                 hackingWorldObj.SetActive(true);
                 debris.SetActive(true);
-                avium.SetActive(false);
+                dissolveState += (0.3f) * Time.deltaTime;
+                avium.GetComponent<Renderer>().material.shader = Dissolve;
+                aviumMat.SetFloat("Vector1_5D1B6B4A", dissolveState);
                 aviumAcquired = true;
                 Pod.GetComponent<ControlAnimations>().enabled = true;
                 Player.transform.parent = Pod.transform;
+
+                if (dissolveState >= 150f)
+                {
+                    avium.SetActive(false);
+                }
             }
         }
     }

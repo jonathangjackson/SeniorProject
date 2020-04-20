@@ -9,6 +9,8 @@ public class GeneratorButton3 : MonoBehaviour
     public Animator animController;
 
     public AudioSource buttonPressSound;
+    public DeltePowerCell power;
+    public GameObject tube;
 
     // Start is called before the first frame update
     void Start()
@@ -24,21 +26,23 @@ public class GeneratorButton3 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if ((other.tag == "Hand" || other.tag == "Claw") && !active)
+        if ((other.tag == "Hand" || other.tag == "Claw") && !active && power.generatorPower == true)
         {
             buttonPressSound.Play();
             active = true;
             animController.SetBool("Play", true);
-        }
-        if (GeneratorButton2.active == true)
-        {
-            GeneratorButton2.reset();
+            tube.GetComponent<Renderer>().material.EnableKeyword("_EMISSION");
+            if (GeneratorButton2.active == true)
+            {
+                GeneratorButton2.reset();
+            }
         }
     }
 
 
     public void reset()
     {
+        tube.GetComponent<Renderer>().material.DisableKeyword("_EMISSION");
         active = false;
         Debug.Log(this.gameObject.name + "Button With Error");
         animController.SetBool("Play", false);

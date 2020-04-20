@@ -7,7 +7,7 @@ public class Lab1Door : MonoBehaviour
     Animator animator1;
     AudioSource audio1;
     public AudioSource doorOpen;
-    public DeltePowerCell power;
+    public GeneratorButton1 button1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class Lab1Door : MonoBehaviour
         {
             if (collider.gameObject.tag == "Player")
             {
-                if (power.generatorPower == true)
+                if (button1.active == true)
                 {
                     audio1.PlayOneShot(audio1.clip);
                     doorOpen.Play();
