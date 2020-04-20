@@ -10,6 +10,9 @@ public class GeneratorButton1 : MonoBehaviour
     public AudioSource buttonPressSound;
     public DeltePowerCell power;
     public GameObject tube;
+    float dark = -3f;
+    float light = 0.0f;
+    float intensity;
 
     // Start is called before the first frame update
     void Start()
