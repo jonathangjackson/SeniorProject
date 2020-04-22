@@ -8,6 +8,7 @@ public class DeltePowerCell : MonoBehaviour
     public List<Animator> animController = new List<Animator>();
     public bool generatorPower;
     public Animator labDoor;
+    public AudioSource generatorOnSound;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class DeltePowerCell : MonoBehaviour
             other.gameObject.SetActive(false);
             powerCell.SetActive(true);
             generatorPower = true;
+            generatorOnSound.Play();
             for(int i = 0; i < animController.Count; i++)
             {
                 animController[i].SetBool("Play", true);
