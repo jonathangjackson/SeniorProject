@@ -21,6 +21,8 @@ public class EndCreditsScript : MonoBehaviour
     {
         if (bS.gameFinished)
         {
+            if (!this.GetComponent<Canvas>().enabled)
+                this.GetComponent<Canvas>().enabled = true;
             anim.Play("EndCreditsAnimation2");
         }
     }

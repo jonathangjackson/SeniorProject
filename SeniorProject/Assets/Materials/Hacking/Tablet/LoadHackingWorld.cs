@@ -118,8 +118,10 @@ public class LoadHackingWorld : MonoBehaviour
 
     private IEnumerator pauseMinerva(float waitTime, Transform pos)
     {
-        yield return new WaitForSeconds(waitTime);
         thePlayer.transform.position = pos.position;
+        VRMovement.GetComponent<VRMovementOculus>().canMove = false;
+        yield return new WaitForSeconds(waitTime);
+        VRMovement.GetComponent<VRMovementOculus>().canMove = true;
         VRMovement.GetComponent<VRMovementOculus>().minerSwitchOn = false;
         if (isHacked)
             this.enabled = false;

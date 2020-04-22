@@ -28,7 +28,7 @@ public class SequentialTutorialTrigger : MonoBehaviour
     public string collisionTag;
     public bool triggerActivated = false;
     public Animator animation;
-
+    public GameObject shipExterior;
     public void Update()
     {
         switch (triggerType)
@@ -118,4 +118,9 @@ public class SequentialTutorialTrigger : MonoBehaviour
         this.gameObject.SetActive(val);
     }
 
+
+    public void hideShipExterior()
+    {
+        shipExterior.SetActive(false);
+    }
 }

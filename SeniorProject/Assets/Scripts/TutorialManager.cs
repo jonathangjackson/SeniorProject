@@ -41,10 +41,13 @@ public class TutorialManager : MonoBehaviour
             tutorialControllers[0].destroyTutorial();
             tutorialControllers.RemoveAt(0);
             //END of Tutorial
+            if(tutorialControllers.Count == 1)
+            {
+                unlockDoor.SetBool("Locked", false);
+            }
             if (tutorialControllers.Count == 0)
             {
 
-                unlockDoor.SetBool("Locked", false);
                 //Debug.Log("END OF Tutorial");
                 Destroy(this);
             }

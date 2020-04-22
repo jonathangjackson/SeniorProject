@@ -25,7 +25,7 @@ public class finalLevel : MonoBehaviour
     {
         Audio.GetComponent<AudioClip>();
         aviumAcquired = false;
-        aviumMat = avium.GetComponent<Renderer>().material;
+        aviumMat = this.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -46,18 +46,19 @@ public class finalLevel : MonoBehaviour
                 aviumAcquired = true;
                 Pod.GetComponent<ControlAnimations>().enabled = true;
                 Player.transform.parent = Pod.transform;
-                if (dissolveState < 1.0f)
-                {
-                    dissolveState += (0.3f) * Time.deltaTime;
-                    aviumMat.SetFloat("Vector1_51085A6D", dissolveState);
+                
 
-                    if (dissolveState >= 1.0f)
-                    {
-                        dissolveState = 1.0f;
-                        avium.SetActive(false);
-                    }
-                }
+            }
+        }
+        if(grabTimes == 1 && dissolveState < 1.0f)
+        {
+            dissolveState += (0.3f) * Time.deltaTime;
+            aviumMat.SetFloat("Vector1_51085A6D", dissolveState);
 
+            if (dissolveState >= 1.0f)
+            {
+                dissolveState = 1.0f;
+                avium.SetActive(false);
             }
         }
     }

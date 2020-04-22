@@ -30,6 +30,7 @@ public class ControlAnimations : MonoBehaviour
         }
         if (triggerCollision && boolName == "Final" && this.enabled)
         {
+            animatorController.SetBool(boolName, true);
             doorSound.clip = finalLevel;
             doorSound.Play();
             triggerCollision = false;

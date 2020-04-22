@@ -5,6 +5,7 @@ using UnityEngine.Animations;
 using UnityEngine.UI;
 using OVR;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class ArmMenu : MonoBehaviour
 {
@@ -185,6 +186,11 @@ public class ArmMenu : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         wait = false;
 
+    }
+
+    public void quitGame()
+    {
+        SceneManager.LoadScene("StartMenu02");
     }
 
     public void swapToBot()
