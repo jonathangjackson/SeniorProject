@@ -11,6 +11,7 @@ public class ControlAnimations : MonoBehaviour
     public AudioSource doorSound;
     public AudioClip finalLevel;
     public string boolName;
+    public bool gameFinished = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,8 @@ public class ControlAnimations : MonoBehaviour
             doorSound.clip = finalLevel;
             doorSound.Play();
             triggerCollision = false;
+
+            gameFinished = true;
         }
     }
     private void OnTriggerExit(Collider other)

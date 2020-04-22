@@ -18,6 +18,7 @@ public class finalLevel : MonoBehaviour
     public GameObject Player;
     private Material aviumMat;
     public float dissolveState = 0.0f;
+    public AudioSource debrisFallingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class finalLevel : MonoBehaviour
         {
             if (grabTimes == 0)
             {
+                debrisFallingSound.Play();
                 lab2.reset();
                 lab3.reset();
                 doorLocked.GetComponent<Animator>().SetBool("Locked", true);
