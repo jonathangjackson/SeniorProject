@@ -64,6 +64,7 @@ public class ArmMenu : MonoBehaviour
     public AudioSource menuItemPressSound;
     public AudioSource bodySwitchSound;
     public AudioSource sonarSound;
+    public AudioSource footsteps;
 
     // Start is called before the first frame update
     void Start()
@@ -85,9 +86,19 @@ public class ArmMenu : MonoBehaviour
         //if (OVRInput.GetDown(OVRInput.Button.Three))
         //{
 
-          //  menuOn = !menuOn;
-         //   transform.GetChild(0).gameObject.SetActive(menuOn);
+        //  menuOn = !menuOn;
+        //   transform.GetChild(0).gameObject.SetActive(menuOn);
         //}
+
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) >= 0.9f || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) >= 0.9f)
+        {
+            footsteps.volume = 1.0f;
+        }
+
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) == 0.0f && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) == 0.0f)
+        {
+            footsteps.volume = 0.0f;
+        }
 
         if (slider.value == 1.0f)
         {

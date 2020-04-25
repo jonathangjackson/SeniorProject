@@ -21,12 +21,12 @@ public class WalkingSound : MonoBehaviour
     {
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) >= 0.9f || OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) >= 0.9f)
         {
-            footsteps.Play();
+            footsteps.volume = 1.0f;
         }
 
-        else
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) == 0.0f && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) == 0.0f)
         {
-            footsteps.Pause();
+            footsteps.volume = 0.0f;
         }
     }
 
