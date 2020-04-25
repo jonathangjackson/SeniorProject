@@ -29,7 +29,7 @@ public class ControlAnimations : MonoBehaviour
             animatorController.SetBool(boolName, true);
             doorSound.Play();
         }
-        if (triggerCollision && boolName == "Final" && this.enabled)
+        if (triggerCollision && boolName == "Final" && this.enabled && other.tag == "Player")
         {
             minerva.GetComponent<VRMovementOculus>().canMove = false;
             animatorController.SetBool(boolName, true);
