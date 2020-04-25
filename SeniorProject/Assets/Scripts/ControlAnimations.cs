@@ -12,6 +12,7 @@ public class ControlAnimations : MonoBehaviour
     public AudioClip finalLevel;
     public string boolName;
     public bool gameFinished = false;
+    public GameObject minerva;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class ControlAnimations : MonoBehaviour
         }
         if (triggerCollision && boolName == "Final" && this.enabled)
         {
+            minerva.GetComponent<VRMovementOculus>().canMove = false;
             animatorController.SetBool(boolName, true);
             doorSound.clip = finalLevel;
             doorSound.Play();
